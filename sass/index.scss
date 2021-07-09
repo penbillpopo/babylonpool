@@ -1,0 +1,477 @@
+@import "./load";
+.swiper-pagination{
+	bottom: -40px !important;
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+	.swiper-pagination-bullet {
+		background-color: $color_white_02 !important;
+		opacity: 1!important;
+		margin: 0 5px !important;
+		transition: width 0.1s ease;
+	}
+	.swiper-pagination-bullet-active {
+		width: 32px !important;
+		border-radius: 5px !important;
+	}
+	@media screen and (max-width: 1023px) {
+		bottom: -35px !important;
+	}
+	@media screen and (max-width: 768px) {
+		bottom: -30px !important;
+	}
+	@media screen and (max-width: 480px) {
+		bottom: -20px !important;
+	}
+}
+.titleBox{
+	.text{
+		color: $color_white_01;
+		font-family: NotoSans_Regular;
+		letter-spacing: 15px;
+	}
+	.subText{
+		font-family: NotoSans_Regular;
+		color: $color_green_01;
+	}
+}
+#headBanner{
+	width: 100%;
+	.swiperbox{
+		.swiper-slide{
+			width: 100%;
+			padding-bottom: 80%;
+			background-size: 100%;
+		}
+		.navBox{
+			position: absolute;
+			left: 50%;
+			top: 40%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			.swiper-button-prev,
+			.swiper-button-next {
+				width: 30px !important;
+				height: 50px !important;
+				margin: 0;
+				@extend %background_100_100;
+				background-image: url('../img/icon/arrow.png');
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: transform 0.5s ease,
+				opacity 0.5s ease;
+			}
+			
+			.swiper-button-prev {
+				transform: rotate(180deg);
+				&:hover{
+					transform: scale(1.2) rotate(180deg);
+					opacity: 0.9;
+				}
+			}
+			.swiper-button-next {
+				&:hover{
+					transform: scale(1.2) rotate(0deg);
+					opacity: 0.9;
+				}
+			}
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
+		}
+		.paginationBox{
+			display: none;
+			position: absolute;
+			left: 50%;
+			bottom: 30%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+			width: 100%;
+			
+			.swiper-pagination .swiper-pagination-bullet-active {
+				width: 20px!important;
+			}
+		}
+	}
+	@media screen and (max-width: 1023px) {
+		.swiperbox{
+			.swiper-slide{
+				padding-bottom: 70%;
+			}
+			.navBox{
+				display: none;
+			}
+			.paginationBox{
+				display: block;
+				bottom: 33%;
+			}
+		}	
+	}
+	@media screen and (max-width: 768px) {
+		.swiperbox{
+			.paginationBox{
+				bottom: 35%;
+			}
+		}
+	}
+	@media screen and (max-width: 580px) {
+		.swiperbox{
+			.paginationBox{
+				bottom: 38%;
+			}
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.swiperbox{
+			.paginationBox{
+				bottom: 40%;
+			}
+		}
+	}
+}
+#productField{
+	width: 100%;
+	padding-bottom: 75%;
+	position: relative;
+	background-color: $color-blue-02;
+	z-index: 1;
+	@media screen and (max-width: 1023px) {
+		padding-bottom: 65%;
+	}
+	@media screen and (max-width: 768px) {
+		padding-bottom: 90%;
+	}
+	.waveArea{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		padding-bottom: 62%;
+		@extend %background_100;
+		background-image: url('../img/index/wave-s.png');
+		transform: translateY(-32%);
+		.container{
+			position: absolute;
+			top: 35%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			.titleBox{
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin-bottom: 45px;
+				.title{
+					color: $color-white-01;
+					text-shadow:#000000 1px 1px 5px;
+					text-align: center;
+					letter-spacing: 5px;
+					font-family: NotoSans_Regular;
+				}
+			}
+			.swiperbox{
+				position: relative;
+				background-color: #ffffff40;
+				padding:40px 60px;
+				padding-bottom:20px;
+				margin: 0 20px;
+				border-radius: 10px;
+				.swiper-slide{
+					img{
+						width: 100%;
+					}
+					.text{
+						width: 100%;
+						text-align: center;
+						color: $color-blue-02;
+						white-space: nowrap;
+					}
+				}
+				.navBox{
+					position: absolute;
+					top: 45%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					width: 100%;
+					z-index: 2;
+					.swiper-button-prev,
+					.swiper-button-next {
+						width: 10px !important;
+						height: 18px !important;
+						margin: 0;
+						@extend %background_100_100;
+						background-image: url('../img/icon/arrow-s.png');
+						transition: transform 0.5s ease,opacity 0.5s ease;
+					}
+					.swiper-button-prev {
+						margin-left: 20px;
+						transform: scaleX(-1);
+						&:hover{
+							opacity: 0.9;
+						}
+					}
+					.swiper-button-next {
+						margin-right: 20px;
+						&:hover{
+							opacity: 0.9;
+						}
+					}
+					@media screen and (max-width: 1023px) {
+						display: none;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 1023px) {
+			.container{
+				top: 42%;
+				.titleBox{
+					margin-bottom: 30px;
+				}
+			}
+		}
+		@media screen and (max-width: 768px) {
+			.container{
+				top: 48%;
+				.swiperbox{
+					padding:0px;
+					background-color:transparent;
+				}
+			}
+		}
+		@media screen and (max-width: 480px) {
+			.container{
+				top: 50%;
+				.titleBox{
+					margin-bottom: 10px;
+				}
+			}
+		}
+		@media screen and (max-width: 400px) {
+			.container{
+				.titleBox{
+					.title{
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 360px) {
+			.container{
+				.titleBox{
+					.title{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 340px) {
+			.container{
+				.titleBox{
+					.title{
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+	@keyframes watchAnime {
+		0%   {left: 0;}
+		25%  {left: 10px;}
+		100% {left: 0;}
+	}
+	.surfArea{
+		position: absolute;
+		left: 0;
+		top: 33%;
+		width: 100%;
+		.container{
+			padding: 0 40px;
+			position: relative;
+			.titleBox{
+				position: absolute;
+				top: 0;
+				left: 5%;
+				.watch{
+					position: absolute;
+					bottom: -200%;
+					color: $color-white-01;
+					font-family: NotoSans_Regular;
+					animation-name: watchAnime;
+  					animation-duration: 1s;
+					animation-iteration-count: infinite;
+				}
+				  
+			}
+			.videoBox{
+				padding-top: 20px;
+				width: 100%;
+				.surfImg{
+					position: relative;
+					width: 100%;
+					padding-bottom: 64%;
+					@extend %background_100;
+					background-image: url('../img/index/surf.png');
+					transform-origin: 50% 90%;
+					animation-duration: 1s;
+					animation-timing-function:ease-out;
+					&.is-surfing{
+						animation-name: surfShow;
+					}
+					.playBtn{
+						position: absolute;
+						top: 37%;
+						left: 50%;
+						transform: translate(-50%,-50%);
+						width: 100px;
+						height: 100px;
+						cursor: pointer;
+						@extend %background_100_100;
+						background-image: url('../img/index/playBtn.png');
+						@media screen and (min-width: 768px) {
+							transition: transform 0.3s ease;
+							&:hover{
+								transform:translate(-50%,-50%) scale(1.1);	
+							}
+						}
+					}
+				}
+				@keyframes surfShow {
+					0%   {transform: rotate(-60deg);opacity: 0;}
+					100% {transform: rotate(0deg);opacity: 1;}
+				}
+			}
+		}
+		@media screen and (max-width: 1023px) {
+			top: 40%;
+			.container{
+				.titleBox{
+					.watch{
+						bottom: -150%;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 768px) {
+			top: 52%;
+			.container{
+				.titleBox{
+					.watch{
+						bottom: -100%;
+					}
+				}
+				.videoBox{
+					.surfImg{
+						.playBtn{
+							width: 80px;
+							height: 80px;
+						}
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 580px) {
+			.container{
+				.titleBox{
+					.watch{
+						font-size: 12px;
+						bottom: -60%;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 480px) {
+			.container{
+				padding: 0 30px;
+				.titleBox{
+					.watch{
+						display: none;
+					}
+				}
+				.videoBox{
+					.surfImg{
+						.playBtn{
+							width: 60px;
+							height: 60px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#caseField{
+	width: 100%;
+	padding-bottom: 30px;
+	background-color: $color-blue-02;
+	margin-top: -1px;
+	.container{
+		padding: 0 40px;
+		.titleBox{
+			width: 100%;
+			text-align: end;
+			margin-bottom: 50px;
+			.text{
+				margin-right: -15px;
+			}
+		}
+		.caseBox{
+			width: 100%;
+			padding: 0 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.case{
+				width: 45%;
+				margin-bottom: 60px;
+				.imgFrame{
+					width: 100%;
+					overflow: hidden;
+					margin-bottom: 10px;
+					.img{
+						width: 100%;
+						padding-bottom: 70%;
+						@extend %hover_scale_11;
+						@extend %background_100;
+					}
+				}
+				.text{
+					color: $color-white-01;
+					text-align: center;
+				}
+			}
+		}
+		@media screen and (max-width: 768px) {
+			padding: 0 20px;
+			.caseBox{
+				.case{
+					margin-bottom: 40px;
+				}
+			}
+			.titleBox{
+				margin-bottom: 30px;
+			}
+		}
+		@media screen and (max-width: 480px) {
+			.caseBox{
+				padding: 0;
+				.case{
+					margin-bottom: 20px;
+					.text{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 360px) {
+			.caseBox{
+				.case{
+					.text{
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}

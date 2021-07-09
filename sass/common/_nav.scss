@@ -1,0 +1,213 @@
+$color-background:$color_white_01;
+$color-darkgray:$color_grey_01;
+
+#navbar {
+	width: 100%;
+	height: 110px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	background-color: $color-background;
+	transition: height 0.3s ease;
+	&.reduce{
+		height: 80px;
+		.container{
+			.logo {
+				width: 200px;
+			}
+			
+		}
+	}
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		padding: 0 38px;
+		.logo {
+			width: 250px;
+			transition: width 0.3s ease;
+			img {
+				width: 100%;
+				transition: transform 0.5s ease;
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+		.navitem {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			.btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-left: 30px;
+				transition: border 0.5s ease;
+				&:nth-last-child(1){
+					border-right: 0;				
+				}
+				p {
+					transition: color 0.5s ease,transform 0.5s ease;
+					color: $color_black_01;
+					font-family: NotoSans_Regular;
+					&:hover {
+						color: $color_blue_01;
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+	}
+	.mobile {
+		display: none;
+	}
+	#hambuger {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 6;
+
+		.menu-icon {
+			cursor: pointer;
+			padding: 40px 40px;
+			position: relative;
+			user-select: none;
+			display: none;
+
+			//navicon >> 三條線
+			.navicon {
+				background: #333;
+				display: block;
+				height: 2px;
+				position: relative;
+				transition: background .2s ease-out;
+				width: 22px;
+
+				&:before,
+				&:after {
+					background: #333;
+					content: '';
+					display: block;
+					height: 100%;
+					position: absolute;
+					transition: all .2s ease-out;
+					width: 100%;
+				}
+
+				&:before {
+					top: 8px;
+				}
+
+				&:after {
+					top: -8px;
+				}
+			}
+		}
+
+		.menu-btn {
+			display: none;
+
+			&:checked~.menu {
+				max-height: 240px;
+			}
+
+			&:checked~.menu-icon .navicon {
+				background: transparent;
+			}
+
+			&:checked~.menu-icon .navicon:before {
+				transform: rotate(-45deg);
+			}
+
+			&:checked~.menu-icon .navicon:after {
+				transform: rotate(45deg);
+			}
+
+			&:checked~.menu-icon:not(.steps) .navicon:before,
+			&:checked~.menu-icon:not(.steps) .navicon:after {
+				top: 0;
+			}
+		}
+	}
+	#nav_blackfield {
+		display: none;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		right: 0;
+		background-color: #00000050;
+		z-index: 4;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+	}
+	@media screen and (max-width: 1023px) {
+		height: 80px;
+		.mobile {
+			display: block;
+		}
+		.container{
+			padding: 0;
+			.logo {
+				width: 200px;
+			}
+			.navitem {
+				display: block;
+				width: 0vw;
+				height: 100vh;
+				margin: 0px;
+				padding-top: 60px;
+				transition: width 0.5s ease;
+				position: fixed;
+				top: 0;
+				right: 0;
+				background-color: $color-background;
+				z-index: 5;
+				.btn {
+					display: none;
+					width: 100%;
+					height: 60px;
+					margin: 0px;
+					flex-direction: column;
+					small{
+						font-size: 16px;
+					}
+				}
+				&.active {
+					width: 80vw;
+					.btn {
+						display: flex;
+					}
+				}
+			}
+		}
+		#hambuger .menu-icon {
+			display: block;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		height: 60px;
+		.container{
+			padding: 0;
+			.logo {
+				width: 150px;
+			}
+		}
+		#hambuger {
+			.menu-icon {
+				padding: 30px;
+			}
+		}
+	}
+}
+
+#nav_gap {
+	width: 100%;
+	height: 70px;
+	@media screen and (max-width: 1023px) {
+		height: 60px;
+	}
+}

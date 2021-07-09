@@ -1,0 +1,493 @@
+/* ----------FUNCTION---------- */
+//px轉rem，注意:若要改全站字體，請更改$font-change-html，不可改$font-ori-htm，那是初始設定
+$font-ori-html:14;
+$font-change-html:14;
+$font-changeValue:$font-ori-html/$font-change-html;
+
+@function pxToRem($px) {
+	@return $px / ($font-ori-html*$font-changeValue)+rem;
+}
+/* ----------MININ---------- */
+/*自訂scroll樣式 
+參數:垂直ScrollBar寬，水平ScrollBar寬，Bar顏色，拖曳Bar顏色*/
+@mixin scrollcontainer($width,$height,$barcolor,$thumbcolor) {
+	overflow-y: auto;
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+	&::-webkit-scrollbar:vertical {
+		width: $width;
+		background-color: $barcolor;
+	}
+	&::-webkit-scrollbar:horizontal {
+		height: $height;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background-color: $thumbcolor;
+	}
+}
+
+@mixin fontSizeRWD($S, $S1023, $S768, $S480) {
+	font-size: pxToRem($S);
+	@media screen and (max-width: 1023px) {
+		font-size: pxToRem($S1023);
+	}
+	@media screen and (max-width: 768px) {
+		font-size: pxToRem($S768);
+	}
+	@media screen and (max-width: 480px) {
+		font-size: pxToRem($S480);
+	}
+}
+
+/*繪製三角形
+參數:方向，邊長，顏色*/
+@mixin triangle($direction,$length,$color) {
+	//sqrt(3)
+	$height:1.732 * $length;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	line-height: 0px;
+	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+	@if($direction == 'up') {
+		border-width: 0px $length $height $length;
+		border-color: transparent transparent $color transparent;
+		_border-color: #000000 #000000 $color #000000;
+	}
+	@else if($direction == 'down') {
+		border-width: $height $length 0px $length;
+		border-color: $color transparent transparent transparent;
+		_border-color: $color #000000 #000000 #000000;
+	}
+	@else if($direction == 'left') {
+		border-width: $length $height $length 0px;
+		border-color: transparent $color transparent transparent;
+		_border-color: #000000 $color #000000 #000000;
+	}
+	@else if($direction == 'right') {
+		border-width: $length 0px $length $height;
+		border-color: transparent transparent transparent $color;
+		_border-color: #000000 #000000 #000000 $color;
+	}	
+}
+@mixin arrow($direction,$length,$border,$color) {
+	width: $length;
+	height: $length;
+	border-bottom: $border solid $color;
+	border-left: $border solid $color;
+	@if($direction=='up') {
+		transform: rotate(135deg);
+		margin-top: $length/2;
+	}
+	@else if($direction=='down') {
+		transform: rotate(315deg);
+		margin-bottom: $length/2;
+	}
+	@else if($direction=='left') {
+		transform: rotate(45deg);
+		margin-left: $length/2;
+		
+	}
+	@else if($direction=='right') {
+		transform: rotate(225deg);
+		margin-right: $length/2;		
+	}
+}
+@mixin Gradient($direction,$from,$to) {
+	background: linear-gradient(to $direction, $from, $to);
+}
+@mixin textdot($lines) {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+}
+
+/* ----------Extend---------- */
+/*background*/
+%background_100 {
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+%background_100_100 {
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+%background_cover {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/*hover*/
+
+%hover_scale_105 {
+	@media screen and (min-width: 768px) {
+		transition: transform 0.3s ease;
+		&:hover{
+			transform: scale(1.05);	
+		}
+	}
+}
+%hover_scale_11 {
+	@media screen and (min-width: 768px) {
+		transition: transform 0.3s ease;
+		&:hover{
+			transform: scale(1.1);	
+		}
+	}
+}
+
+
+/*#region col*/
+.col100 {
+	width: 100%;
+}
+
+.col90 {
+	width: 90%;
+}
+
+.col85 {
+	width: 85%;
+}
+
+.col80 {
+	width: 80%;
+}
+
+.col75 {
+	width: 75%;
+}
+
+.col70 {
+	width: 70%;
+}
+
+.col66 {
+	width: 66.6666%;
+}
+
+.col65 {
+	width: 65%;
+}
+
+.col60 {
+	width: 60%;
+}
+
+.col55 {
+	width: 55%;
+}
+
+.col50 {
+	width: 50%;
+}
+
+.col45 {
+	width: 45%;
+}
+
+.col40 {
+	width: 40%;
+}
+
+.col35 {
+	width: 35%;
+}
+
+.col30 {
+	width: 30%;
+}
+
+.col33 {
+	width: 33.3333%;
+}
+
+.col25 {
+	width: 25%;
+}
+
+.col20 {
+	width: 20%;
+}
+
+.col16 {
+	width: 16.6666667%;
+}
+
+.col15 {
+	width: 15%;
+}
+/*#endregion col*/
+
+
+.w1200{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	@media screen and (max-width: 1023px) {
+		width: 90%;
+	}
+}
+.w800{
+	width: 70%;
+	max-width: 800px;
+	margin: 0 auto;
+	@media screen and (max-width: 1023px) {
+		width: 90%;
+	}
+	@media screen and (max-width: 480px) {
+		width: 95%;
+	}
+}
+
+
+/* ----------FONT-FAMAILY---------- */
+@font-face {
+	font-family: NotoSans_DemiLight;
+	src: url('../font/NotoSansCJKtc/NotoSansCJKtc-DemiLight.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: NotoSans_Regular;
+	src: url('../font/NotoSansCJKtc/NotoSansCJKtc-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: NotoSans_Medium;
+	src: url('../font/NotoSansCJKtc/NotoSansCJKtc-Medium.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: NotoSans_Bold;
+	src: url('../font/NotoSansCJKtc/NotoSansCJKtc-Bold.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* ----------Scrollbar Initial---------- */
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+	width: 4px;
+	background-color: #A0A0A0;
+}
+
+::-webkit-scrollbar:horizontal {
+	width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: #f5f5f5;
+}
+
+
+/* ----------VARIABLES---------- */
+/*color*/
+$color_white_01:#FFFFFF;
+$color_white_02:#EEF3F9;
+$color_grey_01:#BCBCBC;
+$color_grey_02:#4d4946;
+$color_blue_01:#0092E5;
+$color_blue_02:#1d5c8f;
+$color_green_01:#b5e494;
+$color_green_02:#1a6735;
+$color_black_01:#151B28;
+
+/*container*/
+$container-minHeight:80px;
+
+/* ----------Initial Setting---------- */
+html{
+	font-size: $font-ori-html+px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font: inherit;
+	color: inherit;
+}
+
+body {
+	font-family: sans-serif;
+	color: $color_black_01;
+	background-color: $color_white_01;
+
+	overflow-x: hidden;
+}
+
+@media screen and (max-width: 480px) {
+	html {
+		font-size: $font-ori-html - 0px ;
+	}
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
+/* ----------text---------- */
+
+
+h3 {
+	@include fontSizeRWD(38, 30, 22, 16);
+	color: $color_black_01;
+	line-height: 1.2;
+	font-family: NotoSans_DemiLight;
+	font-weight: normal;
+}
+
+h4{
+	@include fontSizeRWD(27, 24, 20, 16);
+	color: $color_black_01;
+	line-height: 1.2;
+	font-family: NotoSans_DemiLight;
+	font-weight: normal;
+}
+h5{
+	@include fontSizeRWD(22, 20, 18, 16);
+	color: $color_black_01;
+	line-height: 1.2;
+	font-family:NotoSans_DemiLight;
+	font-weight: normal;
+}
+h6{
+	@include fontSizeRWD(20, 18, 16, 15);
+	color: $color_black_01;
+	line-height: 1.2;
+	font-family:NotoSans_DemiLight;
+	font-weight: normal;
+}
+
+p,
+ul,
+li
+{
+	@include fontSizeRWD(18, 16, 15 ,14);
+	color: $color_black_01;
+	line-height: 1.6;
+	font-family: NotoSans_DemiLight;
+	font-weight: lighter;
+}
+a,span{
+	font-family: inherit;
+	font-size: inherit;
+	letter-spacing: inherit;
+	color: inherit;
+	line-height: inherit;
+}
+
+small{
+	@include fontSizeRWD(16, 14, 13, 12);
+	color: $color_black_01;
+	line-height: 1.6;
+	font-family:NotoSans_DemiLight;
+}
+
+
+
+//public component
+.dash {
+	width: 40px;
+	height: 1px;
+	background-color: $color_blue_01;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+.bread{
+	margin-top: 20px;
+	margin-bottom: 40px;
+	.content{
+		font-size: 0.8rem;
+		color: #00000080;
+	}
+	@media screen and (max-width: 1023px) {
+		margin-bottom: 0px;
+		.content {
+			display: none;
+		}
+	}
+}
+.pagebtnbox{
+	display: flex;
+	width: 100%;
+	margin-bottom: 30px;
+	justify-content: center;
+	align-items: center;
+	@include fontSizeRWD(16, 14, 12,12);
+	button{
+		cursor: pointer;
+		margin: 0 10px;
+		&.page {
+			padding: 5px 2px;
+			&.active {
+				border-bottom: 2px solid $color_green_01;
+			}
+		}
+	}
+}
+
+//後台編輯區塊
+.BackEditArea {
+	* {
+		font-family: NotoSans_DemiLight !important;
+		font-size: pxToRem(18) !important;
+		line-height: 1.6 !important;
+	}
+	strong{
+		font-family: NotoSans_Regular !important;		
+	}
+}
+
+//無資料
+.nodata {
+	* {
+		order: 3;
+	}
+
+	&::before {
+		content: "";
+		width: 100px;
+		height: 150px;
+		@extend %background_100;
+		background-image: url('../img/icon-nodone.svg');
+		margin-bottom: 20px;
+		order: 0;
+	}
+
+	&::after {
+		content: attr(data-nodata);
+		font-size: 1.5em;
+		margin-bottom: 30px;
+		order: 1;
+	}
+
+	margin: 0 auto;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 20px;
+}
+
+
+
