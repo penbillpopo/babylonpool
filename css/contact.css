@@ -164,36 +164,28 @@ textarea {
 參數:方向，邊長，顏色*/
 /* ----------Extend---------- */
 /*background*/
-.nodata::before, #footer .contentbox .left .logoBox img, #headBanner .bannerImg, #surfField .container .videoBox .surfImg, #caseField .container .caseBox .case .imgFrame .img {
+.nodata::before, #footer .contentbox .left .logoBox img, #headBanner .bannerImg {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.pagebtnbox .preBtn, .pagebtnbox .nextBtn, #headBanner .swiperbox .navBox .swiper-button-prev,
-#headBanner .swiperbox .navBox .swiper-button-next, #waveField .container .swiperbox .navBox .swiper-button-prev,
-#waveField .container .swiperbox .navBox .swiper-button-next, #surfField .container .videoBox .surfImg .playBtn {
+.pagebtnbox .preBtn, .pagebtnbox .nextBtn {
   background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#waveField, #waveField .container .swiperbox .swiper-slide .imgFrame .img {
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 /*hover*/
 @media screen and (min-width: 768px) {
-  .pagebtnbox .preBtn, .pagebtnbox .nextBtn, .pagebtnbox .pageBtn, #footer .contentbox .right .share a, #caseField .container .caseBox .case .imgFrame .img {
+  .pagebtnbox .preBtn, .pagebtnbox .nextBtn, .pagebtnbox .pageBtn, #footer .contentbox .right .share a {
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
     -o-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   }
-  .pagebtnbox .preBtn:hover, .pagebtnbox .nextBtn:hover, .pagebtnbox .pageBtn:hover, #footer .contentbox .right .share a:hover, #caseField .container .caseBox .case .imgFrame .img:hover {
+  .pagebtnbox .preBtn:hover, .pagebtnbox .nextBtn:hover, .pagebtnbox .pageBtn:hover, #footer .contentbox .right .share a:hover {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
@@ -1522,605 +1514,205 @@ textarea {
   padding-bottom: 31%;
 }
 
-.titleBox .text {
-  color: #FFFFFF;
-  font-weight: 400;
-  letter-spacing: 15px;
+#contact.pageContainer .contentField {
+  border-top: 5px solid #5099bf;
+  border-bottom: 5px solid #5099bf;
+  padding: 50px 0;
+  margin-bottom: 70px;
 }
 
-.titleBox .subText {
-  font-weight: 400;
-  color: #b5e494;
+#contact.pageContainer .contentField .formBox {
+  margin: 0 auto;
+  width: 90%;
 }
 
-#headBanner {
+#contact.pageContainer .contentField .formBox .infoTxt {
   width: 100%;
-}
-
-#headBanner .swiperbox .swiper-slide {
-  width: 100%;
-  height: 100vh;
-  background-size: 100%;
-}
-
-#headBanner .swiperbox .navBox {
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#headBanner .swiperbox .navBox .swiper-button-prev,
-#headBanner .swiperbox .navBox .swiper-button-next {
-  width: 30px !important;
-  height: 50px !important;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  -o-transition: transform 0.5s ease, opacity 0.5s ease;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-#headBanner .swiperbox .navBox .swiper-button-prev {
-  background-image: url("../img/icon/arrow-left.png");
-  margin-left: 30px;
-}
-
-#headBanner .swiperbox .navBox .swiper-button-prev:hover {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
-  opacity: 0.9;
-}
-
-#headBanner .swiperbox .navBox .swiper-button-next {
-  background-image: url("../img/icon/arrow-right.png");
-  margin-right: 30px;
-}
-
-#headBanner .swiperbox .navBox .swiper-button-next:hover {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
-  opacity: 0.9;
-}
-
-@media screen and (max-width: 768px) {
-  #headBanner .swiperbox .navBox {
-    display: none;
-  }
-}
-
-#headBanner .swiperbox .paginationBox {
-  display: none;
-  position: absolute;
-  left: 50%;
-  bottom: 23%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1;
-  width: 100%;
-}
-
-#headBanner .swiperbox .paginationBox .swiper-pagination .swiper-pagination-bullet-active {
-  width: 20px !important;
-}
-
-@media screen and (max-width: 1023px) {
-  #headBanner .swiperbox .swiper-slide {
-    height: auto;
-    padding-bottom: 70%;
-  }
-  #headBanner .swiperbox .navBox {
-    display: none;
-  }
-  #headBanner .swiperbox .paginationBox {
-    display: block;
-  }
-}
-
-#waveField {
-  width: 100%;
-  background-image: url("../img/index/wave-center.png");
-  position: relative;
-  z-index: 1;
-}
-
-#waveField::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 5px;
-  width: 100%;
-  height: 165px;
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../img/index/wave-top.png");
-}
-
-#waveField .container {
-  padding: 20px 0;
-}
-
-#waveField .container .titleBox {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  margin-bottom: 45px;
-}
-
-#waveField .container .titleBox .title {
-  color: #FFFFFF;
-  text-shadow: #000000 2px 2px 5px;
-  text-align: center;
-  letter-spacing: 5px;
-  font-weight: 400;
-}
-
-#waveField .container .swiperbox {
-  position: relative;
-  background-color: #ffffff40;
-  padding: 40px 60px;
-  padding-bottom: 20px;
-  margin: 0 20px;
-  border-radius: 10px;
-}
-
-#waveField .container .swiperbox .swiper-slide:hover .imgFrame .img {
-  -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-#waveField .container .swiperbox .swiper-slide .imgFrame {
-  margin: 10px;
-}
-
-#waveField .container .swiperbox .swiper-slide .imgFrame .img {
-  display: block;
-  width: 100%;
-  padding-bottom: 50%;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  -webkit-box-shadow: 5px 5px 10px #00000020;
-          box-shadow: 5px 5px 10px #00000020;
-  border-radius: 10px;
-}
-
-#waveField .container .swiperbox .swiper-slide .text {
-  width: 100%;
-  text-align: center;
-  color: #1c5c8d;
-  white-space: nowrap;
-  font-weight: 400;
-}
-
-#waveField .container .swiperbox .navBox {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100%;
-  z-index: 2;
-}
-
-#waveField .container .swiperbox .navBox .swiper-button-prev,
-#waveField .container .swiperbox .navBox .swiper-button-next {
-  width: 10px !important;
-  height: 18px !important;
-  margin: 0;
-  -webkit-transition: opacity 0.5s ease,-webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease,-webkit-transform 0.5s ease;
-  -o-transition: transform 0.5s ease,opacity 0.5s ease;
-  transition: transform 0.5s ease,opacity 0.5s ease;
-  transition: transform 0.5s ease,opacity 0.5s ease,-webkit-transform 0.5s ease;
-}
-
-#waveField .container .swiperbox .navBox .swiper-button-prev {
-  margin-left: 20px;
-  background-image: url("../img/icon/arrow-left-s.png");
-}
-
-#waveField .container .swiperbox .navBox .swiper-button-prev:hover {
-  opacity: 0.9;
-}
-
-#waveField .container .swiperbox .navBox .swiper-button-next {
-  margin-right: 20px;
-  background-image: url("../img/icon/arrow-right-s.png");
-}
-
-#waveField .container .swiperbox .navBox .swiper-button-next:hover {
-  opacity: 0.9;
-}
-
-@media screen and (max-width: 1023px) {
-  #waveField .container .swiperbox .navBox {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  #waveField::before {
-    height: auto;
-    background-size: 100%;
-    padding-bottom: 12%;
-  }
-  #waveField .container .titleBox {
-    margin-bottom: 35px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #waveField .container {
-    padding: 0;
-    -webkit-transform: translateY(25px);
-        -ms-transform: translateY(25px);
-            transform: translateY(25px);
-  }
-  #waveField .container .titleBox {
-    margin-bottom: 20px;
-  }
-  #waveField .container .swiperbox {
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-#surfField {
-  width: 100%;
-  position: relative;
-  background-color: #1c5c8d;
-}
-
-#surfField::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -2px;
-  width: 100%;
-  height: 265px;
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../img/index/wave-bottom.png");
-}
-
-#surfField .container {
-  padding: 0 40px;
-  position: relative;
-}
-
-#surfField .container .titleBox {
-  position: absolute;
-  top: 12%;
-  left: 5%;
-}
-
-#surfField .container .titleBox .watch {
-  position: absolute;
-  bottom: -200%;
-  color: #FFFFFF;
-  font-weight: 400;
-  -webkit-animation-name: watchAnime;
-          animation-name: watchAnime;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-#surfField .container .videoBox {
-  width: 100%;
-  padding-bottom: 60%;
-  position: relative;
-}
-
-#surfField .container .videoBox .surfImg {
-  position: absolute;
-  left: 0;
-  top: 14%;
-  width: 100%;
-  padding-bottom: 64%;
-  background-image: url("../img/index/surf.png");
-  -webkit-transform-origin: 50% 90%;
-      -ms-transform-origin: 50% 90%;
-          transform-origin: 50% 90%;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-
-#surfField .container .videoBox .surfImg.is-surfing {
-  -webkit-animation-name: surfShow;
-          animation-name: surfShow;
-}
-
-#surfField .container .videoBox .surfImg .playBtn {
-  position: absolute;
-  top: 37%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-  background-image: url("../img/index/playBtn.png");
-}
-
-@media screen and (min-width: 768px) {
-  #surfField .container .videoBox .surfImg .playBtn {
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  }
-  #surfField .container .videoBox .surfImg .playBtn:hover {
-    -webkit-transform: translate(-50%, -50%) scale(1.1);
-        -ms-transform: translate(-50%, -50%) scale(1.1);
-            transform: translate(-50%, -50%) scale(1.1);
-  }
-}
-
-@-webkit-keyframes surfShow {
-  0% {
-    -webkit-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 1;
-  }
-}
-
-@keyframes surfShow {
-  0% {
-    -webkit-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes watchAnime {
-  0% {
-    left: 0;
-  }
-  25% {
-    left: 10px;
-  }
-  100% {
-    left: 0;
-  }
-}
-
-@keyframes watchAnime {
-  0% {
-    left: 0;
-  }
-  25% {
-    left: 10px;
-  }
-  100% {
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  #surfField::before {
-    top: -5px;
-    height: auto;
-    background-size: 100%;
-    padding-bottom: 20%;
-  }
-  #surfField .container .titleBox {
-    top: 5%;
-  }
-  #surfField .container .videoBox .surfImg .playBtn {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #surfField::before {
-    top: -3px;
-  }
-  #surfField .container {
-    padding: 0 20px;
-  }
-  #surfField .container .titleBox {
-    top: 30%;
-  }
-  #surfField .container .titleBox .watch {
-    bottom: -150%;
-  }
-  #surfField .container .videoBox {
-    padding-bottom: 95%;
-  }
-  #surfField .container .videoBox .surfImg {
-    top: 38%;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  #surfField .container .titleBox .watch {
-    font-size: 14px;
-    bottom: -100%;
-  }
-  #surfField .container .videoBox {
-    padding-bottom: 100%;
-  }
-  #surfField .container .videoBox .surfImg {
-    top: 42%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #surfField .container {
-    padding: 0px;
-  }
-  #surfField .container .videoBox {
-    padding-bottom: 105%;
-  }
-  #surfField .container .videoBox .surfImg {
-    top: 46%;
-  }
-  #surfField .container .videoBox .surfImg .playBtn {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  #surfField .container .titleBox {
-    top: 25%;
-    font-size: 12px;
-  }
-}
-
-#caseField {
-  width: 100%;
-  padding-bottom: 30px;
-  background-color: #1c5c8d;
-  margin-top: -1px;
-}
-
-#caseField .container {
-  padding: 0 40px;
-}
-
-#caseField .container .titleBox {
-  width: 100%;
-  text-align: end;
   margin-bottom: 50px;
 }
 
-#caseField .container .titleBox .text {
-  margin-right: -15px;
+#contact.pageContainer .contentField .formBox .infoTxt p {
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-#caseField .container .caseBox {
-  width: 100%;
-  padding: 0 20px;
+#contact.pageContainer .contentField .formBox .infoTxt p.top {
+  max-width: 740px;
+}
+
+#contact.pageContainer .contentField .formBox .infoTxt p.phone {
+  font-weight: 500;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact.pageContainer .contentField .formBox .infoTxt p.phone::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-right: 10px;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon/phone-call.png");
+}
+
+#contact.pageContainer .contentField .formBox .infoTxt p.bottom {
+  max-width: 680px;
+}
+
+#contact.pageContainer .contentField .formBox .rowBox .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-#caseField .container .caseBox .case {
-  width: 45%;
-  margin-bottom: 60px;
-}
-
-#caseField .container .caseBox .case .imgFrame {
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-#caseField .container .caseBox .case .imgFrame .img {
-  width: 100%;
-  padding-bottom: 70%;
-}
-
-#caseField .container .caseBox .case .text {
+#contact.pageContainer .contentField .formBox .rowBox .row label {
+  width: 30%;
+  height: 50px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5099bf;
   color: #FFFFFF;
-  text-align: center;
-  font-weight: 400;
+  text-align: right;
+  white-space: nowrap;
+}
+
+#contact.pageContainer .contentField .formBox .rowBox .row input, #contact.pageContainer .contentField .formBox .rowBox .row textarea {
+  width: calc(70% - 20px);
+  height: 50px;
+  border: 0;
+}
+
+#contact.pageContainer .contentField .formBox .rowBox .row textarea {
+  min-height: 400px;
+}
+
+#contact.pageContainer .contentField .formBox .buttonBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#contact.pageContainer .contentField .formBox .buttonBox .btn {
+  width: 100px;
+  height: 40px;
+  background-color: #434343;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact.pageContainer .contentField .formBox .buttonBox .btn.pale {
+  background-color: #6e6c6c;
+}
+
+#contact.pageContainer .contentField .formBox .buttonBox .btn .text {
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 1023px) {
+  #contact.pageContainer .contentField {
+    padding: 40px 0;
+  }
+  #contact.pageContainer .contentField .formBox {
+    width: 95%;
+  }
+  #contact.pageContainer .contentField .formBox .infoTxt {
+    margin-bottom: 40px;
+  }
+  #contact.pageContainer .contentField .formBox .rowBox .row textarea {
+    min-height: 300px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  #caseField .container {
-    padding: 0 20px;
+  #contact.pageContainer .contentField {
+    border-top: 3px solid #5099bf;
+    border-bottom: 3px solid #5099bf;
+    padding: 30px 0;
   }
-  #caseField .container .caseBox .case {
-    margin-bottom: 40px;
-  }
-  #caseField .container .titleBox {
+  #contact.pageContainer .contentField .formBox .infoTxt {
     margin-bottom: 30px;
+  }
+  #contact.pageContainer .contentField .formBox .rowBox .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact.pageContainer .contentField .formBox .rowBox .row label {
+    text-align: left;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: #5099bf;
+    font-size: 1.57143rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-width: 1023px) {
+  #contact.pageContainer .contentField .formBox .rowBox .row label {
+    font-size: 1.42857rem;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  #contact.pageContainer .contentField .formBox .rowBox .row label {
+    font-size: 1.28571rem;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-width: 480px) {
+  #contact.pageContainer .contentField .formBox .rowBox .row label {
+    font-size: 1.14286rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #contact.pageContainer .contentField .formBox .rowBox .row input, #contact.pageContainer .contentField .formBox .rowBox .row textarea {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  #caseField .container {
-    padding: 0;
-  }
-  #caseField .container .caseBox {
-    padding: 0;
-  }
-  #caseField .container .caseBox .case {
-    width: 47%;
+  #contact.pageContainer .contentField .formBox .infoTxt {
     margin-bottom: 20px;
-  }
-  #caseField .container .caseBox .case .text {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  #caseField .container .caseBox .case .text {
-    font-size: 12px;
   }
 }

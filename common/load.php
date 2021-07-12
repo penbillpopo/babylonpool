@@ -4,6 +4,9 @@
 
 <link rel="stylesheet" href="./lib/swiper.min.css">
 <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
 
 <script src="./lib/jquery-3.1.0.min.js"></script>
 <script src="./lib/swiper.min.js" defer></script>

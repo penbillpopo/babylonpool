@@ -1,0 +1,359 @@
+@import "./load";
+
+#plan.pageContainer{
+    .contentField{
+        .tabBox{
+            width: 100%;
+            display: flex;
+            margin-bottom: 110px;
+            position: relative;
+            .tab:nth-child(odd){
+                background-color: $color_white_02;
+                border-top: 3px solid $color_blue_01;
+            }
+            .tab:nth-last-child(1){
+                &::after{
+                    display: none;
+                }
+            }
+            .tab{
+                width: 25%;
+                padding: 60px 30px;
+                background-color: $color_white_01;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2px;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    top: 35%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    content: '';
+                    width: 44px;
+                    height: 40px;
+                    display: block;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url('../img/plan/complete.png');
+                    margin-bottom: 15px;
+                }
+                &::after{
+                    position: absolute;
+                    top: 55%;
+                    right: 0;
+                    transform: translateX(50%);
+                    content: '';
+                    width: 25px;
+                    height: 17px;
+                    display: block;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url('../img/plan/arrow.png');
+                    z-index: 1;
+                }
+                .text{
+                    margin-top: 40px;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+            @media screen and (max-width: 1023px) {
+                margin-bottom: 80px;
+                .tab{
+                    padding: 50px 20px;
+                    &::before{
+                        top: 30%;
+                    }
+                }
+            }
+            @media screen and (max-width: 768px) {
+                margin-bottom: 60px;
+                .tab{
+                    &::before{
+                        top: 15%;
+                    }
+                    .text{
+                        -webkit-writing-mode: vertical-lr;
+                        writing-mode: vertical-lr;
+                    }
+                }
+            }
+            @media screen and (max-width: 480px) {
+                margin-bottom: 40px;
+            }
+
+        }
+        .textBox{
+            .title{
+                font-weight: 500;
+                position: relative;
+                margin-bottom: 50px;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -25px;
+                    left: 0;
+                    width: 70px;
+                    height: 5px;
+                    background-color: $color_blue_01;
+                }
+            }
+            .text{
+                p,strong{
+                    line-height: 2.2;
+                }
+            }
+        }
+        .introBox{
+            width: 100%;
+            position: relative;
+            background-color: $color_white_01;
+            overflow: hidden;
+            &.blue{
+                background-color: $color_blue_05;
+            }
+            &.reverse{
+                .textArea{
+                    justify-content: flex-end;
+                    .textBox{
+                        padding-left: 7%;
+                    }
+                }
+                img{
+                    right: 50%;
+                    transform: translateX(-100%);
+                }
+            }
+            .textArea{
+                padding: 75px 0;
+                display: flex;
+                .textBox{
+                    width: 50%;
+                }
+            }
+            img{
+                position: absolute;
+                left: 50%;
+                top: 0;
+                max-width: 50%;
+            }
+            .flag{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: calc(50% + 100px);
+                padding: 2px;
+                padding-right: 150px;
+                background-color: $color_blue_02;
+                .text{
+                    color: $color_white_01;
+                    text-align: right;
+                }
+            }
+            @media screen and (max-width: 1023px) {
+                .textArea{
+                    padding: 40px 0;
+                    .textBox{
+                        width: 100%;
+                    }
+                }
+                img{
+                    position: initial;
+                    left: initial;
+                    top: initial;
+                    width: calc(100% - 40px);
+                    margin: 40px 20px;
+                    margin-top: 0;
+                    max-width: 100%;
+                }
+                &.reverse{
+                    .textArea{
+                        justify-content: flex-start;
+                        .textBox{
+                            padding-left: 0;
+                        }
+                    }
+                    img{
+                        right: initial;
+                        transform: translateX(0);
+                    }
+                }
+                .flag{
+                    width: 100%;
+                    padding: 5px 10px;
+                    .text{
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        .installBox{
+            margin-bottom: 30px;
+            .textArea{
+                padding: 75px 0;
+                display: flex;
+                justify-content: center;
+                .textBox{
+                    text-align: center;
+                    .title{
+                        &::before{
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        margin-bottom: 80px;
+                    }
+                }
+            }
+            .imgArea{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                .longImg{
+                    width: 25%;
+                }
+                .squareBox{
+                    width: 50%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    img{
+                        width: 50%;
+                    }
+                }
+            }
+            #imgAreaMobile{
+                display: none;
+                width: 100%;
+                .container{
+                    padding: 0;
+                    .swiperbox{
+                        position: relative;
+                        .swiper-slide{
+                            width: 100%;
+                            padding-bottom: 25%;
+                            @extend %background_cover;
+                        }
+                        .paginationBox{
+                            display: block;
+                            position: absolute;
+                            left: 50%;
+                            bottom: 40px;
+                            transform: translate(-50%, -50%);
+                            z-index: 1;
+                            width: 100%;
+                            .swiper-pagination .swiper-pagination-bullet-active {
+                                width: 20px!important;
+                            }
+                        }
+                        @media screen and (max-width: 580px) {
+                            .swiper-slide{
+                                padding-bottom: 40%;
+                            }
+                        }
+                        @media screen and (max-width: 480px) {
+                            .paginationBox{
+                                bottom: 30px;
+                            }
+                        }
+
+                    }
+                }
+            }
+            
+            @media screen and (max-width: 1023px) {
+                .textArea{
+                    padding: 50px 0;
+                    .textBox{
+                        .title{
+                            margin-bottom: 60px;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .textArea{
+                    padding: 50px 0;
+                    .textBox{
+                        .title{
+                            margin-bottom: 60px;
+                        }
+                    }
+                }
+                .imgArea{
+                    display: none;
+                }
+                #imgAreaMobile{
+                    display: block;
+                }
+            }
+            @media screen and (max-width: 480px) {
+                .textArea{
+                    padding: 30px 0;
+                    .textBox{
+                        .title{
+                            margin-bottom: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .serviceBox{
+            position: relative;
+            .textArea{
+                position: absolute;
+                top: 70%;
+                left:0;
+                transform: translateY(-50%);
+                width: 100%;
+                background-color: #1c5c8d9c;
+                padding: 50px 0;
+                .textBox{
+                    text-align: center;
+                    .title{
+                        &::before{
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background-color: $color_white_01;
+                        }
+                        color: $color_white_01;
+                        margin-bottom: 80px;
+                    }
+                    .text{
+                        color: $color_white_01;
+                    }
+                }
+            }
+            .imgArea{
+                img{
+                    width: 100%;
+                }
+            }
+            @media screen and (max-width: 1023px) {
+                .textArea{
+                    padding: 30px 20px;
+                    position: initial;
+                    top: initial;
+                    left:initial;
+                    transform: translateY(0);
+                    .textBox{
+                        .title{
+                            margin-bottom: 50px;
+                        }
+                        .text{
+                            br{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .imgArea{
+                    display: none;
+                }
+            }
+        }
+    }
+}

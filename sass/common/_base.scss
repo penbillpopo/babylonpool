@@ -99,11 +99,11 @@ $font-changeValue:$font-ori-html/$font-change-html;
 	background: linear-gradient(to $direction, $from, $to);
 }
 @mixin textdot($lines) {
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	-webkit-line-clamp: $lines;
-	-webkit-box-orient: vertical;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	display:-webkit-box;
+	-webkit-line-clamp:$lines;
+	-webkit-box-orient:vertical;
 }
 
 /* ----------Extend---------- */
@@ -227,6 +227,11 @@ $font-changeValue:$font-ori-html/$font-change-html;
 /*#endregion col*/
 
 
+.w1920{
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
 .w1200{
 	width: 100%;
 	max-width: 1200px;
@@ -246,35 +251,6 @@ $font-changeValue:$font-ori-html/$font-change-html;
 		width: 95%;
 	}
 }
-
-
-/* ----------FONT-FAMAILY---------- */
-@font-face {
-	font-family: NotoSans_DemiLight;
-	src: url('../font/NotoSansCJKtc/NotoSansCJKtc-DemiLight.otf');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: NotoSans_Regular;
-	src: url('../font/NotoSansCJKtc/NotoSansCJKtc-Regular.otf');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: NotoSans_Medium;
-	src: url('../font/NotoSansCJKtc/NotoSansCJKtc-Medium.otf');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: NotoSans_Bold;
-	src: url('../font/NotoSansCJKtc/NotoSansCJKtc-Bold.otf');
-	font-weight: normal;
-	font-style: normal;
-}
-
 
 /* ----------Scrollbar Initial---------- */
 ::-webkit-scrollbar {
@@ -299,11 +275,17 @@ $font-changeValue:$font-ori-html/$font-change-html;
 /* ----------VARIABLES---------- */
 /*color*/
 $color_white_01:#FFFFFF;
-$color_white_02:#EEF3F9;
+$color_white_02:#eff3f5;
 $color_grey_01:#BCBCBC;
 $color_grey_02:#4d4946;
-$color_blue_01:#0092E5;
-$color_blue_02:#1d5c8f;
+$color_grey_03:#8c8a8a;
+$color_grey_04:#434343;
+$color_grey_05:#6e6c6c;
+$color_blue_01:#5197bd;
+$color_blue_02:#5099bf;
+$color_blue_03:#a7cbe6;
+$color_blue_04:#1c5c8d;
+$color_blue_05:#88bfe8;
 $color_green_01:#b5e494;
 $color_green_02:#1a6735;
 $color_black_01:#151B28;
@@ -347,45 +329,69 @@ a:active {
 /* ----------text---------- */
 
 
-h3 {
-	@include fontSizeRWD(38, 30, 22, 16);
+h1 {
+	@include fontSizeRWD(38, 30, 26, 22);
 	color: $color_black_01;
 	line-height: 1.2;
-	font-family: NotoSans_DemiLight;
-	font-weight: normal;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 300;
+}
+
+h2 {
+	@include fontSizeRWD(36, 28, 24, 20);
+	color: $color_black_01;
+	line-height: 1.2;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 300;
+}
+h3 {
+	@include fontSizeRWD(30, 26, 22, 18);
+	color: $color_black_01;
+	line-height: 1.2;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 300;
 }
 
 h4{
-	@include fontSizeRWD(27, 24, 20, 16);
+	@include fontSizeRWD(27, 24, 20, 18);
 	color: $color_black_01;
 	line-height: 1.2;
-	font-family: NotoSans_DemiLight;
-	font-weight: normal;
+	letter-spacing: 5px;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 300;
 }
 h5{
 	@include fontSizeRWD(22, 20, 18, 16);
 	color: $color_black_01;
 	line-height: 1.2;
-	font-family:NotoSans_DemiLight;
-	font-weight: normal;
+	letter-spacing: 5px;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 300;
 }
 h6{
 	@include fontSizeRWD(20, 18, 16, 15);
 	color: $color_black_01;
 	line-height: 1.2;
-	font-family:NotoSans_DemiLight;
-	font-weight: normal;
+	letter-spacing: 2px;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 300;
 }
 
 p,
 ul,
-li
+li,
+strong,
+label,
+input,
+textarea
 {
 	@include fontSizeRWD(18, 16, 15 ,14);
 	color: $color_black_01;
 	line-height: 1.6;
-	font-family: NotoSans_DemiLight;
-	font-weight: lighter;
+	letter-spacing: 2px;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 1;
+	font-weight: 300;
 }
 a,span{
 	font-family: inherit;
@@ -394,14 +400,24 @@ a,span{
 	color: inherit;
 	line-height: inherit;
 }
-
+strong{
+	font-weight: 500;
+	display: block;
+}
 small{
 	@include fontSizeRWD(16, 14, 13, 12);
 	color: $color_black_01;
 	line-height: 1.6;
-	font-family:NotoSans_DemiLight;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 300;
 }
-
+input,
+textarea{
+	padding: 0 10px;
+}
+textarea{
+	padding-top: 10px;
+}
 
 
 //public component
@@ -429,31 +445,116 @@ small{
 .pagebtnbox{
 	display: flex;
 	width: 100%;
-	margin-bottom: 30px;
 	justify-content: center;
 	align-items: center;
-	@include fontSizeRWD(16, 14, 12,12);
-	button{
-		cursor: pointer;
-		margin: 0 10px;
-		&.page {
-			padding: 5px 2px;
-			&.active {
-				border-bottom: 2px solid $color_green_01;
+	.preBtn,.nextBtn,.pageBtn{
+		display: block;
+		margin: 0 20px;
+		@extend %hover_scale_11;
+	}
+	.pageBtn{
+		@include fontSizeRWD(20, 18, 16, 15);
+		&.active{
+			color: $color_blue_01;
+		}
+	}
+	.preBtn,.nextBtn{
+		width: 15px;
+		height: 20px;
+		@extend %background_100_100;
+		background-image: url('../img/icon/arrowPage-left.png');
+	}
+	.nextBtn{
+		background-image: url('../img/icon/arrowPage-right.png');
+	}
+}
+.pageContainer{
+	position: relative;
+	width: 100%;
+	background-color: #cbd8e0;
+	padding: 20px 60px;
+	&::before{
+		content: '';
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 2px;
+		padding-bottom: 12%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url('../img/common/banner-wave.png');
+		transform: translateY(-100%);
+	}
+	.headField{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 70px;
+		.titleBox{
+			display: flex;
+			align-items: flex-end;
+			.title{
+				margin-right: 15px;
+				color: $color_blue_02;
+				font-weight: 500;
+				position: relative;
+				&::before{
+					content: '';
+					position: absolute;
+					left:-10px;
+					top: 50%;
+					width: 50px;
+					height: 25px;
+					transform: translate(-100%,-50%);
+					background-size: 100% 100%;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-image: url('../img/icon/title-mark.png');
+				}
+			}
+			.subTitle{
+				color: $color_grey_03;
+				font-weight: 500;
+			}
+		}
+	}
+	.contentField{
+		.title{
+			font-weight: 400;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		padding: 20px 40px;
+		.headField{
+			margin-bottom: 50px;
+			.titleBox{
+				transform: translateX(30px);
+			}
+		}
+	}
+	@media screen and (max-width: 480px) {
+		padding: 20px;
+		.headField{
+			margin-bottom: 30px;
+			.titleBox{
+				transform: translateX(30px);
 			}
 		}
 	}
 }
 
+
+
 //後台編輯區塊
 .BackEditArea {
 	* {
-		font-family: NotoSans_DemiLight !important;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 300;
 		font-size: pxToRem(18) !important;
 		line-height: 1.6 !important;
 	}
 	strong{
-		font-family: NotoSans_Regular !important;		
+		font-weight: 500;
 	}
 }
 
@@ -489,5 +590,29 @@ small{
 	padding: 0 20px;
 }
 
-
+//swiper
+.swiper-pagination{
+	bottom: -40px !important;
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+	.swiper-pagination-bullet {
+		background-color: $color_white_02 !important;
+		opacity: 1!important;
+		margin: 0 5px !important;
+		transition: width 0.1s ease;
+	}
+	.swiper-pagination-bullet-active {
+		width: 32px !important;
+		border-radius: 5px !important;
+	}
+	@media screen and (max-width: 1023px) {
+		bottom: -35px !important;
+	}
+	@media screen and (max-width: 768px) {
+		bottom: -30px !important;
+	}
+	@media screen and (max-width: 480px) {
+		bottom: -20px !important;
+	}
+}
 

@@ -16,7 +16,7 @@ $(function () {
 		},
 		
 	});
-	var WaveAreaSwiper = new Swiper('#productField .waveArea .swiper-container', {
+	var WaveAreaSwiper = new Swiper('#waveField .swiper-container', {
 		slidesPerView: 4,
 		spaceBetween: 0,
 		loop: true,
@@ -40,19 +40,6 @@ $(function () {
 			  slidesPerView: 4,
 			}
 		}
-	});
-	var HotEventSwiper = new Swiper('#hotEventfield .swiper-container', {
-		slidesPerView: 1,
-		spaceBetween: 0,
-		loop: true,
-		speed: 800,
-		pagination: {
-			el: '#hotEventfield .swiper-pagination',
-			clickable: true,
-		},
-		autoplay: {
-			delay: 5000,
-		},
 	});
 });
 

@@ -17,7 +17,7 @@
 				position: relative;
 				p{
 					color: $color_black_01;
-					font-family: NotoSans_Regular;
+					font-weight: 400;
 				}
 				&.active{
 					&::after{
@@ -51,7 +51,7 @@
 				background-color: $color-white-01;
 				.text{
 					color: $color_grey_01;
-					font-weight: bold;
+					font-weight: 400;
 					margin-top: -5px;
 					transition: color 0.3s ease;
 				}
@@ -89,11 +89,11 @@
 		padding: 60px 40px;
 		h4{
 			color: $color_white_01;
-			font-family: NotoSans_Medium;
+			font-weight: 500;
 		}
 		small{
 			color: $color_white_01;
-			font-family: NotoSans_Regular;
+			font-weight: 400;
 			transform-origin: left;
 		}
 		.left{
@@ -105,12 +105,12 @@
 				img{
 					width: 60px;
 					height: 60px;
-					margin-right: 10px;
+					margin-right: 30px;
 					@extend %background_100;
 				}
 			}
 			.copy,.design{
-				margin-left: 70px;
+				margin-left: 90px;
 			}
 			.design{
 				opacity: 0.3;
@@ -136,12 +136,21 @@
 					}
 				}
 			}
+			.contact{
+				display: flex;
+				flex-wrap: wrap;
+				a{
+					white-space: nowrap;
+					margin-right: 10px;
+				}
+			}
 		}
 		@media screen and (max-width: 768px) {
 			.left{
 				padding-left: 0;
 				.logoBox{
 					img{
+						margin-right: 10px;
 						width: 45px;
 						height: 45px;
 					}
@@ -151,7 +160,8 @@
 				}
 			}
 			.right{
-				padding-right: 5%;
+				padding-right: 0;
+				padding-left: 10%;
 			}
 		}
 		@media screen and (max-width: 580px) {

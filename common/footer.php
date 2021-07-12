@@ -3,7 +3,7 @@
 		<div id="pagetop">
 			<div class="content">
 				<div class="arrow"></div>		
-				<p class="text">Top</p>
+				<p class="text">TOP</p>
 			</div>
 		</div>
 		<div class="navBox">
@@ -33,7 +33,7 @@
 				<img src="./img/logo.png" alt="">
 				<div class="text">
 					<h4>巴比倫</h4>
-					<small>Babylon pool system</small>
+					<small>Babylon pool systems</small>
 				</div>
 			</div>
 			<small class='copy'>版權所有 © BABYLON POOL SYSTEMS CO.LTD</small>
@@ -43,9 +43,12 @@
 			<small>
 				台中市西屯區河南路二段262號5F之1
 			</small>
-			<small>
-				TEL : 04-27082772
-			</small>
+			<div class="contact">
+				<a href="tel:04-27082772">
+					<small>TEL : 04-27082772</small>	
+				</a>
+				<small>FAX : 04-27082775</small>	
+			</div>
 			<small>
 				E-mail : service@babylon.tw
 			</small>

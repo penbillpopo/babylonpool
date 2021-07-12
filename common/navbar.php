@@ -4,22 +4,22 @@
 			<img src="./img/header_logo.png" alt="">
 		</a>
 		<div class="navitem">
-			<a href="#" class="btn">
+			<a href="about.php" class="btn">
 				<p>關於巴比倫</p>
 			</a>
-			<a href="#" class="btn">
+			<a href="newsList.php" class="btn">
 				<p>最新消息</p>
 			</a>
-			<a href="#" class="btn">
+			<a href="plan.php" class="btn">
 				<p>規劃設計</p>
 			</a>
-			<a href="#" class="btn">
+			<a href="facilityList.php" class="btn">
 				<p>水樂園設施</p>
 			</a>
 			<a href="#" class="btn">
 				<p>完工案例</p>
 			</a>
-			<a href="#" class="btn">
+			<a href="contact.php" class="btn">
 				<p>聯絡我們</p>
 			</a>
 		</div>

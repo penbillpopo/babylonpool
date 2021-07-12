@@ -1,0 +1,143 @@
+@import "./load";
+
+#contact.pageContainer{
+    .headField{
+    }
+    .contentField{
+        border-top: 5px solid $color_blue_02;
+        border-bottom: 5px solid $color_blue_02;
+        padding: 50px 0;
+        margin-bottom: 70px;
+        .formBox{
+            margin: 0 auto;
+            width: 90%;
+            .infoTxt{
+                width: 100%;
+                margin-bottom: 50px;
+                p{
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+                p.top{
+                    max-width: 740px;
+                }
+                p.phone{
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    &::before{
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        display: block;
+                        margin-right: 10px;
+                        background-size: 100% 100%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-image: url('../img/icon/phone-call.png');
+                    }
+                }
+                p.bottom{
+                    max-width: 680px;
+                }
+            }
+            .rowBox{
+                .row{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    label{
+                        width: 30%;
+                        height: 50px;
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background-color: $color_blue_02;
+                        color: $color_white_01;
+                        text-align: right;
+                        white-space: nowrap;
+                    }
+                    input,textarea{
+                        width: calc(70% - 20px);
+                        height: 50px;
+                        border: 0;
+                    }
+                    textarea{
+                        min-height: 400px;
+                    }
+                }
+            }
+            .buttonBox{
+                display: flex;
+                justify-content: flex-end;
+                .btn{
+                    width: 100px;
+                    height: 40px;
+                    background-color: $color_grey_04;
+                    margin-left: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &.pale{
+                        background-color: $color_grey_05;
+                    }
+                    .text{
+                        color: $color_white_01;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 1023px) {
+            padding: 40px 0;
+            .formBox{
+                width: 95%;
+                .infoTxt{
+                    margin-bottom: 40px;
+                }
+                .rowBox{
+                    .row{
+                        textarea{
+                            min-height: 300px;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            border-top: 3px solid $color_blue_02;
+            border-bottom: 3px solid $color_blue_02;
+            padding: 30px 0;
+            .formBox{
+                .infoTxt{
+                    margin-bottom: 30px;
+                }
+                .rowBox{
+                    .row{
+                        display: flex;
+                        flex-direction: column;
+                        label{
+                            text-align: left;
+                            width: auto;
+                            height: auto;
+                            padding: 0;
+                            margin-bottom: 10px;
+                            background-color: transparent;
+                            color: $color_blue_02;
+                            @include fontSizeRWD(22, 20, 18, 16);
+                            font-weight: 500;
+                        }
+                        input,textarea{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .formBox{
+                .infoTxt{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

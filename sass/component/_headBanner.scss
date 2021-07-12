@@ -1,0 +1,8 @@
+#headBanner{
+    width: 100%;
+    .bannerImg{
+        width: 100%;
+        padding-bottom: 31%;
+        @extend %background_100;
+    }
+}
