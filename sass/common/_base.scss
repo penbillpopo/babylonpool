@@ -429,20 +429,7 @@ textarea{
 	margin-top: 10px;
 	margin-bottom: 15px;
 }
-.bread{
-	margin-top: 20px;
-	margin-bottom: 40px;
-	.content{
-		font-size: 0.8rem;
-		color: #00000080;
-	}
-	@media screen and (max-width: 1023px) {
-		margin-bottom: 0px;
-		.content {
-			display: none;
-		}
-	}
-}
+
 .pagebtnbox{
 	display: flex;
 	width: 100%;
@@ -650,6 +637,7 @@ textarea{
 	.headField{
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-end;
 		margin-bottom: 70px;
 		.titleBox{
 			display: flex;
@@ -677,6 +665,15 @@ textarea{
 			.subTitle{
 				color: $color_grey_03;
 				font-weight: 500;
+			}
+		}
+		.bread{
+			.text{
+				color: $color-black-01;
+				font-size: 16px;
+				@media screen and (max-width: 1023px) {
+					display: none;
+				}
 			}
 		}
 	}

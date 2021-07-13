@@ -643,25 +643,6 @@ textarea {
   margin-bottom: 15px;
 }
 
-.bread {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-.bread .content {
-  font-size: 0.8rem;
-  color: #00000080;
-}
-
-@media screen and (max-width: 1023px) {
-  .bread {
-    margin-bottom: 0px;
-  }
-  .bread .content {
-    display: none;
-  }
-}
-
 .pagebtnbox {
   display: -webkit-box;
   display: -webkit-flex;
@@ -782,6 +763,10 @@ textarea {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-bottom: 70px;
 }
 
@@ -825,6 +810,17 @@ textarea {
 .pageContainer .headField .titleBox .subTitle {
   color: #8c8a8a;
   font-weight: 500;
+}
+
+.pageContainer .headField .bread .text {
+  color: #151B28;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1023px) {
+  .pageContainer .headField .bread .text {
+    display: none;
+  }
 }
 
 .pageContainer .contentField .block {
