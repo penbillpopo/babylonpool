@@ -32,7 +32,7 @@
 				}
 			}
 		}
-		#pagetop{
+		#pagetopIndex{
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -75,6 +75,56 @@
 				.content{
 					width: 50px;
 					height: 50px;
+					.arrow{
+						@include arrow('up',10px,2px,$color_grey_01);
+					}
+				}
+			}
+		}
+		#pagetop{
+			position: fixed;
+			bottom: 20%;
+			right: 0px;
+			cursor: pointer;
+			z-index: 1;
+			.content{
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				width: 65px;
+				height: 65px;
+				background-color: #5098bf9a;
+				.text{
+					color: $color_white_01;
+					font-weight: 400;
+					margin-top: -5px;
+					transition: color 0.3s ease;
+				}
+				.arrow{
+					@include triangle('up',10px,$color_white_01);
+					transition: border-color 0.3s ease,margin 0.3s ease;
+					transform: scaleY(0.6);
+				}
+			}
+			&:hover{
+				.content{
+					.text{
+						color: $color_green_01;
+					}
+					.arrow{
+						margin-top: -10px;
+						border-color: transparent transparent $color_green_01 transparent;
+					}
+				}
+			}
+			@media screen and (max-width: 768px) {
+				.content{
+					width: 50px;
+					height: 50px;
+					.arrow{
+						@include arrow('up',10px,2px,$color_grey_01);
+					}
 				}
 			}
 		}

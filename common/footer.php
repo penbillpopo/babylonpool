@@ -1,6 +1,6 @@
 <footer id="footer">
 	<div class="navField">
-		<div id="pagetop">
+		<div id="pagetop<?php if(isset($isIndex) && $isIndex) echo 'Index';?>">
 			<div class="content">
 				<div class="arrow"></div>		
 				<p class="text">TOP</p>

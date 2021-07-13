@@ -380,7 +380,6 @@ h6{
 p,
 ul,
 li,
-strong,
 label,
 input,
 textarea
@@ -393,7 +392,7 @@ textarea
 	letter-spacing: 1;
 	font-weight: 300;
 }
-a,span{
+a,span,strong{
 	font-family: inherit;
 	font-size: inherit;
 	letter-spacing: inherit;
@@ -402,7 +401,6 @@ a,span{
 }
 strong{
 	font-weight: 500;
-	display: block;
 }
 small{
 	@include fontSizeRWD(16, 14, 13, 12);
@@ -467,6 +465,16 @@ textarea{
 	.nextBtn{
 		background-image: url('../img/icon/arrowPage-right.png');
 	}
+	@media screen and (max-width: 768px){
+		.preBtn,.nextBtn,.pageBtn{
+			margin: 0 15px;
+		}
+	}
+	@media screen and (max-width: 480px){
+		.preBtn,.nextBtn,.pageBtn{
+			margin: 0 10px;
+		}
+	}
 }
 .pageContainer{
 	position: relative;
@@ -519,8 +527,225 @@ textarea{
 		}
 	}
 	.contentField{
-		.title{
-			font-weight: 400;
+		.block{
+			margin-bottom: 50px;
+			.titleBox{
+				display: flex;
+				flex-wrap: wrap;
+				.text{
+					line-height: 40px;
+					margin-bottom: 15px;
+					margin-right: 20px;
+				}
+			}
+			.text{
+				&,*{
+					line-height: 40px;
+				}
+				&.bold{
+					font-weight: 400;
+				}
+				&.blue{
+					color: $color_blue_02;
+				}
+			}
+			img{
+				display: block;
+				height: auto;
+				max-width: 100%;
+				&.fit-content{
+					height: fit-content;
+				}
+			}
+			.flexBox{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				&.nowrap{
+					flex-wrap: nowrap;
+				}
+				&.center{
+					justify-content: center;
+				}
+				&.end{
+					justify-content: end;
+				}
+				@media screen and (max-width: 1023px) {
+					&:not(.nowrap){
+						.text,img{
+							width: 100%;
+							margin-right: 0px;
+							margin-bottom: 20px;
+							&.col90,
+							&.col85,
+							&.col80,
+							&.col75,
+							&.col70,
+							&.col66,
+							&.col65,
+							&.col60,
+							&.col55,
+							&.col50,
+							&.col45,
+							&.col40,
+							&.col35,
+							&.col30,
+							&.col33,
+							&.col25,
+							&.col20,
+							&.col16,
+							&.col15 {
+								width: 100%;
+							}
+						}
+						img{
+							max-width: 100%;
+							&.col90,
+							&.col85,
+							&.col80,
+							&.col75,
+							&.col70,
+							&.col66,
+							&.col65,
+							&.col60,
+							&.col55,
+							&.col50,
+							&.col45,
+							&.col40,
+							&.col35,
+							&.col30,
+							&.col33,
+							&.col25,
+							&.col20,
+							&.col16,
+							&.col15 {
+								max-width: 100%;
+							}
+						}
+					}
+				}
+
+			}
+			.col100 {
+				max-width: 100%;
+				width: calc(100% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
+			.col90 {
+				max-width: 90%;
+				width: calc(90% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
+			.col85 {
+				max-width: 85%;
+				width: calc(85% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col80 {
+				max-width: 80%;
+				width: calc(80% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col75 {
+				max-width: 75%;
+				width: calc(75% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col70 {
+				max-width: 70%;
+				width: calc(70% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col66 {
+				max-width: 66.6666%;
+				width: calc(66.6666% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col65 {
+				max-width: 65%;
+				width: calc(65% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col60 {
+				max-width: 60%;
+				width: calc(60% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col55 {
+				max-width: 55%;
+				width: calc(55% - 10px);	
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col50 {
+				max-width: 50%;
+				width: calc(50% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col45 {
+				max-width: 45%;
+				width: calc(45% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col40 {
+				max-width: 40%;
+				width: calc(40% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col35 {
+				max-width: 35%;
+				width: calc(35% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col30 {
+				max-width: 30%;
+				width: calc(30% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col33 {
+				max-width: 33.3333%;
+				width: calc(33.3333% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col25 {
+				max-width: 25%;
+				width: calc(25% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col20 {
+				max-width: 20%;
+				width: calc(20% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col16 {
+				max-width: 16.6666667%;
+				width: calc(16.6666667% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}				
+			.col15 {
+				max-width: 15%;
+				width: calc(15% - 10px);
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
 		}
 	}
 	@media screen and (max-width: 768px) {
@@ -547,15 +772,15 @@ textarea{
 
 //後台編輯區塊
 .BackEditArea {
-	* {
-		font-family: 'Noto Sans TC', sans-serif;
-		font-weight: 300;
-		font-size: pxToRem(18) !important;
-		line-height: 1.6 !important;
-	}
-	strong{
-		font-weight: 500;
-	}
+	// * {
+	// 	font-family: 'Noto Sans TC', sans-serif;
+	// 	font-weight: 300;
+	// 	font-size: pxToRem(18) !important;
+	// 	line-height: 1.6 !important;
+	// }
+	// strong{
+	// 	font-weight: 500;
+	// }
 }
 
 //無資料

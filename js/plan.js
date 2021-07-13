@@ -20,5 +20,12 @@ $(function () {
 			},
 		}
 	});
+
+	$(".tab").click(function() {
+		let targetId = $(this).data('id')
+		$('html, body').animate({
+			scrollTop: $("#"+targetId).offset().top - 80
+		}, 1000);
+	});
 });
 

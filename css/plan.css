@@ -535,7 +535,6 @@ h6 {
 p,
 ul,
 li,
-strong,
 label,
 input,
 textarea {
@@ -552,7 +551,6 @@ textarea {
   p,
   ul,
   li,
-  strong,
   label,
   input,
   textarea {
@@ -564,7 +562,6 @@ textarea {
   p,
   ul,
   li,
-  strong,
   label,
   input,
   textarea {
@@ -576,7 +573,6 @@ textarea {
   p,
   ul,
   li,
-  strong,
   label,
   input,
   textarea {
@@ -584,7 +580,7 @@ textarea {
   }
 }
 
-a, span {
+a, span, strong {
   font-family: inherit;
   font-size: inherit;
   letter-spacing: inherit;
@@ -594,7 +590,6 @@ a, span {
 
 strong {
   font-weight: 500;
-  display: block;
 }
 
 small {
@@ -716,6 +711,18 @@ textarea {
   background-image: url("../img/icon/arrowPage-right.png");
 }
 
+@media screen and (max-width: 768px) {
+  .pagebtnbox .preBtn, .pagebtnbox .nextBtn, .pagebtnbox .pageBtn {
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pagebtnbox .preBtn, .pagebtnbox .nextBtn, .pagebtnbox .pageBtn {
+    margin: 0 10px;
+  }
+}
+
 .pageContainer {
   position: relative;
   width: 100%;
@@ -790,8 +797,236 @@ textarea {
   font-weight: 500;
 }
 
-.pageContainer .contentField .title {
+.pageContainer .contentField .block {
+  margin-bottom: 50px;
+}
+
+.pageContainer .contentField .block .titleBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.pageContainer .contentField .block .titleBox .text {
+  line-height: 40px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.pageContainer .contentField .block .text, .pageContainer .contentField .block .text * {
+  line-height: 40px;
+}
+
+.pageContainer .contentField .block .text.bold {
   font-weight: 400;
+}
+
+.pageContainer .contentField .block .text.blue {
+  color: #5099bf;
+}
+
+.pageContainer .contentField .block img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.pageContainer .contentField .block img.fit-content {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.pageContainer .contentField .block .flexBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.pageContainer .contentField .block .flexBox.nowrap {
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
+.pageContainer .contentField .block .flexBox.center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pageContainer .contentField .block .flexBox.end {
+  -webkit-box-pack: end;
+  -webkit-justify-content: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+@media screen and (max-width: 1023px) {
+  .pageContainer .contentField .block .flexBox:not(.nowrap) .text, .pageContainer .contentField .block .flexBox:not(.nowrap) img {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col90, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col85, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col80, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col75, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col70, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col66, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col65, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col60, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col55, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col50, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col45, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col40, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col35, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col30, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col33, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col25, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col20, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col16, .pageContainer .contentField .block .flexBox:not(.nowrap) .text.col15, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col90, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col85, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col80, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col75, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col70, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col66, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col65, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col60, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col55, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col50, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col45, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col40, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col35, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col30, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col33, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col25, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col20, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col16, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col15 {
+    width: 100%;
+  }
+  .pageContainer .contentField .block .flexBox:not(.nowrap) img {
+    max-width: 100%;
+  }
+  .pageContainer .contentField .block .flexBox:not(.nowrap) img.col90, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col85, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col80, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col75, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col70, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col66, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col65, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col60, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col55, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col50, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col45, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col40, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col35, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col30, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col33, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col25, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col20, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col16, .pageContainer .contentField .block .flexBox:not(.nowrap) img.col15 {
+    max-width: 100%;
+  }
+}
+
+.pageContainer .contentField .block .col100 {
+  max-width: 100%;
+  width: calc(100% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col90 {
+  max-width: 90%;
+  width: calc(90% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col85 {
+  max-width: 85%;
+  width: calc(85% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col80 {
+  max-width: 80%;
+  width: calc(80% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col75 {
+  max-width: 75%;
+  width: calc(75% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col70 {
+  max-width: 70%;
+  width: calc(70% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col66 {
+  max-width: 66.6666%;
+  width: calc(66.6666% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col65 {
+  max-width: 65%;
+  width: calc(65% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col60 {
+  max-width: 60%;
+  width: calc(60% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col55 {
+  max-width: 55%;
+  width: calc(55% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col50 {
+  max-width: 50%;
+  width: calc(50% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col45 {
+  max-width: 45%;
+  width: calc(45% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col40 {
+  max-width: 40%;
+  width: calc(40% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col35 {
+  max-width: 35%;
+  width: calc(35% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col30 {
+  max-width: 30%;
+  width: calc(30% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col33 {
+  max-width: 33.3333%;
+  width: calc(33.3333% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col25 {
+  max-width: 25%;
+  width: calc(25% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col20 {
+  max-width: 20%;
+  width: calc(20% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col16 {
+  max-width: 16.6666667%;
+  width: calc(16.6666667% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .col15 {
+  max-width: 15%;
+  width: calc(15% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -820,17 +1055,6 @@ textarea {
         -ms-transform: translateX(30px);
             transform: translateX(30px);
   }
-}
-
-.BackEditArea * {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 300;
-  font-size: 1.28571rem !important;
-  line-height: 1.6 !important;
-}
-
-.BackEditArea strong {
-  font-weight: 500;
 }
 
 .nodata {
@@ -999,7 +1223,7 @@ textarea {
   height: 100%;
 }
 
-#navbar .container .navitem .btn {
+#navbar .container .navitem .nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1013,26 +1237,56 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: 30px;
-  -webkit-transition: border 0.5s ease;
-  -o-transition: border 0.5s ease;
-  transition: border 0.5s ease;
+  position: relative;
+  height: 100%;
 }
 
-#navbar .container .navitem .btn:nth-last-child(1) {
-  border-right: 0;
+@media screen and (min-width: 1023px) {
+  #navbar .container .navitem .nav.hasSub:hover .subNavItem {
+    display: block;
+  }
 }
 
-#navbar .container .navitem .btn p {
+#navbar .container .navitem .nav.hasSub .subNavItem {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 100%);
+      -ms-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 5px 5px 5px #00000090;
+          box-shadow: 5px 5px 5px #00000090;
+}
+
+#navbar .container .navitem .nav.hasSub .subNavItem .subNav {
+  display: block;
+  padding: 20px 40px;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+#navbar .container .navitem .nav.hasSub .subNavItem .subNav:hover {
+  background-color: #5099bf20;
+}
+
+#navbar .container .navitem .nav .name {
+  color: #151B28;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+#navbar .container .navitem a .name {
   -webkit-transition: color 0.5s ease,-webkit-transform 0.5s ease;
   transition: color 0.5s ease,-webkit-transform 0.5s ease;
   -o-transition: color 0.5s ease,transform 0.5s ease;
   transition: color 0.5s ease,transform 0.5s ease;
   transition: color 0.5s ease,transform 0.5s ease,-webkit-transform 0.5s ease;
-  color: #151B28;
-  font-weight: 400;
 }
 
-#navbar .container .navitem .btn p:hover {
+#navbar .container .navitem a:hover .name {
   color: #5099bf;
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
@@ -1164,24 +1418,47 @@ textarea {
     background-color: #FFFFFF;
     z-index: 5;
   }
-  #navbar .container .navitem .btn {
+  #navbar .container .navitem .nav {
     display: none;
     width: 100%;
-    height: 60px;
+    height: auto;
     margin: 0px;
+    padding: 20px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #navbar .container .navitem .btn small {
+  #navbar .container .navitem .nav small {
     font-size: 16px;
+  }
+  #navbar .container .navitem .nav.hasSub .subNavItem {
+    display: block;
+    position: initial;
+    bottom: initial;
+    left: initial;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    background-color: #FFFFFF;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  #navbar .container .navitem .nav.hasSub .subNavItem .subNav {
+    display: block;
+    padding: 20px 40px;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+  }
+  #navbar .container .navitem .nav.hasSub .subNavItem .subNav:hover {
+    background-color: #5099bf20;
   }
   #navbar .container .navitem.active {
     width: 80vw;
   }
-  #navbar .container .navitem.active .btn {
+  #navbar .container .navitem.active .nav {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1274,7 +1551,7 @@ textarea {
   background-color: #b5e494;
 }
 
-#footer .navField #pagetop {
+#footer .navField #pagetopIndex {
   position: absolute;
   top: 0;
   left: 50%;
@@ -1285,7 +1562,7 @@ textarea {
   z-index: 1;
 }
 
-#footer .navField #pagetop .content {
+#footer .navField #pagetopIndex .content {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1311,7 +1588,7 @@ textarea {
   background-color: #FFFFFF;
 }
 
-#footer .navField #pagetop .content .text {
+#footer .navField #pagetopIndex .content .text {
   color: #BCBCBC;
   font-weight: 400;
   margin-top: -5px;
@@ -1320,7 +1597,7 @@ textarea {
   transition: color 0.3s ease;
 }
 
-#footer .navField #pagetop .content .arrow {
+#footer .navField #pagetopIndex .content .arrow {
   -webkit-transition: border-color 0.3s ease,margin 0.3s ease;
   -o-transition: border-color 0.3s ease,margin 0.3s ease;
   transition: border-color 0.3s ease,margin 0.3s ease;
@@ -1334,19 +1611,112 @@ textarea {
   margin-top: 7.5px;
 }
 
+#footer .navField #pagetopIndex:hover .content .text {
+  color: #b5e494;
+}
+
+#footer .navField #pagetopIndex:hover .content .arrow {
+  border-color: #b5e494;
+  margin-top: -5px;
+}
+
+@media screen and (max-width: 768px) {
+  #footer .navField #pagetopIndex .content {
+    width: 50px;
+    height: 50px;
+  }
+  #footer .navField #pagetopIndex .content .arrow {
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #BCBCBC;
+    border-left: 2px solid #BCBCBC;
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+    margin-top: 5px;
+  }
+}
+
+#footer .navField #pagetop {
+  position: fixed;
+  bottom: 20%;
+  right: 0px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#footer .navField #pagetop .content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 65px;
+  height: 65px;
+  background-color: #5098bf9a;
+}
+
+#footer .navField #pagetop .content .text {
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-top: -5px;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+#footer .navField #pagetop .content .arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  line-height: 0px;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  border-width: 0px 10px 17.32px 10px;
+  border-color: transparent transparent #FFFFFF transparent;
+  _border-color: #000000 #000000 #FFFFFF #000000;
+  -webkit-transition: border-color 0.3s ease,margin 0.3s ease;
+  -o-transition: border-color 0.3s ease,margin 0.3s ease;
+  transition: border-color 0.3s ease,margin 0.3s ease;
+  -webkit-transform: scaleY(0.6);
+      -ms-transform: scaleY(0.6);
+          transform: scaleY(0.6);
+}
+
 #footer .navField #pagetop:hover .content .text {
   color: #b5e494;
 }
 
 #footer .navField #pagetop:hover .content .arrow {
-  border-color: #b5e494;
-  margin-top: -5px;
+  margin-top: -10px;
+  border-color: transparent transparent #b5e494 transparent;
 }
 
 @media screen and (max-width: 768px) {
   #footer .navField #pagetop .content {
     width: 50px;
     height: 50px;
+  }
+  #footer .navField #pagetop .content .arrow {
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #BCBCBC;
+    border-left: 2px solid #BCBCBC;
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+    margin-top: 5px;
   }
 }
 
@@ -1520,6 +1890,10 @@ textarea {
   padding-bottom: 31%;
 }
 
+#plan.pageContainer .contentField {
+  padding-bottom: 60px;
+}
+
 #plan.pageContainer .contentField .tabBox {
   width: 100%;
   display: -webkit-box;
@@ -1562,6 +1936,19 @@ textarea {
           justify-content: center;
   border-radius: 2px;
   position: relative;
+  cursor: pointer;
+}
+
+#plan.pageContainer .contentField .tabBox .tab:hover .text {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#plan.pageContainer .contentField .tabBox .tab:hover::before {
+  -webkit-transform: scale(1.05) translate(-50%, -50%);
+      -ms-transform: scale(1.05) translate(-50%, -50%);
+          transform: scale(1.05) translate(-50%, -50%);
 }
 
 #plan.pageContainer .contentField .tabBox .tab::before {
@@ -1579,6 +1966,11 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../img/plan/complete.png");
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   margin-bottom: 15px;
 }
 
@@ -1604,6 +1996,11 @@ textarea {
   margin-top: 40px;
   font-weight: 400;
   text-align: center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 @media screen and (max-width: 1023px) {
@@ -1622,8 +2019,13 @@ textarea {
   #plan.pageContainer .contentField .tabBox {
     margin-bottom: 60px;
   }
+  #plan.pageContainer .contentField .tabBox .tab {
+    padding: 30px;
+  }
   #plan.pageContainer .contentField .tabBox .tab::before {
     top: 15%;
+    width: 33px;
+    height: 30px;
   }
   #plan.pageContainer .contentField .tabBox .tab .text {
     -webkit-writing-mode: vertical-lr;
@@ -1635,6 +2037,10 @@ textarea {
 @media screen and (max-width: 480px) {
   #plan.pageContainer .contentField .tabBox {
     margin-bottom: 40px;
+  }
+  #plan.pageContainer .contentField .tabBox .tab::after {
+    width: 20px;
+    height: 12px;
   }
 }
 

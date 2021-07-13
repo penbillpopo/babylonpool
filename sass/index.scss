@@ -373,11 +373,14 @@
 			}
 		}
 	}
-	@media screen and (max-width: 360px) {
+	@media screen and (max-width: 380px) {
 		.container{
 			.titleBox{
 				top: 25%;
 				font-size: 12px;
+				.watch{
+					bottom: -70%;
+				}
 			}
 		}
 	}

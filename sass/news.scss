@@ -1,12 +1,12 @@
 @import "./load";
 #newsList.pageContainer{
     .contentField{
-        padding-bottom: 175px;
+        padding-bottom: 140px;
         .newsBox{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding: 70px 0;
+            margin-bottom: 35px;
             .news{
                 width: calc(50% - 20px);
                 background-color: $color_blue_03;
@@ -15,6 +15,11 @@
                 display: flex;
                 &:hover{
                     background-color: $color_blue_02;
+                    .textArea{
+                        .detail{
+                            transform: translateX(10px);
+                        }
+                    }
                 }
                 .img{
                     width: 55%;
@@ -27,14 +32,47 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    align-items: flex-end;
                     .text{
-                        font-weight: 400;
-                        @include textdot(3)
+                        width: 100%;
+                        font-weight: 500;
+                        @include textdot(3);
+                        margin-bottom: 20px;
                     }
                     .detail{
+                        width: 100%;
                         color: $color-white-01;
                         font-weight: 400;
+                        text-align: right;
+                        transition: transform 0.3s ease;
+                    }
+                }
+            }
+        }
+    	@media screen and (max-width: 1023px) {
+            padding-bottom: 70px;
+            .newsBox{
+                margin-bottom: 20px;
+                .news{
+                    width: 100%;
+                    margin-bottom: 40px;
+                    .img{
+                        width: 40%;
+                        padding-bottom: 32%;
+                    }
+                    .textArea{
+                        width: 60%;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    	@media screen and (max-width: 480px) {
+            padding-bottom: 40px;
+            .newsBox{
+                .news{
+                    margin-bottom: 30px;
+                    .textArea{
+                        padding: 15px;
                     }
                 }
             }
@@ -43,9 +81,6 @@
 }
 
 #news.pageContainer{
-    .headField{
-        margin-bottom: 70px;
-    }
     .contentField{
         padding-bottom: 80px;
         .newsHead{
@@ -63,6 +98,7 @@
             }
             .title{
                 font-weight: 500;
+                letter-spacing: 2px;
             }
         }
         .BackEditArea{
@@ -79,6 +115,23 @@
             display: inline-block;
             .text{
                 color: $color_white_01;
+            }
+            @extend %hover_scale_105;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .contentField{
+            padding-bottom: 60px;
+            .newsHead{
+                margin-bottom: 40px;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .contentField{
+            padding-bottom: 50px;
+            .newsHead{
+                margin-bottom: 35px;
             }
         }
     }
