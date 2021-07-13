@@ -1,3 +1,7 @@
+<?php
+	$headTitle = '聯絡我們';
+	$headSubTitle = 'Contact Us';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>	
@@ -16,7 +20,7 @@
 				</div>
 			</div>
 			<div class="contentField">
-				<form class="formBox">
+				<form id="contactForm" class="formBox" method="post" action="contact_b.php">
 					<div class="infoTxt">
 						<p class="top">
 							歡迎您的蒞臨及瀏覽本公司的網站，如果您對於本公司的產品需要更詳盡的說明時，
@@ -30,39 +34,39 @@
 					</div>
 					<div class="rowBox">
 						<div class="row">
-							<label for="company">個人公司或名稱</label>
+							<p class='rowName'>個人公司或名稱</p>
 							<input id="company" name="company" type="text">
 						</div>
 						<div class="row">
-							<label for="name">聯絡人</label>
+							<p class='rowName'>聯絡人</p>
 							<input id="name" name="name"  type="text">
 						</div>
 						<div class="row">
-							<label for="phone">聯絡電話</label>
+							<p class='rowName'>聯絡電話</p>
 							<input id="phone" name="phone"  type="text">
 						</div>
 						<div class="row">
-							<label for="email">E-mail</label>
+							<p class='rowName'>E-mail</p>
 							<input id="email" name="email"  type="email">
 						</div>
 						<div class="row">
-							<label for="address">地址</label>
+							<p class='rowName'>地址</p>
 							<input id="address" name="address"  type="text">
 						</div>
 						<div class="row">
-							<label for="interest">您最有興趣的產品</label>
+							<p class='rowName'>您最有興趣的產品</p>
 							<input id="interest" name="interest"  type="text">
 						</div>
 						<div class="row">
-							<label for="message">給我們的留言</label>
+							<p class='rowName'>給我們的留言</p>
 							<textarea id="message" name="message"></textarea>
 						</div>
 					</div>
 					<div class="buttonBox">
-						<button id="clearBtn" class="btn">
+						<button id="submitBtn" class="btn" type="submit">
 							<p class="text">送出</p>
 						</button>
-						<button id="submitBtn" class="btn pale">
+						<button id="clearBtn" class="btn pale" type="button">
 							<p class="text">清除</p>
 						</button>
 					</div>
@@ -72,5 +76,9 @@
 	</div>
 </body>
 <?php include('./common/footer.php') ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+<script src="./js/contact.js"></script>
 </html>
 

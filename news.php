@@ -1,3 +1,8 @@
+<?php
+	$headTitle = '最新消息';
+	$headSubTitle = 'Hot News';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>	

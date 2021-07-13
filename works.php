@@ -1,7 +1,12 @@
 <?php
-	$headTitle = '水樂園設施';
-	$headSubTitle = 'Water Park Facilities';
-	$id = $_GET['id'];
+	$headTitle = '完工案例';
+	$headSubTitle = 'Works';
+	if(isset($_GET['id'])) {
+		$id = $_GET['id'];
+	}
+	if(isset($_GET['subId'])) {
+		$subId = $_GET['subId'];
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,12 +21,18 @@
 		<div class="w1200">
 			<div class="headField">
 				<div class="titleBox">
-					<h2 class="title">水樂園設施</h2>
-					<h6 class="subTitle">Water park facilities</h6>
+					<h2 class="title">完工案例</h2>
+					<h6 class="subTitle">Works</h6>
 				</div>
 			</div>
 			<div class="contentField">
-				<?php include('./page/facility/facility-'.$id.'.php') ?>
+				<?php
+					if(isset($id)&&isset($subId)){
+						include('./page/works/works-'.$id.'-'.$subId.'.php');
+					}else if(isset($id)){
+						include('./page/works/works-'.$id.'.php');
+					}					
+				?>
 			</div>
 		</div>
 	</div>

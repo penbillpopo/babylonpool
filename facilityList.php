@@ -1,13 +1,17 @@
+<?php
+	$headTitle = '水樂園設施';
+	$headSubTitle = 'Water Park Facilities';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>	
-	<link rel="stylesheet" href="./css/facility.css">
+	<link rel="stylesheet" href="./css/sample.css">
 	<?php include('./common/load.php') ?>
 </head>
 	<?php include('./common/navbar.php') ?>
 <body>
 	<?php include('./component/headBanner.php') ?>
-	<div id="facilityList" class="pageContainer">
+	<div class="sampleList pageContainer">
 		<div class="w1200">
 			<div class="headField">
 				<div class="titleBox">
@@ -18,39 +22,39 @@
 			<div class="contentField">
                 <div class="facilityBox">
                     <a class="item" href="facility.php?id=1">
-                        <img class="bg" src="./img/facility/1.png" alt="">
+                        <div class="bg" style="background-image: url('./img/common/facility_01.png');"></div>
                         <h2 class="text">造浪設備</h2>
                     </a>
                     <a class="item" href="facility.php?id=2">
-                        <img class="bg" src="./img/facility/2.png" alt="">
+                        <div class="bg" style="background-image: url('./img/common/facility_02.png');"></div>
                         <h2 class="text">過濾設備</h2>
                     </a>
                     <a class="item" href="facility.php?id=3">
-                        <img class="bg" src="./img/facility/3.png" alt="">
+                        <div class="bg" style="background-image: url('./img/common/facility_03.png');"></div>
                         <h2 class="text">ＦＬＯＷＲＩＤＥＲ®</h2>
                     </a>
                     <a class="item" href="facility.php?id=4">
-                        <img class="bg" src="./img/facility/4.png" alt="">
+                        <div class="bg" style="background-image: url('./img/common/facility_04.png');"></div>
                         <h2 class="text">漂流河規劃</h2>
                     </a>
-                    <a class="item" href="facility.php">
-                        <img class="bg" src="./img/facility/5.png" alt="">
+                    <a class="item" href="#">
+                        <div class="bg" style="background-image: url('./img/common/facility_05.png');"></div>
                         <h2 class="text">兒童區規劃</h2>
                     </a>
-                    <a class="item" href="facility.php">
-                        <img class="bg" src="./img/facility/6.png" alt="">
+                    <a class="item" href="#">
+                        <div class="bg" style="background-image: url('./img/common/facility_06.png');"></div>
                         <h2 class="text">互動水屋</h2>
                     </a>
-                    <a class="item" href="facility.php">
-                        <img class="bg" src="./img/facility/7.png" alt="">
+                    <a class="item" href="#">
+                        <div class="bg" style="background-image: url('./img/common/facility_07.png');"></div>
                         <h2 class="text">滑水道設備</h2>
                     </a>
-                    <a class="item" href="facility.php">
-                        <img class="bg" src="./img/facility/8.png" alt="">
+                    <a class="item" href="#">
+                        <div class="bg" style="background-image: url('./img/common/facility_08.png');"></div>
                         <h2 class="text">過山車設備</h2>
                     </a>
-                    <a class="item" href="facility.php">
-                        <img class="bg" src="./img/facility/9.png" alt="">
+                    <a class="item" href="#">
+                        <div class="bg" style="background-image: url('./img/common/facility_09.png');"></div>
                         <h2 class="text">升降式地板</h2>
                     </a>
                 </div>

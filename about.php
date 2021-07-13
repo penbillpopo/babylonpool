@@ -1,3 +1,7 @@
+<?php
+	$headTitle = '關於巴比倫';
+	$headSubTitle = 'About Us';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>	

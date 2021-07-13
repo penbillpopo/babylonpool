@@ -16,7 +16,7 @@
     </div>
     <div class="block">
         <div class="titleBox">
-            <h6 class="title">TWIN TIDES®</h6>
+            <h6 class="text bold">TWIN TIDES®</h6>
         </div>
         <p class="text">
             TWIN TIDES®Dual Entry Wave Pool是一款獨一無二的雙造浪系統設計，
@@ -32,7 +32,7 @@
     </div>
     <div class="block">
         <div class="titleBox">
-            <h6 class="title">WAVETEK®</h6>
+            <h6 class="text bold">WAVETEK®</h6>
         </div>
         <div class="flexBox">
             <p class="text col60">
@@ -47,7 +47,7 @@
     </div>
     <div class="block">
         <div class="titleBox">
-            <h6 class="title">WAVETEK®</h6>
+            <h6 class="text bold">WAVETEK®</h6>
         </div>
         <p class="text">
             我們一共有8種浪型，其中Diamond Wave(鑽石浪)為ADG的標準浪型，

@@ -1,3 +1,8 @@
+<?php
+	$headTitle = '規劃設計';
+	$headSubTitle = 'Planning';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>	

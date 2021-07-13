@@ -239,6 +239,9 @@ $font-changeValue:$font-ori-html/$font-change-html;
 	@media screen and (max-width: 1023px) {
 		width: 90%;
 	}
+	@media screen and (max-width: 480px) {
+		width: 95%;
+	}
 }
 .w800{
 	width: 70%;
@@ -476,11 +479,146 @@ textarea{
 		}
 	}
 }
+
+@mixin colSetting($gap) {
+	.col100 {
+		max-width: 100%;
+		width: calc(100% - #{$gap});
+		margin-right: $gap;
+	}
+	.col90 {
+		max-width: 90%;
+		width: calc(90% - #{$gap});
+		margin-right: $gap;
+	}
+	.col85 {
+		max-width: 85%;
+		width: calc(85% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col80 {
+		max-width: 80%;
+		width: calc(80% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col75 {
+		max-width: 75%;
+		width: calc(75% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col70 {
+		max-width: 70%;
+		width: calc(70% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col66 {
+		max-width: 66.6666%;
+		width: calc(66.6666% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col65 {
+		max-width: 65%;
+		width: calc(65% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col60 {
+		max-width: 60%;
+		width: calc(60% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col55 {
+		max-width: 55%;
+		width: calc(55% - #{$gap});	
+		margin-right: $gap;
+	}				
+	.col50 {
+		max-width: 50%;
+		width: calc(50% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col45 {
+		max-width: 45%;
+		width: calc(45% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col40 {
+		max-width: 40%;
+		width: calc(40% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col35 {
+		max-width: 35%;
+		width: calc(35% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col30 {
+		max-width: 30%;
+		width: calc(30% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col33 {
+		max-width: 33.3333%;
+		width: calc(33.3333% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col25 {
+		max-width: 25%;
+		width: calc(25% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col20 {
+		max-width: 20%;
+		width: calc(20% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col16 {
+		max-width: 16.6666667%;
+		width: calc(16.6666667% - #{$gap});
+		margin-right: $gap;
+	}				
+	.col15 {
+		max-width: 15%;
+		width: calc(15% - #{$gap});
+		margin-right: $gap;
+	}
+}
+@mixin colMobileFull(){
+	.col90,
+	.col85,
+	.col80,
+	.col75,
+	.col70,
+	.col66,
+	.col65,
+	.col60,
+	.col55,
+	.col50,
+	.col45,
+	.col40,
+	.col35,
+	.col30,
+	.col33,
+	.col25,
+	.col20,
+	.col16,
+	.col15 {
+		width: 100%;
+		max-width: 100%;
+		margin-right: 0px;
+	}
+	.text,img{
+		width: 100%;
+		max-width: 100%;
+		margin-right: 0px;
+	}
+}
+
 .pageContainer{
 	position: relative;
 	width: 100%;
 	background-color: #cbd8e0;
 	padding: 20px 60px;
+	z-index: 0;
 	&::before{
 		content: '';
 		width: 100%;
@@ -493,6 +631,21 @@ textarea{
 		background-position: center;
 		background-image: url('../img/common/banner-wave.png');
 		transform: translateY(-100%);
+		z-index: 0;
+	}
+	&::after{
+		content: '';
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 40%;
+		padding-bottom: 36%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url('../img/common/page-wave.png');
+		transform: translateY(-50%);
+		z-index: -1;
 	}
 	.headField{
 		display: flex;
@@ -500,6 +653,7 @@ textarea{
 		margin-bottom: 70px;
 		.titleBox{
 			display: flex;
+			flex-wrap: wrap;
 			align-items: flex-end;
 			.title{
 				margin-right: 15px;
@@ -532,18 +686,25 @@ textarea{
 			.titleBox{
 				display: flex;
 				flex-wrap: wrap;
+				margin-bottom: 15px;
+				margin-right: 20px;
 				.text{
 					line-height: 40px;
-					margin-bottom: 15px;
-					margin-right: 20px;
+				}
+				&.border{
+					border-bottom: 2px solid $color_blue_02;
 				}
 			}
 			.text{
+				margin-bottom: 10px;
 				&,*{
 					line-height: 40px;
 				}
 				&.bold{
 					font-weight: 400;
+				}
+				&.bolder{
+					font-weight: 500;
 				}
 				&.blue{
 					color: $color_blue_02;
@@ -553,8 +714,39 @@ textarea{
 				display: block;
 				height: auto;
 				max-width: 100%;
+				margin-bottom: 10px;
 				&.fit-content{
 					height: fit-content;
+				}
+			}
+			.tabBox{
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+				.tab{
+					padding: 0px 20px;
+					padding-top: 7px;
+					padding-bottom: 2px;
+					background-color: $color_blue_02;
+					margin-right: 20px;
+					margin-bottom: 10px;
+					border-radius: 10px;
+					.text{
+						color: $color_white_01;
+						font-weight: 400;
+						line-height: 1;
+					}
+					&.active{
+						background-color: $color_blue_05;
+						.text{
+							color: $color_black_01;
+						}
+					}
+				}
+				&.border{
+					border-bottom: 2px solid $color_blue_02;
 				}
 			}
 			.flexBox{
@@ -563,189 +755,41 @@ textarea{
 				flex-wrap: wrap;
 				&.nowrap{
 					flex-wrap: nowrap;
+					@media screen and (max-width: 1023px) {
+						@include colSetting(10px);
+						&.gap-20{
+							@include colSetting(20px);
+						}
+					}
+				}
+				&.gap-20{
+					@include colSetting(20px);
+					@media screen and (max-width: 1023px) {
+						@include colMobileFull()
+					}
+				}
+				&.wrap-reverse{
+					flex-wrap: wrap-reverse;
 				}
 				&.center{
 					justify-content: center;
 				}
-				&.end{
-					justify-content: end;
+				&.right{
+					justify-content: flex-end;
 				}
-				@media screen and (max-width: 1023px) {
-					&:not(.nowrap){
-						.text,img{
-							width: 100%;
-							margin-right: 0px;
-							margin-bottom: 20px;
-							&.col90,
-							&.col85,
-							&.col80,
-							&.col75,
-							&.col70,
-							&.col66,
-							&.col65,
-							&.col60,
-							&.col55,
-							&.col50,
-							&.col45,
-							&.col40,
-							&.col35,
-							&.col30,
-							&.col33,
-							&.col25,
-							&.col20,
-							&.col16,
-							&.col15 {
-								width: 100%;
-							}
-						}
-						img{
-							max-width: 100%;
-							&.col90,
-							&.col85,
-							&.col80,
-							&.col75,
-							&.col70,
-							&.col66,
-							&.col65,
-							&.col60,
-							&.col55,
-							&.col50,
-							&.col45,
-							&.col40,
-							&.col35,
-							&.col30,
-							&.col33,
-							&.col25,
-							&.col20,
-							&.col16,
-							&.col15 {
-								max-width: 100%;
-							}
-						}
-					}
+				&.middle{
+					align-items: center;
 				}
+				&.bottom{
+					align-items:flex-end;
+				}
+			}
+			@include colSetting(10px);
+			
+			@media screen and (max-width: 1023px) {
+				@include colMobileFull()
+			}
 
-			}
-			.col100 {
-				max-width: 100%;
-				width: calc(100% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}
-			.col90 {
-				max-width: 90%;
-				width: calc(90% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}
-			.col85 {
-				max-width: 85%;
-				width: calc(85% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col80 {
-				max-width: 80%;
-				width: calc(80% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col75 {
-				max-width: 75%;
-				width: calc(75% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col70 {
-				max-width: 70%;
-				width: calc(70% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col66 {
-				max-width: 66.6666%;
-				width: calc(66.6666% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col65 {
-				max-width: 65%;
-				width: calc(65% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col60 {
-				max-width: 60%;
-				width: calc(60% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col55 {
-				max-width: 55%;
-				width: calc(55% - 10px);	
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col50 {
-				max-width: 50%;
-				width: calc(50% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col45 {
-				max-width: 45%;
-				width: calc(45% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col40 {
-				max-width: 40%;
-				width: calc(40% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col35 {
-				max-width: 35%;
-				width: calc(35% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col30 {
-				max-width: 30%;
-				width: calc(30% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col33 {
-				max-width: 33.3333%;
-				width: calc(33.3333% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col25 {
-				max-width: 25%;
-				width: calc(25% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col20 {
-				max-width: 20%;
-				width: calc(20% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col16 {
-				max-width: 16.6666667%;
-				width: calc(16.6666667% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}				
-			.col15 {
-				max-width: 15%;
-				width: calc(15% - 10px);
-				margin-right: 10px;
-				margin-bottom: 10px;
-			}
 		}
 	}
 	@media screen and (max-width: 768px) {
@@ -756,6 +800,11 @@ textarea{
 				transform: translateX(30px);
 			}
 		}
+		.contentField{
+			.block{
+				margin-bottom: 40px;
+			}
+		}
 	}
 	@media screen and (max-width: 480px) {
 		padding: 20px;
@@ -763,6 +812,21 @@ textarea{
 			margin-bottom: 30px;
 			.titleBox{
 				transform: translateX(30px);
+			}
+		}
+		.contentField{
+			.block{
+				margin-bottom: 30px;
+				.tabBox{
+					.tab{
+						padding: 0px 10px;
+						padding-top: 7px;
+						padding-bottom: 2px;
+						.text{
+							font-size: 14px;
+						}
+					}
+				}
 			}
 		}
 	}

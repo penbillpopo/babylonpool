@@ -13,20 +13,33 @@
 			<a href="plan.php" class="nav">
 				<p class='name'>規劃設計</p>
 			</a>
-			<a href="facilityList.php" class="nav">
-				<p class='name'>水樂園設施</p>
-			</a>
+			<div class="nav hasSub">
+				<a href="facilityList.php">
+					<p class='name'>水樂園設施</p>
+				</a>
+				<div class="subNavItem">
+					<a href="facility.php?id=1" class="subNav">
+						<p class='name'>造浪設備</p>
+					</a>
+					<a href="facility.php?id=2" class="subNav">
+						<p class='name'>過濾設備</p>
+					</a>
+					<a href="facility.php?id=3" class="subNav">
+						<p class='name'>ＦＬＯＷＲＩＤＥＲ®</p>
+					</a>
+					<a href="facility.php?id=4" class="subNav">
+						<p class='name'>漂流河規劃</p>
+					</a>
+				</div>
+			</div>
 			<div class="nav hasSub">
 				<p class='name'>完工案例</p>
 				<div class="subNavItem">
-					<a href="about.php" class="subNav">
-						<p class='name'>案例1</p>
+					<a href="works.php?id=1" class="subNav">
+						<p class='name'>六福村水樂園</p>
 					</a>
-					<a href="about.php" class="subNav">
-						<p class='name'>案例2</p>
-					</a>
-					<a href="about.php" class="subNav">
-						<p class='name'>案例3</p>
+					<a href="works.php?id=2&subId=1" class="subNav">
+						<p class='name'>少年PI的奇幻漂流造浪池</p>
 					</a>
 				</div>
 			</div>

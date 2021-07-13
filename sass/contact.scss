@@ -1,8 +1,6 @@
 @import "./load";
 
 #contact.pageContainer{
-    .headField{
-    }
     .contentField{
         border-top: 5px solid $color_blue_02;
         border-bottom: 5px solid $color_blue_02;
@@ -45,8 +43,15 @@
                 .row{
                     display: flex;
                     justify-content: space-between;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
                     margin-bottom: 20px;
-                    label{
+                    position: relative;
+                    label.error{
+                        margin-left: calc(30% + 20px);
+                        color: red;
+                    }
+                    .rowName{
                         width: 30%;
                         height: 50px;
                         display: inline-block;
