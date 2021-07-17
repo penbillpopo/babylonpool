@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>	
-	<link rel="stylesheet" href="./css/plan.css">
+	<link rel="stylesheet" href="./css/plan.css?version=&lt;?php echo time(); ?&gt;">
 	<?php include('./common/load.php') ?>
 </head>
 	<?php include('./common/navbar.php') ?>
@@ -123,6 +123,6 @@
 	</div>
 </body>
 <?php include('./common/footer.php') ?>
-<script src="./js/plan.js"></script>
+<script src="./js/plan.js?version=&lt;?php echo time(); ?&gt;"></script>
 </html>
 

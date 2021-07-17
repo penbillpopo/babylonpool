@@ -11,8 +11,8 @@
 <script src="./lib/jquery-3.1.0.min.js"></script>
 <script src="./lib/swiper.min.js" defer></script>
 <script src="./lib/scrollreveal.min.js" defer></script>
-<script src="./js/navbar.js" defer></script>
-<script src="./js/footer.js" defer></script>
-<script src="./js/main.js" defer></script>
+<script src="./js/navbar.js?version=&lt;?php echo time(); ?&gt;" defer></script>
+<script src="./js/footer.js?version=&lt;?php echo time(); ?&gt;" defer></script>
+<script src="./js/main.js?version=&lt;?php echo time(); ?&gt;" defer></script>
 
 <title>巴比倫</title>

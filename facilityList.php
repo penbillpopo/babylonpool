@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>	
-	<link rel="stylesheet" href="./css/sample.css">
+	<link rel="stylesheet" href="./css/sample.css?version=&lt;?php echo time(); ?&gt;">
 	<?php include('./common/load.php') ?>
 </head>
 	<?php include('./common/navbar.php') ?>
