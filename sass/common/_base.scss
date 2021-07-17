@@ -127,7 +127,7 @@ $font-changeValue:$font-ori-html/$font-change-html;
 /*hover*/
 
 %hover_scale_105 {
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 1023px) {
 		transition: transform 0.3s ease;
 		&:hover{
 			transform: scale(1.05);	
@@ -135,7 +135,7 @@ $font-changeValue:$font-ori-html/$font-change-html;
 	}
 }
 %hover_scale_11 {
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 1023px) {
 		transition: transform 0.3s ease;
 		&:hover{
 			transform: scale(1.1);	
@@ -299,6 +299,7 @@ $container-minHeight:80px;
 /* ----------Initial Setting---------- */
 html{
 	font-size: $font-ori-html+px;
+	overflow-x: hidden;
 }
 * {
 	margin: 0;
@@ -312,7 +313,6 @@ body {
 	font-family: sans-serif;
 	color: $color_black_01;
 	background-color: $color_white_01;
-
 	overflow-x: hidden;
 }
 
@@ -605,6 +605,7 @@ textarea{
 	width: 100%;
 	background-color: #cbd8e0;
 	padding: 20px 60px;
+	padding-top: 0px;
 	z-index: 0;
 	&::before{
 		content: '';
@@ -618,7 +619,7 @@ textarea{
 		background-position: center;
 		background-image: url('../img/common/banner-wave.png');
 		transform: translateY(-100%);
-		z-index: 0;
+		z-index: -2;
 	}
 	&::after{
 		content: '';
@@ -681,10 +682,7 @@ textarea{
 		.block{
 			margin-bottom: 50px;
 			.titleBox{
-				display: flex;
-				flex-wrap: wrap;
 				margin-bottom: 15px;
-				margin-right: 20px;
 				.text{
 					line-height: 40px;
 				}
@@ -791,6 +789,7 @@ textarea{
 	}
 	@media screen and (max-width: 768px) {
 		padding: 20px 40px;
+		padding-top: 0px;
 		.headField{
 			margin-bottom: 50px;
 			.titleBox{
@@ -805,6 +804,7 @@ textarea{
 	}
 	@media screen and (max-width: 480px) {
 		padding: 20px;
+		padding-top: 0px;
 		.headField{
 			margin-bottom: 30px;
 			.titleBox{

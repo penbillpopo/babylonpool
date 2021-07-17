@@ -31,7 +31,7 @@
                     </a>
                     <a class="item" href="facility.php?id=3">
                         <div class="bg" style="background-image: url('./img/common/facility_03.png');"></div>
-                        <h2 class="text">ＦＬＯＷＲＩＤＥＲ®</h2>
+                        <h2 class="text">FLOWRIDER®</h2>
                     </a>
                     <a class="item" href="facility.php?id=4">
                         <div class="bg" style="background-image: url('./img/common/facility_04.png');"></div>

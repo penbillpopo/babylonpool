@@ -16,7 +16,7 @@
 	.swiperbox{
 		.swiper-slide{
 			width: 100%;
-			height: 100vh;
+			height: 75vh;
 			background-size: 100%;
 		}
 		.navBox{
@@ -44,17 +44,21 @@
 			.swiper-button-prev {
 				background-image: url('../img/icon/arrow-left.png');
 				margin-left: 30px;
-				&:hover{
-					transform: scale(1.2);
-					opacity: 0.9;
+				@media screen and (min-width: 1023px) {
+					&:hover{
+						transform: scale(1.2);
+						opacity: 0.9;
+					}
 				}
 			}
 			.swiper-button-next {
 				background-image: url('../img/icon/arrow-right.png');
 				margin-right: 30px;
-				&:hover{
-					transform: scale(1.2);
-					opacity: 0.9;
+				@media screen and (min-width: 1023px) {
+					&:hover{
+						transform: scale(1.2);
+						opacity: 0.9;
+					}
 				}
 			}
 			@media screen and (max-width: 768px) {
@@ -78,7 +82,7 @@
 		.swiperbox{
 			.swiper-slide{
 				height: auto;
-				padding-bottom: 70%;
+				padding-bottom: 50%;
 			}
 			.navBox{
 				display: none;
@@ -131,10 +135,12 @@
 			margin: 0 20px;
 			border-radius: 10px;
 			.swiper-slide{
-				&:hover{
-					.imgFrame{
-						.img{
-							transform: scale(1.05);
+				@media screen and (min-width: 1023px) {
+					&:hover{
+						.imgFrame{
+							.img{
+								transform: scale(1.05);
+							}
 						}
 					}
 				}
@@ -176,15 +182,19 @@
 				.swiper-button-prev {
 					margin-left: 20px;
 					background-image: url('../img/icon/arrow-left-s.png');
-					&:hover{
-						opacity: 0.9;
+					@media screen and (min-width: 1023px) {
+						&:hover{
+							opacity: 0.9;
+						}
 					}
 				}
 				.swiper-button-next {
 					margin-right: 20px;
 					background-image: url('../img/icon/arrow-right-s.png');
-					&:hover{
-						opacity: 0.9;
+					@media screen and (min-width: 1023px) {
+						&:hover{
+							opacity: 0.9;
+						}
 					}
 				}
 				@media screen and (max-width: 1023px) {
@@ -282,8 +292,8 @@
 					cursor: pointer;
 					@extend %background_100_100;
 					background-image: url('../img/index/playBtn.png');
-					@media screen and (min-width: 768px) {
-						transition: transform 0.3s ease;
+					transition: transform 0.3s ease;
+					@media screen and (min-width: 1023px) {
 						&:hover{
 							transform:translate(-50%,-50%) scale(1.1);	
 						}

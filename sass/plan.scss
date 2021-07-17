@@ -1,6 +1,8 @@
 @import "./load";
 
 #plan.pageContainer{
+    padding: 0;
+    padding-bottom: 20px;
     .contentField{
         padding-bottom: 60px;
         .tabBox{
@@ -28,12 +30,14 @@
                 border-radius: 2px;
                 position: relative;
                 cursor: pointer;
-                &:hover{
-                    .text{
-                        transform: scale(1.05);
-                    }
-                    &::before{
-                        transform: scale(1.05) translate(-50%,-50%);
+                @media screen and (min-width: 1023px) {
+                    &:hover{
+                        .text{
+                            transform: scale(1.05);
+                        }
+                        &::before{
+                            transform: scale(1.05) translate(-50%,-50%);
+                        }
                     }
                 }
                 &::before{
@@ -236,56 +240,35 @@
                 flex-wrap: wrap;
                 .longImg{
                     width: 25%;
+                    padding-bottom: 40%;
+                    @extend %background_cover;
                 }
                 .squareBox{
                     width: 50%;
                     display: flex;
                     flex-wrap: wrap;
-                    img{
+                    .img{
                         width: 50%;
+                        @extend %background_cover;
+                        padding-bottom: 40%;
+                    }
+                    .mobile{
+                        display: none;
                     }
                 }
             }
-            #imgAreaMobile{
-                display: none;
-                width: 100%;
-                .container{
-                    padding: 0;
-                    .swiperbox{
-                        position: relative;
-                        .swiper-slide{
-                            width: 100%;
-                            padding-bottom: 25%;
-                            @extend %background_cover;
-                        }
-                        .paginationBox{
-                            display: block;
-                            position: absolute;
-                            left: 50%;
-                            bottom: 40px;
-                            transform: translate(-50%, -50%);
-                            z-index: 1;
-                            width: 100%;
-                            .swiper-pagination .swiper-pagination-bullet-active {
-                                width: 20px!important;
-                            }
-                        }
-                        @media screen and (max-width: 580px) {
-                            .swiper-slide{
-                                padding-bottom: 40%;
-                            }
-                        }
-                        @media screen and (max-width: 480px) {
-                            .paginationBox{
-                                bottom: 30px;
-                            }
-                        }
-
-                    }
-                }
-            }
-            
             @media screen and (max-width: 1023px) {
+                .imgArea{
+                    .longImg{
+                        display: none;
+                    }
+                    .squareBox{
+                        width: 100%;
+                        .mobile{
+                            display: block;
+                        }
+                    }
+                }
                 .textArea{
                     padding: 50px 0;
                     .textBox{
@@ -303,12 +286,6 @@
                             margin-bottom: 60px;
                         }
                     }
-                }
-                .imgArea{
-                    display: none;
-                }
-                #imgAreaMobile{
-                    display: block;
                 }
             }
             @media screen and (max-width: 480px) {
@@ -349,30 +326,16 @@
                 }
             }
             .imgArea{
-                img{
+                .img{
                     width: 100%;
+                    @extend %background_cover;
+                    padding-bottom: 55%;
+                    min-height: 500px;
                 }
             }
             @media screen and (max-width: 1023px) {
                 .textArea{
-                    padding: 30px 20px;
-                    position: initial;
-                    top: initial;
-                    left:initial;
-                    transform: translateY(0);
-                    .textBox{
-                        .title{
-                            margin-bottom: 50px;
-                        }
-                        .text{
-                            br{
-                                display: none;
-                            }
-                        }
-                    }
-                }
-                .imgArea{
-                    display: none;
+                    top: 60%;
                 }
             }
         }

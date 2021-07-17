@@ -16,6 +16,10 @@
             display: flex;
             justify-content: flex-end;
             color: $color_white_01;
+            text-shadow: 5px 5px 10px #000000;
+            font-weight: 500;
+        }
+        .bannerSubTitle{
             font-weight: 400;
         }
     }

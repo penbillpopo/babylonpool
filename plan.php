@@ -92,33 +92,16 @@
                     </div>
                 </div>
                 <div class="imgArea w1920">
-                    <img class="longImg" src="./img/plan/install-1.png" alt="">
+                    <div class="longImg" style="background-image:url('./img/plan/install-1.png');"></div>
                     <div class="squareBox">
-                        <img src="./img/plan/install-2.png" alt="">
-                        <img src="./img/plan/install-3.png" alt="">
-                        <img src="./img/plan/install-4.png" alt="">
-                        <img src="./img/plan/install-5.png" alt="">
+                        <div class="img mobile" style="background-image:url('./img/plan/install-1.png');"></div>
+                        <div class="img" style="background-image:url('./img/plan/install-2.png');"></div>
+                        <div class="img" style="background-image:url('./img/plan/install-3.png');"></div>
+                        <div class="img" style="background-image:url('./img/plan/install-4.png');"></div>
+                        <div class="img" style="background-image:url('./img/plan/install-5.png');"></div>
+                        <div class="img mobile" style="background-image:url('./img/plan/install-6.png');"></div>
                     </div>
-                    <img class="longImg" src="./img/plan/install-6.png" alt="">
-                </div>
-                <div id="imgAreaMobile">
-                    <div class="container">
-                        <div class="swiperbox">		
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide" style="background-image: url('./img/plan/install-1.png');"></div>		
-                                    <div class="swiper-slide" style="background-image: url('./img/plan/install-2.png');"></div>		
-                                    <div class="swiper-slide" style="background-image: url('./img/plan/install-3.png');"></div>		
-                                    <div class="swiper-slide" style="background-image: url('./img/plan/install-4.png');"></div>		
-                                    <div class="swiper-slide" style="background-image: url('./img/plan/install-5.png');"></div>		
-                                    <div class="swiper-slide" style="background-image: url('./img/plan/install-6.png');"></div>		
-                                </div>
-                                <div class="paginationBox">
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="longImg" style="background-image:url('./img/plan/install-6.png');"></div>
                 </div>
             </div>
             <div id="soldService" class="serviceBox">
@@ -133,7 +116,7 @@
                     </div>
                 </div>
                 <div class="imgArea w1920">
-                    <img src="./img/plan/service.png" alt="">
+                    <div class="img" style="background-image:url('./img/plan/service.png');"></div>
                 </div>
             </div>
         </div>

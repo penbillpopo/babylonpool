@@ -14,9 +14,12 @@
 				<p class='name'>規劃設計</p>
 			</a>
 			<div class="nav hasSub">
-				<a href="facilityList.php">
+				<a class="pc" href="facilityList.php">
 					<p class='name'>水樂園設施</p>
 				</a>
+				<div class="mobile">
+					<p class='name'>水樂園設施</p>
+				</div>
 				<div class="subNavItem">
 					<a href="facility.php?id=1" class="subNav">
 						<p class='name'>造浪設備</p>
