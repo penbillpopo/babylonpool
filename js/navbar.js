@@ -21,8 +21,10 @@ $("#nav_blackfield").click(function () {
 	$('#nav_blackfield').css("opacity", "0");
 	$('#nav_blackfield').css("display", "none");
 });
-$("#navbar .nav.hasSub").on('click', function () {
+$("#navbar .nav.hasSub,#navbar .secondNav.hasSub").on('click', function (e) {
+	e.stopPropagation();
 	if (window.screen.width < 1023) {
 		$(this).hasClass('active')?$(this).removeClass('active'):$(this).addClass('active');
+
 	}
 })

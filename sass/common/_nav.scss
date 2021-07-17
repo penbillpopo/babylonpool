@@ -62,26 +62,45 @@ $color-darkgray:$color_grey_01;
 					}
 					@media screen and (min-width: 1023px) {
 						&:hover{
-							.subNavItem{
+							.secondNavItem{
 								display: block;
 							}
 						}
 					}
-					.subNavItem{
+					.secondNavItem{
 						display: none;
 						position: absolute;
 						bottom: 0px;
 						left: 50%;
 						transform: translate(-50%,100%);
 						background-color: $color_white_01;
-						box-shadow: 5px 5px 5px #00000090;
-						.subNav{
+						box-shadow: 2px 2px 3px #00000090;
+						.secondNav{
 							display: block;
 							padding: 20px 40px;
 							transition: background-color 0.3s ease;
+							position: relative;
 							@media screen and (min-width: 1023px) {
 								&:hover{
 									background-color: #5099bf20;
+								}
+							}
+							.thirdNavItem{
+								position: absolute;
+								top: 0px;
+								left: 0;
+								transform: translate(-100%,0);
+								background-color: $color_white_01;
+								box-shadow: 2px 2px 3px #00000090;
+								.thirdNav{
+									display: block;
+									padding: 20px 40px;
+									transition: background-color 0.3s ease;
+									@media screen and (min-width: 1023px) {
+										&:hover{
+											background-color: #5099bf20;
+										}
+									}
 								}
 							}
 						}
@@ -228,16 +247,33 @@ $color-darkgray:$color_grey_01;
 						font-size: 16px;
 					}
 					&.hasSub{
+						&::before{
+							content: '';
+							width: 10px;
+							height: 15px;
+							background-size: 100% 100%;
+							background-repeat: no-repeat;
+							background-position: center;
+							background-image: url('../img/icon/arrowPage-left.png');
+							position: absolute;
+							top: 35px;
+							right: 40px;
+							opacity: 0.6;
+							transition: transform 0.3s ease;
+						}
 						&.active{
+							&::before{
+								transform: rotate(-90deg);
+							}
 							>.name{
 								color: $color-blue-02;
 							}
-							.subNavItem{
-								max-height: 500px;
+							.secondNavItem{
+								max-height: 1000px;
 								background-color: #5099bf20;
 							}
 						}
-						.subNavItem{
+						.secondNavItem{
 							overflow: hidden;
 							width: 100%;
 							max-height: 0px;
@@ -249,7 +285,7 @@ $color-darkgray:$color_grey_01;
 							background-color: $color_white_01;
 							box-shadow: none;
 							transition: max-height 1s ease;
-							.subNav{
+							.secondNav{
 								display: block;
 								transition: background-color 0.3s ease;
 								.name{
@@ -258,6 +294,46 @@ $color-darkgray:$color_grey_01;
 								@media screen and (min-width: 1023px) {
 									&:hover{
 										background-color: #5099bf20;
+									}
+								}
+								&.hasSub{
+									&::before{
+										content: '';
+										width: 10px;
+										height: 15px;
+										background-size: 100% 100%;
+										background-repeat: no-repeat;
+										background-position: center;
+										background-image: url('../img/icon/arrowPage-left.png');
+										position: absolute;
+										top: 45px;
+										right: 40px;
+										opacity: 0.6;
+										transition: transform 0.3s ease;
+									}
+									&.active{
+										&::before{
+											transform: rotate(-90deg);
+										}
+										>.name{
+											color: $color-blue-02;
+										}
+										.thirdNavItem{
+											max-height: 1000px;
+										}
+									}
+									.thirdNavItem{
+										display: block;
+										position: initial;
+										bottom: initial;
+										left: initial;
+										transform: translate(0,0);
+										box-shadow: none;
+										max-height: 0px;
+										transition: max-height 1s ease;
+										.thirdNav{
+											display: block;
+										}
 									}
 								}
 							}

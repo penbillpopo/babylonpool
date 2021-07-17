@@ -20,30 +20,44 @@
 				<div class="mobile">
 					<p class='name'>水樂園設施</p>
 				</div>
-				<div class="subNavItem">
-					<a href="facility.php?id=1" class="subNav">
+				<div class="secondNavItem">
+					<a href="facility.php?id=1" class="secondNav">
 						<p class='name'>造浪設備</p>
 					</a>
-					<a href="facility.php?id=2" class="subNav">
+					<a href="facility.php?id=2" class="secondNav">
 						<p class='name'>過濾設備</p>
 					</a>
-					<a href="facility.php?id=3" class="subNav">
+					<a href="facility.php?id=3" class="secondNav">
 						<p class='name'>ＦＬＯＷＲＩＤＥＲ®</p>
 					</a>
-					<a href="facility.php?id=4" class="subNav">
+					<a href="facility.php?id=4" class="secondNav">
 						<p class='name'>漂流河規劃</p>
 					</a>
 				</div>
 			</div>
 			<div class="nav hasSub">
 				<p class='name'>完工案例</p>
-				<div class="subNavItem">
-					<a href="works.php?id=1" class="subNav">
+				<div class="secondNavItem">
+					<a href="works.php?id=1" class="secondNav">
 						<p class='name'>六福村水樂園</p>
 					</a>
-					<a href="works.php?id=2&subId=1" class="subNav">
+					<div class="secondNav hasSub">
 						<p class='name'>少年PI的奇幻漂流造浪池</p>
-					</a>
+						<div class="thirdNavItem">
+							<a href="works.php?id=2&subId=1" class="thirdNav">
+								<p class='name'>造浪設備</p>
+							</a>
+							<a href="works.php?id=2&subId=2" class="thirdNav">
+								<p class='name'>過濾設備</p>
+							</a>
+							<a href="works.php?id=2&subId=3" class="thirdNav">
+								<p class='name'>FLOWRIDER®</p>
+							</a>
+							<a href="works.php?id=2&subId=4" class="thirdNav">
+								<p class='name'>漂流河規劃</p>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<a href="contact.php" class="nav">

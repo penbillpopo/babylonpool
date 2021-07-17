@@ -1705,12 +1705,12 @@ textarea {
 }
 
 @media screen and (min-width: 1023px) {
-  #navbar .container .navitem .nav.hasSub:hover .subNavItem {
+  #navbar .container .navitem .nav.hasSub:hover .secondNavItem {
     display: block;
   }
 }
 
-#navbar .container .navitem .nav.hasSub .subNavItem {
+#navbar .container .navitem .nav.hasSub .secondNavItem {
   display: none;
   position: absolute;
   bottom: 0px;
@@ -1719,11 +1719,38 @@ textarea {
       -ms-transform: translate(-50%, 100%);
           transform: translate(-50%, 100%);
   background-color: #FFFFFF;
-  -webkit-box-shadow: 5px 5px 5px #00000090;
-          box-shadow: 5px 5px 5px #00000090;
+  -webkit-box-shadow: 2px 2px 3px #00000090;
+          box-shadow: 2px 2px 3px #00000090;
 }
 
-#navbar .container .navitem .nav.hasSub .subNavItem .subNav {
+#navbar .container .navitem .nav.hasSub .secondNavItem .secondNav {
+  display: block;
+  padding: 20px 40px;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+@media screen and (min-width: 1023px) {
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav:hover {
+    background-color: #5099bf20;
+  }
+}
+
+#navbar .container .navitem .nav.hasSub .secondNavItem .secondNav .thirdNavItem {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 2px 2px 3px #00000090;
+          box-shadow: 2px 2px 3px #00000090;
+}
+
+#navbar .container .navitem .nav.hasSub .secondNavItem .secondNav .thirdNavItem .thirdNav {
   display: block;
   padding: 20px 40px;
   -webkit-transition: background-color 0.3s ease;
@@ -1732,7 +1759,7 @@ textarea {
 }
 
 @media screen and (min-width: 1023px) {
-  #navbar .container .navitem .nav.hasSub .subNavItem .subNav:hover {
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav .thirdNavItem .thirdNav:hover {
     background-color: #5099bf20;
   }
 }
@@ -1904,14 +1931,37 @@ textarea {
   #navbar .container .navitem .nav small {
     font-size: 16px;
   }
+  #navbar .container .navitem .nav.hasSub::before {
+    content: '';
+    width: 10px;
+    height: 15px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/icon/arrowPage-left.png");
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    opacity: 0.6;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+  #navbar .container .navitem .nav.hasSub.active::before {
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
   #navbar .container .navitem .nav.hasSub.active > .name {
     color: #5099bf;
   }
-  #navbar .container .navitem .nav.hasSub.active .subNavItem {
-    max-height: 500px;
+  #navbar .container .navitem .nav.hasSub.active .secondNavItem {
+    max-height: 1000px;
     background-color: #5099bf20;
   }
-  #navbar .container .navitem .nav.hasSub .subNavItem {
+  #navbar .container .navitem .nav.hasSub .secondNavItem {
     overflow: hidden;
     width: 100%;
     max-height: 0px;
@@ -1929,24 +1979,71 @@ textarea {
     -o-transition: max-height 1s ease;
     transition: max-height 1s ease;
   }
-  #navbar .container .navitem .nav.hasSub .subNavItem .subNav {
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav {
     display: block;
     -webkit-transition: background-color 0.3s ease;
     -o-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
   }
-  #navbar .container .navitem .nav.hasSub .subNavItem .subNav .name {
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav .name {
     padding: 20px 0;
   }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 1023px) {
-  #navbar .container .navitem .nav.hasSub .subNavItem .subNav:hover {
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav:hover {
     background-color: #5099bf20;
   }
 }
 
 @media screen and (max-width: 1023px) {
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub::before {
+    content: '';
+    width: 10px;
+    height: 15px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/icon/arrowPage-left.png");
+    position: absolute;
+    top: 45px;
+    right: 40px;
+    opacity: 0.6;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub.active::before {
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub.active > .name {
+    color: #5099bf;
+  }
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub.active .thirdNavItem {
+    max-height: 1000px;
+  }
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub .thirdNavItem {
+    display: block;
+    position: initial;
+    bottom: initial;
+    left: initial;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    max-height: 0px;
+    -webkit-transition: max-height 1s ease;
+    -o-transition: max-height 1s ease;
+    transition: max-height 1s ease;
+  }
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub .thirdNavItem .thirdNav {
+    display: block;
+  }
   #navbar .container .navitem.active {
     width: 80vw;
   }
