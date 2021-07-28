@@ -1967,7 +1967,6 @@ textarea {
   }
   #navbar .container .navitem .nav.hasSub.active .secondNavItem {
     max-height: 1000px;
-    background-color: #5099bf20;
   }
   #navbar .container .navitem .nav.hasSub .secondNavItem {
     overflow: hidden;
@@ -1980,7 +1979,7 @@ textarea {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
-    background-color: #FFFFFF;
+    background-color: #5099bf20;
     -webkit-box-shadow: none;
             box-shadow: none;
     -webkit-transition: max-height 1s ease;

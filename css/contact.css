@@ -1959,7 +1959,6 @@ textarea {
   }
   #navbar .container .navitem .nav.hasSub.active .secondNavItem {
     max-height: 1000px;
-    background-color: #5099bf20;
   }
   #navbar .container .navitem .nav.hasSub .secondNavItem {
     overflow: hidden;
@@ -1972,7 +1971,7 @@ textarea {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
-    background-color: #FFFFFF;
+    background-color: #5099bf20;
     -webkit-box-shadow: none;
             box-shadow: none;
     -webkit-transition: max-height 1s ease;
@@ -2521,11 +2520,11 @@ textarea {
   margin-bottom: 15px;
 }
 
-#contact.pageContainer .contentField .formBox .infoTxt p.top {
+#contact.pageContainer .contentField .formBox .infoTxt .top {
   max-width: 740px;
 }
 
-#contact.pageContainer .contentField .formBox .infoTxt p.phone {
+#contact.pageContainer .contentField .formBox .infoTxt .phone {
   font-weight: 500;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2535,9 +2534,10 @@ textarea {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 15px;
 }
 
-#contact.pageContainer .contentField .formBox .infoTxt p.phone::before {
+#contact.pageContainer .contentField .formBox .infoTxt .phone::before {
   content: '';
   width: 20px;
   height: 20px;
@@ -2549,7 +2549,7 @@ textarea {
   background-image: url("../img/icon/phone-call.png");
 }
 
-#contact.pageContainer .contentField .formBox .infoTxt p.bottom {
+#contact.pageContainer .contentField .formBox .infoTxt .bottom {
   max-width: 680px;
 }
 
@@ -2722,5 +2722,15 @@ textarea {
 @media screen and (max-width: 480px) {
   #contact.pageContainer .contentField .formBox .infoTxt {
     margin-bottom: 20px;
+  }
+  #contact.pageContainer .contentField .formBox .buttonBox {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #contact.pageContainer .contentField .formBox .buttonBox .btn {
+    margin-left: 0;
+    margin-right: 15px;
   }
 }

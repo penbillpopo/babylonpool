@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>	
-	<link rel="stylesheet" href="./css/contact.css?version=&lt;?php echo time(); ?&gt;">
+	<link rel="stylesheet" href="./css/contact.css?version=<?php echo time();?>">
 	<?php include('./common/load.php') ?>
 </head>
 	<?php include('./common/navbar.php') ?>
@@ -26,7 +26,7 @@
 							歡迎您的蒞臨及瀏覽本公司的網站，如果您對於本公司的產品需要更詳盡的說明時，
 							請撥打我們的服務專線，我們將竭誠為您服務:
 						</p>
-						<p class='phone'>服務專線 : 04-2708-2772</p>
+						<h5 class='phone'>服務專線: 04-2708-2772</h5>
 						<p class="bottom">
 							您也可以將您的需求內容填入以下表單傳送給我們，我們將會儘速與您聯絡，
 							期待與您的互動交流及提供您最優質專業的服務。
@@ -79,6 +79,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
-<script src="./js/contact.js?version=&lt;?php echo time(); ?&gt;"></script>
+<script src="./js/contact.js?version=<?php echo time();?>"></script>
 </html>
 

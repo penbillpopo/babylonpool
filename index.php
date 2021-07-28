@@ -5,7 +5,7 @@
 <html lang="en">
 <head>	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
-	<link rel="stylesheet" href="./css/index.css?version=&lt;?php echo time(); ?&gt;">
+	<link rel="stylesheet" href="./css/index.css?version=<?php echo time();?>">
 	<?php include('./common/load.php') ?>
 </head>
 	<?php include('./common/navbar.php') ?>
@@ -128,6 +128,6 @@
 </body>
 <?php include('./common/footer.php') ?>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-<script src="./js/index.js?version=&lt;?php echo time(); ?&gt;"></script>
+<script src="./js/index.js?version=<?php echo time();?>"></script>
 </html>
 

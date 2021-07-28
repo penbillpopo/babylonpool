@@ -270,7 +270,6 @@ $color-darkgray:$color_grey_01;
 							}
 							.secondNavItem{
 								max-height: 1000px;
-								background-color: #5099bf20;
 							}
 						}
 						.secondNavItem{
@@ -282,7 +281,7 @@ $color-darkgray:$color_grey_01;
 							bottom: initial;
 							left: initial;
 							transform: translate(0,0);
-							background-color: $color_white_01;
+							background-color: #5099bf20;
 							box-shadow: none;
 							transition: max-height 1s ease;
 							.secondNav{

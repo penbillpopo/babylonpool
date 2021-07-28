@@ -22,9 +22,12 @@ $("#nav_blackfield").click(function () {
 	$('#nav_blackfield').css("display", "none");
 });
 $("#navbar .nav.hasSub,#navbar .secondNav.hasSub").on('click', function (e) {
-	e.stopPropagation();
 	if (window.screen.width < 1023) {
 		$(this).hasClass('active')?$(this).removeClass('active'):$(this).addClass('active');
-
+	}
+})
+$("#navbar .secondNav,#navbar .thirdNav").on('click', function (e) {
+	if (window.screen.width < 1023) {
+		e.stopPropagation();
 	}
 })

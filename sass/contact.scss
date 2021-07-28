@@ -16,13 +16,14 @@
                     width: 100%;
                     margin-bottom: 15px;
                 }
-                p.top{
+                .top{
                     max-width: 740px;
                 }
-                p.phone{
+                .phone{
                     font-weight: 500;
                     display: flex;
                     align-items: center;
+                    margin-bottom: 15px;
                     &::before{
                         content: '';
                         width: 20px;
@@ -35,7 +36,7 @@
                         background-image: url('../img/icon/phone-call.png');
                     }
                 }
-                p.bottom{
+                .bottom{
                     max-width: 680px;
                 }
             }
@@ -151,6 +152,13 @@
             .formBox{
                 .infoTxt{
                     margin-bottom: 20px;
+                }
+                .buttonBox{
+                    justify-content: flex-start;
+                    .btn{
+                        margin-left: 0;
+                        margin-right: 15px;
+                    }
                 }
             }
         }
