@@ -45,7 +45,7 @@
                         <div class="bg" style="background-image: url('./img/common/facility_06.png');"></div>
                         <h2 class="text">互動水屋</h2>
                     </a>
-                    <a class="item" href="#">
+                    <a class="item" href="facility.php?id=7">
                         <div class="bg" style="background-image: url('./img/common/facility_07.png');"></div>
                         <h2 class="text">滑水道設備</h2>
                     </a>

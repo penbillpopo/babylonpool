@@ -17,7 +17,13 @@
 			case 4:
 				$currentPage = '漂流河規劃';
 				break;
+			case 7:
+				$currentPage = '滑水道設備';
+				break;
 		}
+	}
+	if(isset($_GET['subId'])) {
+		$subId = $_GET['subId'];
 	}
 ?>
 <!DOCTYPE html>
@@ -41,7 +47,13 @@
 				</div>
 			</div>
 			<div class="contentField">
-				<?php include('./page/facility/facility-'.$id.'.php') ?>
+				<?php
+					if(isset($id)&&isset($subId)){
+						include('./page/facility/facility-'.$id.'-'.$subId.'.php');
+					}else if(isset($id)){
+						include('./page/facility/facility-'.$id.'.php');
+					}		
+				?>
 			</div>
 		</div>
 	</div>

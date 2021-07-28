@@ -33,6 +33,20 @@
 					<a href="facility.php?id=4" class="secondNav">
 						<p class='name'>漂流河規劃</p>
 					</a>
+					<div class="secondNav hasSub">
+						<p class='name'>滑水道設備</p>
+						<div class="thirdNavItem">
+							<a href="facility.php?id=7&subId=1" class="thirdNav">
+								<p class='name'>螺旋滑道</p>
+							</a>
+							<a href="facility.php?id=7&subId=2" class="thirdNav">
+								<p class='name'>急速滑道</p>
+							</a>
+							<a href="facility.php?id=7&subId=3" class="thirdNav">
+								<p class='name'>新滑水道</p>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="nav hasSub">
@@ -45,16 +59,16 @@
 						<p class='name'>少年PI的奇幻漂流造浪池</p>
 						<div class="thirdNavItem">
 							<a href="works.php?id=2&subId=1" class="thirdNav">
-								<p class='name'>造浪設備</p>
+								<p class='name'>造浪池簡介</p>
 							</a>
 							<a href="works.php?id=2&subId=2" class="thirdNav">
-								<p class='name'>過濾設備</p>
+								<p class='name'>造浪池施工</p>
 							</a>
 							<a href="works.php?id=2&subId=3" class="thirdNav">
-								<p class='name'>FLOWRIDER®</p>
+								<p class='name'>中台灣影視基地</p>
 							</a>
 							<a href="works.php?id=2&subId=4" class="thirdNav">
-								<p class='name'>漂流河規劃</p>
+								<p class='name'>首映記者會＆媒體報導</p>
 							</a>
 						</div>
 					</div>
