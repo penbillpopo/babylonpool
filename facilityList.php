@@ -41,7 +41,7 @@
                         <div class="bg" style="background-image: url('./img/common/facility_05.png');"></div>
                         <h2 class="text">兒童區規劃</h2>
                     </a>
-                    <a class="item" href="#">
+                    <a class="item" href="facility.php?id=6">
                         <div class="bg" style="background-image: url('./img/common/facility_06.png');"></div>
                         <h2 class="text">互動水屋</h2>
                     </a>

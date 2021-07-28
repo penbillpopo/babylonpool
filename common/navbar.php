@@ -33,6 +33,9 @@
 					<a href="facility.php?id=4" class="secondNav">
 						<p class='name'>漂流河規劃</p>
 					</a>
+					<a href="facility.php?id=6" class="secondNav">
+						<p class='name'>互動水屋</p>
+					</a>
 					<div class="secondNav hasSub">
 						<p class='name'>滑水道設備</p>
 						<div class="thirdNavItem">
