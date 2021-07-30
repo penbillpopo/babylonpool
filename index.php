@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>	
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
 	<link rel="stylesheet" href="./css/index.css?version=<?php echo time();?>">
 	<?php include('./common/load.php') ?>
 </head>
@@ -32,11 +32,7 @@
 	<div id="waveField">
 		<div class="container w1200">
 			<div class="titleBox">
-				<h4 class="title">國際級水上樂園總體規劃&nbsp</h4>
-				<h4 class="title">/&nbsp細部設計&nbsp</h4>
-				<h4 class="title">/&nbsp設備提供&nbsp</h4>
-				<h4 class="title">/&nbsp責任施工&nbsp</h4>
-				<h4 class="title">/&nbsp售後服務</h4>
+				<h4 class="title">國際級水上樂園總體規劃 / 細部設計 / 設備提供 / 責任施工 / 售後服務</h4>
 			</div>
 			<div class="swiperbox">		
 				<div class="swiper-container">
@@ -83,9 +79,10 @@
 			</div>
 			<div class="videoBox">
 				<div class="surfImg reveal_surfing">
-					<a class="playBtn"
+					<a id="videoBox" class="playBtn"
 						href="https://www.youtube.com/watch?v=JzkV6Z9pOFo"
-						data-fancybox>
+						data-fancybox 
+						>
 					</a>
 				</div>
 			</div>
@@ -127,7 +124,7 @@
 	</div>
 </body>
 <?php include('./common/footer.php') ?>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="./js/index.js?version=<?php echo time();?>"></script>
 </html>
 

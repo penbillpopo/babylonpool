@@ -1,24 +1,31 @@
+<?php
+	$about_active = ($headTitle=='關於巴比倫')?'active':'';
+	$newsList_active = ($headTitle=='最新消息')?'active':'';
+	$plan_active = ($headTitle=='規劃設計')?'active':'';
+	$facilityList_active = ($headTitle=='水樂園設施')?'active':'';
+	$works_active = ($headTitle=='完工案例')?'active':'';
+	$contact_active = ($headTitle=='聯絡我們')?'active':'';
+?>
 <div id="navbar">
 	<div class="w1200 container">
 		<a href="./index.php" class="logo">
 			<img src="./img/header_logo.png" alt="">
 		</a>
 		<div class="navitem">
-			<a href="about.php" class="nav">
+			<a href="about.php" class="nav <?php echo $about_active;?>">
 				<p class='name'>關於巴比倫</p>
 			</a>
-			<a href="newsList.php" class="nav">
+			<a href="newsList.php" class="nav <?php echo $newsList_active;?>">
 				<p class='name'>最新消息</p>
 			</a>
-			<a href="plan.php" class="nav">
+			<a href="plan.php" class="nav <?php echo $plan_active;?>">
 				<p class='name'>規劃設計</p>
 			</a>
-			<div class="nav hasSub">
+			<div class="nav hasSub <?php echo $facilityList_active;?>">
 				<a class="pc" href="facilityList.php">
 					<p class='name'>水樂園設施</p>
 				</a>
 				<div class="mobile">
-					<p class='name'>水樂園設施</p>
 				</div>
 				<div class="secondNavItem">
 					<a href="facility.php?id=1" class="secondNav">
@@ -32,6 +39,9 @@
 					</a>
 					<a href="facility.php?id=4" class="secondNav">
 						<p class='name'>漂流河規劃</p>
+					</a>
+					<a href="facility.php?id=5" class="secondNav">
+						<p class='name'>兒童區規劃</p>
 					</a>
 					<a href="facility.php?id=6" class="secondNav">
 						<p class='name'>互動水屋</p>
@@ -50,9 +60,15 @@
 							</a>
 						</div>
 					</div>
+					<a href="facility.php?id=8" class="secondNav">
+						<p class='name'>過山車設備</p>
+					</a>
+					<a href="facility.php?id=9" class="secondNav">
+						<p class='name'>升降式地板</p>
+					</a>
 				</div>
 			</div>
-			<div class="nav hasSub">
+			<div class="nav hasSub <?php echo $works_active;?>">
 				<p class='name'>完工案例</p>
 				<div class="secondNavItem">
 					<a href="works.php?id=1" class="secondNav">
@@ -75,9 +91,15 @@
 							</a>
 						</div>
 					</div>
+					<a href="works.php?id=3" class="secondNav">
+						<p class='name'>菲律賓AUQA PLANET WATERPARK</p>
+					</a>
+					<a href="works.php?id=4" class="secondNav">
+						<p class='name'>AGD美國水上樂園實績</p>
+					</a>
 				</div>
 			</div>
-			<a href="contact.php" class="nav">
+			<a href="contact.php" class="nav <?php echo $contact_active;?>">
 				<p class='name'>聯絡我們</p>
 			</a>
 		</div>

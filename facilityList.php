@@ -37,7 +37,7 @@
                         <div class="bg" style="background-image: url('./img/common/facility_04.png');"></div>
                         <h2 class="text">漂流河規劃</h2>
                     </a>
-                    <a class="item" href="#">
+                    <a class="item" href="facility.php?id=5">
                         <div class="bg" style="background-image: url('./img/common/facility_05.png');"></div>
                         <h2 class="text">兒童區規劃</h2>
                     </a>
@@ -49,11 +49,11 @@
                         <div class="bg" style="background-image: url('./img/common/facility_07.png');"></div>
                         <h2 class="text">滑水道設備</h2>
                     </a>
-                    <a class="item" href="#">
+                    <a class="item" href="facility.php?id=8">
                         <div class="bg" style="background-image: url('./img/common/facility_08.png');"></div>
                         <h2 class="text">過山車設備</h2>
                     </a>
-                    <a class="item" href="#">
+                    <a class="item" href="facility.php?id=9">
                         <div class="bg" style="background-image: url('./img/common/facility_09.png');"></div>
                         <h2 class="text">升降式地板</h2>
                     </a>

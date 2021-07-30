@@ -1,3 +1,11 @@
+<?php
+	$about_active = ($headTitle=='關於巴比倫')?'active':'';
+	$newsList_active = ($headTitle=='最新消息')?'active':'';
+	$plan_active = ($headTitle=='規劃設計')?'active':'';
+	$facilityList_active = ($headTitle=='水樂園設施')?'active':'';
+	$works_active = ($headTitle=='完工案例')?'active':'';
+	$contact_active = ($headTitle=='聯絡我們')?'active':'';
+?>
 <footer id="footer">
 	<div class="navField">
 		<div id="pagetop<?php if(isset($isIndex) && $isIndex) echo 'Index';?>">
@@ -7,22 +15,22 @@
 			</div>
 		</div>
 		<div class="navBox">
-			<a href="#" class="navBtn active">
+			<a href="about.php" class="navBtn <?php echo $about_active;?>">
 				<p>關於巴比倫</p>
 			</a>
-			<a href="#" class="navBtn">
+			<a href="newsList.php" class="navBtn <?php echo $newsList_active;?>">
 				<p>最新消息</p>
 			</a>
-			<a href="#" class="navBtn">
+			<a href="plan.php" class="navBtn <?php echo $plan_active;?>">
 				<p>規劃設計</p>
 			</a>
-			<a href="#" class="navBtn">
+			<a href="facilityList.php" class="navBtn <?php echo $facilityList_active;?>">
 				<p>水樂園設施</p>
 			</a>
-			<a href="#" class="navBtn">
+			<a href="#" class="navBtn <?php echo $works_active;?>">
 				<p>完工案例</p>
 			</a>
-			<a href="#" class="navBtn">
+			<a href="contact.php" class="navBtn <?php echo $contact_active;?>">
 				<p>聯絡我們</p>
 			</a>
 		</div>
@@ -36,7 +44,7 @@
 					<small>Babylon pool systems</small>
 				</div>
 			</div>
-			<small class='copy'>版權所有 © BABYLON POOL SYSTEMS CO.LTD</small>
+			<small class='copy'>版權所有 © BABYLON POOL SYSTEMS CO.,LTD.</small>
 			<small class='design'>Design by Seraphm</small>
 		</div>
 		<div class="right">
@@ -50,7 +58,7 @@
 				<small>FAX : 04-27082775</small>	
 			</div>
 			<small>
-				E-mail : service@babylon.tw
+				<a href="mailto:service@babylon.tw">E-mail : service@babylon.tw</a>
 			</small>
 			<div class="share">
 				<a href="#">
