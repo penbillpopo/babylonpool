@@ -1972,6 +1972,7 @@ textarea {
     background-image: url("../img/icon/arrowPage-left.png");
     position: absolute;
     top: 35px;
+    left: initial;
     right: 40px;
     opacity: 0.6;
     -webkit-transition: -webkit-transform 0.3s ease;
@@ -2067,6 +2068,7 @@ textarea {
     -webkit-box-shadow: none;
             box-shadow: none;
     max-height: 0px;
+    overflow: hidden;
     -webkit-transition: max-height 1s ease;
     -o-transition: max-height 1s ease;
     transition: max-height 1s ease;

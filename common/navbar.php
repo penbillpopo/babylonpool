@@ -26,6 +26,7 @@
 					<p class='name'>水樂園設施</p>
 				</a>
 				<div class="mobile">
+					<p class='name'>水樂園設施</p>
 				</div>
 				<div class="secondNavItem">
 					<a href="facility.php?id=1" class="secondNav">
@@ -68,7 +69,7 @@
 					</a>
 				</div>
 			</div>
-			<!-- <div class="nav hasSub <?php echo $works_active;?>">
+			<div class="nav hasSub <?php echo $works_active;?>">
 				<p class='name'>完工案例</p>
 				<div class="secondNavItem">
 					<a href="works.php?id=1" class="secondNav">
@@ -98,7 +99,7 @@
 						<p class='name'>AGD美國水上樂園實績</p>
 					</a>
 				</div>
-			</div> -->
+			</div>
 			<a href="contact.php" class="nav <?php echo $contact_active;?>">
 				<p class='name'>聯絡我們</p>
 			</a>

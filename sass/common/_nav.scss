@@ -277,6 +277,7 @@ $color-darkgray:$color_grey_01;
 							background-image: url('../img/icon/arrowPage-left.png');
 							position: absolute;
 							top: 35px;
+							left: initial;
 							right: 40px;
 							opacity: 0.6;
 							transition: transform 0.3s ease;
@@ -349,6 +350,7 @@ $color-darkgray:$color_grey_01;
 										transform: translate(0,0);
 										box-shadow: none;
 										max-height: 0px;
+										overflow: hidden;
 										transition: max-height 1s ease;
 										.thirdNav{
 											display: block;
