@@ -1,4 +1,5 @@
 <?php
+	$headTitle = '';
 	$isIndex = true;
 ?>
 <!DOCTYPE html>

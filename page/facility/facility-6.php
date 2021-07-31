@@ -1,61 +1,52 @@
 <div>
     <div class="block">
         <div class="titleBox">
-            <h4 class="text bold">漂流河規劃</h4>
+            <h4 class="text bold">互動水屋</h4>
         </div>
         <p class="text">
-            關於漂流河，我們分別有Lazy river、Fast river、Wave river、Tidal river這幾種形式能做規劃設計。
-            漂流河的河道兩側也可以規劃安裝噴水設備、水槍或是橋下雨淋設備，以上這些設施都可加裝在漂流河上增加趣味性。
-            漂流河裝有Booster Station (加壓站)，加壓站就是用馬達噴水來帶動水流，使水流可以緩慢流動，
-            其形式我們稱之為Lazy river-懶人漂流河。當加壓站數量增加，或者我們在漂流河某些區塊，把河道縮減尺寸時，
-            它的速度也會隨之加快，增加遊客在漂流河遊玩的趣味。我們可以在某些時候，
-            將增加的加壓站全部打開使Lazy river變成Fast river，它的趣味性會變得不一樣。
-            當有很多人在漂流河的狀態之下，也不會造成水流停滯的狀態。在人多時水流可以轉換成Fast的形式，
-            這就是懶人漂流河跟快速漂流河的不同。
+            互動式遊樂設施，擁有多種類型的滑道能和大家一起遊玩，可根據需求設計各種主題，
+            例:海盜主題、海洋主題、歐洲風格、動漫主題...等。互動水屋專為家庭設計，
+            主打家庭親子同樂，水屋水池深約在20公分以內，但幼兒僅限於在水池中戲水，
+            不能上去滑道，且在水池邊需由家長監督遊玩，水屋滑道設施主打年齡為青少年以上及成人，
+            年紀較小幼童較不適合，水池中有很多噴水設施，能讓小朋友玩，此設施是適合全家一起遊玩的。
         </p>
     </div>
     <div class="block">
+        <h6 class="text bold blue">
+            超級水屋
+        </h6>
+        <img class="col100" src="img/facility/06/01.png" alt="">
+    </div>
+    <div class="block">
         <div class="flexBox">
             <div class="col50">
-                <img src="img/facility/04/01.png" alt="">
                 <h6 class="text bold blue">
-                    雨淋灑水
+                    超級水屋
                 </h6>
+                <img src="img/facility/06/02.png" alt="">
             </div>
             <div class="col50">
-                <img src="img/facility/04/02.png" alt="">
                 <h6 class="text bold blue">
-                    Tidal River
+                    大型水屋
                 </h6>
+                <img src="img/facility/06/03.png" alt="">
             </div>
         </div>
     </div>
     <div class="block">
         <div class="flexBox">
             <div class="col50">
-                <img src="img/facility/04/03.png" alt="">
                 <h6 class="text bold blue">
-                    Wave River
+                    中型水屋
                 </h6>
+                <img src="img/facility/06/04.png" alt="">
             </div>
             <div class="col50">
-                <img src="img/facility/04/04.png" alt="">
                 <h6 class="text bold blue">
-                    Wave River
+                    小型水屋
                 </h6>
+                <img src="img/facility/06/05.png" alt="">
             </div>
         </div>
-    </div>
-    <div class="block">
-        <img class="col100" src="img/facility/04/05.png" alt="">
-        <h6 class="text bold blue">
-            Lazy River
-        </h6>
-    </div>
-    <div class="block">
-        <img class="col100" src="img/facility/04/06.png" alt="">
-        <h6 class="text bold blue">
-            Tidal River
-        </h6>
     </div>
 </div>
