@@ -4,7 +4,7 @@
             <h4 class="text bolder">少年PI的奇幻漂流造浪池</h4>
         </div>
         <div class="tabBox border">
-            <a href="works.php?id=2&subId=1" class="tab active">
+            <a href="works.php?id=2&subId=1" class="tab">
                 <p class="text">造浪池簡介</p>
             </a>
             <a href="works.php?id=2&subId=2" class="tab">
@@ -13,7 +13,7 @@
             <a href="works.php?id=2&subId=3" class="tab">
                 <p class="text">中台灣影視基地</p>
             </a>
-            <a href="" class="tab">
+            <a href="works.php?id=2&subId=4" class="tab active">
                 <p class="text">首映記者會＆媒體報導</p>
             </a>
         </div>

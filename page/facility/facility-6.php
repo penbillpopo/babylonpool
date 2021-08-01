@@ -23,13 +23,13 @@
                 <h6 class="text bold blue">
                     超級水屋
                 </h6>
-                <img src="img/facility/06/02.png" alt="">
+                <img class="col100" src="img/facility/06/02.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
                     大型水屋
                 </h6>
-                <img src="img/facility/06/03.png" alt="">
+                <img class="col100" src="img/facility/06/03.png" alt="">
             </div>
         </div>
     </div>
@@ -39,13 +39,13 @@
                 <h6 class="text bold blue">
                     中型水屋
                 </h6>
-                <img src="img/facility/06/04.png" alt="">
+                <img class="col100" src="img/facility/06/04.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
                     小型水屋
                 </h6>
-                <img src="img/facility/06/05.png" alt="">
+                <img class="col100" src="img/facility/06/05.png" alt="">
             </div>
         </div>
     </div>

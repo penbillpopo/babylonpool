@@ -4,13 +4,13 @@
             <h4 class="text bold">滑水道設備</h4>
         </div>
         <div class="tabBox border">
-            <a href="works.php?id=2&subId=1" class="tab active">
+            <a href="facility.php?id=7&subId=1" class="tab active">
                 <p class="text">螺旋滑道</p>
             </a>
-            <a href="works.php?id=2&subId=2" class="tab">
+            <a href="facility.php?id=7&subId=2" class="tab">
                 <p class="text">急速滑道</p>
             </a>
-            <a href="works.php?id=2&subId=3" class="tab">
+            <a href="facility.php?id=7&subId=3" class="tab">
                 <p class="text">新滑水道</p>
             </a>
         </div>
@@ -23,7 +23,7 @@
         </p>
     </div>
     <div class="block">
-        <div class="flexBox">
+        <div class="flexBox bottom">
             <div class="col60">
                 <h6 class="text bold blue">
                     六並列競速滑道
@@ -31,7 +31,7 @@
                 <p class="text">
                     迴旋向下衝刺的滑道設計，可多人同時滑行，和親朋好友們一起相約來場比賽，在水上樂園也能享受競速的樂趣。
                 </p>
-                <img src="img/facility/07/01/01.png" alt="">
+                <img class="col100" src="img/facility/07/01/01.png" alt="">
             </div>
             <img class="col40" src="img/facility/07/01/02.png" alt="">
         </div>
@@ -53,7 +53,7 @@
     </div>
     <div class="block">
         <div class="flexBox">
-            <div class="col30">
+            <div class="col33">
                 <h6 class="text bold blue">
                     大碗滑道+飛毯滑道
                 </h6>
@@ -65,7 +65,7 @@
                     經過數次跌宕起伏後，進入水池。
                 </p>
             </div>
-            <img class="col70" src="img/facility/07/01/06.png" alt="">
+            <img class="col66" src="img/facility/07/01/06.png" alt="">
         </div>
     </div>
 </div>

@@ -17,13 +17,13 @@
     <div class="block">
         <div class="flexBox">
             <div class="col50">
-                <img src="img/facility/04/01.png" alt="">
+                <img class="col100" src="img/facility/04/01.png" alt="">
                 <h6 class="text bold blue">
                     雨淋灑水
                 </h6>
             </div>
             <div class="col50">
-                <img src="img/facility/04/02.png" alt="">
+                <img class="col100" src="img/facility/04/02.png" alt="">
                 <h6 class="text bold blue">
                     Tidal River
                 </h6>
@@ -33,13 +33,13 @@
     <div class="block">
         <div class="flexBox">
             <div class="col50">
-                <img src="img/facility/04/03.png" alt="">
+                <img class="col100" src="img/facility/04/03.png" alt="">
                 <h6 class="text bold blue">
                     Wave River
                 </h6>
             </div>
             <div class="col50">
-                <img src="img/facility/04/04.png" alt="">
+                <img class="col100" src="img/facility/04/04.png" alt="">
                 <h6 class="text bold blue">
                     Wave River
                 </h6>

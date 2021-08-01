@@ -4,19 +4,19 @@
             <h4 class="text bold">滑水道設備</h4>
         </div>
         <div class="tabBox border">
-            <a href="works.php?id=2&subId=1" class="tab active">
+            <a href="facility.php?id=7&subId=1" class="tab">
                 <p class="text">螺旋滑道</p>
             </a>
-            <a href="works.php?id=2&subId=2" class="tab">
+            <a href="facility.php?id=7&subId=2" class="tab active">
                 <p class="text">急速滑道</p>
             </a>
-            <a href="works.php?id=2&subId=3" class="tab">
+            <a href="facility.php?id=7&subId=3" class="tab">
                 <p class="text">新滑水道</p>
             </a>
         </div>
     </div>
     <div class="block">
-        <div class="flexBox">
+        <div class="flexBox bottom ">
             <div class="col60">
                 <h6 class="text bold blue">
                     大迴環急速滑道
@@ -26,13 +26,13 @@
                     腳下的踏板會瞬間打開，身體如同雲霄飛車般沿著16米高幾近垂直的滑道管高速滑行。
                     讓你感受如出膛子彈般的速度!
                 </p>
-                <img src="img/facility/07/02/01.png" alt="">
+                <img class="col100" src="img/facility/07/02/01.png" alt="">
             </div>
             <img class="col40" src="img/facility/07/02/02.png" alt="">
         </div>
     </div>
     <div class="block">
-        <div class="flexBox">
+        <div class="flexBox ">
             <div class="col100">
                 <h6 class="text bold blue">
                     飛魚滑道
@@ -48,7 +48,7 @@
         </div>
     </div>
     <div class="block">
-        <div class="flexBox">
+        <div class="flexBox ">
             <div class="col100">
                 <h6 class="text bold blue">
                     時光機滑道

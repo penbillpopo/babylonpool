@@ -12,7 +12,7 @@
             如此耗水耗能的週期不斷的在迴圈，有鍵於此，採用可以節能、省水，
             過濾週期長且逆洗耗水量低的過濾設備以配合新時代的環保需求，將是你最明智的選擇。
         </p>
-        <div class="flexBox gap-20 wrap-reverse">
+        <div class="flexBox  wrap-reverse">
             <img class="col50 fit-content" src="img/facility/02/01.png" alt="">
             <p class="text col50">
                 <strong>HVS 真空過濾設備</strong><br>
@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="block">
-        <div class="flexBox gap-20">
+        <div class="flexBox ">
             <img class="col50" src="img/facility/02/02.png" alt="">
             <img class="col50" src="img/facility/02/03.png" alt="">
         </div>

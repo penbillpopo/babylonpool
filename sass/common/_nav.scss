@@ -100,6 +100,23 @@ $color-darkgray:$color_grey_01;
 							padding: 12px 40px;
 							transition: background-color 0.3s ease;
 							position: relative;
+							&.hasSub{
+								&::before{
+									content: '';
+									width: 10px;
+									height: 15px;
+									background-size: 100% 100%;
+									background-repeat: no-repeat;
+									background-position: center;
+									background-image: url('../img/icon/arrowPage-left.png');
+									position: absolute;
+									top:50%;
+									left:10px;
+									transform: translateY(-50%);
+									opacity: 0.6;
+									transition: transform 0.3s ease;
+								}
+							}
 							@media screen and (min-width: 1023px) {
 								&:hover{
 									background-color: #5099bf20;
@@ -327,6 +344,7 @@ $color-darkgray:$color_grey_01;
 										background-image: url('../img/icon/arrowPage-left.png');
 										position: absolute;
 										top: 45px;
+										left: initial;
 										right: 40px;
 										opacity: 0.6;
 										transition: transform 0.3s ease;

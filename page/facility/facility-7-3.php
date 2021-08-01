@@ -4,19 +4,19 @@
             <h4 class="text bold">滑水道設備</h4>
         </div>
         <div class="tabBox border">
-            <a href="works.php?id=2&subId=1" class="tab">
+            <a href="facility.php?id=7&subId=1" class="tab">
                 <p class="text">螺旋滑道</p>
             </a>
-            <a href="works.php?id=2&subId=2" class="tab">
+            <a href="facility.php?id=7&subId=2" class="tab">
                 <p class="text">急速滑道</p>
             </a>
-            <a href="works.php?id=2&subId=3" class="tab active">
+            <a href="facility.php?id=7&subId=3" class="tab active">
                 <p class="text">新滑水道</p>
             </a>
         </div>
     </div>
     <div class="block">
-        <div class="flexBox">
+        <div class="flexBox ">
             <div class="col100">
                 <h6 class="text bold blue">
                     龍捲衝浪
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="block">
-        <div class="flexBox">
+        <div class="flexBox ">
             <div class="col100">
                 <h6 class="text bold blue">
                     電磁彈射過山車
@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="block">
-        <div class="flexBox">
+        <div class="flexBox ">
             <div class="col100">
                 <h6 class="text bold blue">
                     颶風滑道

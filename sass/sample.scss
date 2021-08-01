@@ -1,82 +1,97 @@
 @import "./load";
-.sampleList.pageContainer{
-    .contentField{
-       .facilityBox{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            .item{
-                width: 31%;
-                margin: 0 1%;
-                margin-bottom: 40px;
-                position: relative;
-                overflow: hidden;
-                border-radius: 50%;
-                overflow: hidden;
-                &::after{
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: $color_black_01;
-                    opacity: 0;
-                    z-index: 0;
-                    transition: opacity 0.3s ease;
-                }
-                .bg{
-                    width: 100%;
-                    @extend %background_cover;
-                    padding-bottom: 100%;
-                    transition: transform 0.3s ease;
-                }
-                .text{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                    width: 100%;
-                    color: $color_white_01;
-                    font-weight: 400;
-                    text-align: center;
-                    z-index: 1;
-                    background-color: #5098bfa6;
-                    padding: 20px 0;
-                }
-                @media screen and (min-width: 1023px) {
-                    &:hover{
-                        .bg{
-                            transform: scale(1.1);
-                        }
-                        &::after{
-                            opacity: 0.7;
-                        }
-                    }
-                }
-            }
-            @media screen and (max-width: 1023px) {
+.pageContainer{
+    &.sampleList{
+        .contentField{
+           .facilityBox{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
                 .item{
-                    width: calc(50% - 20px);
-                    margin: 10px;
-                    .text{
-                        font-size: 3vw;
-                    }
-                }
-            }
-            @media screen and (max-width: 768px) {
-                .item{
-                    width: 100%;
-                    margin-bottom: 20px;
-                    border-radius: 10px;
-                    .text{
-                        font-size: 22px;
+                    width: 31%;
+                    margin: 0 1%;
+                    margin-bottom: 40px;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $color_black_01;
+                        opacity: 0;
+                        z-index: 0;
+                        transition: opacity 0.3s ease;
                     }
                     .bg{
-                        padding-bottom: 50%;
+                        width: 100%;
+                        @extend %background_cover;
+                        padding-bottom: 100%;
+                        transition: transform 0.3s ease;
+                    }
+                    .text{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 100%;
+                        color: $color_white_01;
+                        font-weight: 400;
+                        text-align: center;
+                        z-index: 1;
+                        background-color: #5098bfa6;
+                        padding: 20px 0;
+                    }
+                    @media screen and (min-width: 1023px) {
+                        &:hover{
+                            .bg{
+                                transform: scale(1.1);
+                            }
+                            &::after{
+                                opacity: 0.7;
+                            }
+                        }
                     }
                 }
-            }
-       }
+                @media screen and (max-width: 1023px) {
+                    .item{
+                        width: calc(50% - 20px);
+                        margin: 10px;
+                        .text{
+                            font-size: 3vw;
+                        }
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    .item{
+                        width: 100%;
+                        margin-bottom: 20px;
+                        border-radius: 10px;
+                        .text{
+                            font-size: 22px;
+                        }
+                        .bg{
+                            padding-bottom: 50%;
+                        }
+                    }
+                }
+           }
+        }
+    }
+    .contentField{
+        .aboutTextIcon{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('../img/about/02/01.png');
+            transform: translateY(25%);
+        }
     }
 }

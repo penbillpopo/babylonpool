@@ -49,8 +49,55 @@ $().ready(function() {
                 required: "請輸入留言",
             },
         },
-        submitHandler:function(form){
-            form.submit();
+        submitHandler:function(){
+            // form.submit();
+            let company = $('#company').val()
+            let name = $('#name').val()
+            let phone = $('#phone').val()
+            let email = $('#email').val()
+            let address = $('#address').val()
+            let interest = $('#interest').val()
+            let message = $('#message').val()
+            let sendTxt = `
+                <p style="font-size:18px;color:black;">
+                   <strong>個人公司或名稱: </strong><span>${company}</span>
+                </p>
+                <p style="font-size:18px;color:black;">
+                   <strong>聯絡人: </strong><span>${name}</span>
+                </p>
+                <p style="font-size:18px;color:black;">
+                   <strong>聯絡電話: </strong><span>${phone}</span>
+                </p>
+                <p style="font-size:18px;color:black;">
+                   <strong>E-mail: </strong><span>${email}</span>
+                </p>
+                <p style="font-size:18px;color:black;">
+                   <strong>地址: </strong><span>${address}</span>
+                </p>
+                <p style="font-size:18px;color:black;">
+                   <strong>您最有興趣的產品: </strong><span>${interest}</span>
+                </p>
+                <p style="font-size:18px;color:black;">
+                    <strong>給我們的留言: </strong><span>${message}</span>
+                </p>
+            `
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "penbill2016@gmail.com",
+                Password : "075717169",
+                To : 'penbillpopo@gmail.com',
+                From : "penbill2016@gmail.com",
+                Subject : "巴比倫-聯絡我們",
+                Body : sendTxt
+            }).then(
+              message => {
+                  if(message === 'OK'){
+                        alert('發送成功')
+                  }else{
+                        alert('發送失敗')
+                  }
+              }
+            );
         }   
     })
 

@@ -10,10 +10,10 @@
             <a href="works.php?id=2&subId=2" class="tab">
                 <p class="text">造浪池施工</p>
             </a>
-            <a href="works.php?id=2&subId=3" class="tab active">
+            <a href="works.php?id=2&subId=3" class="tab">
                 <p class="text">中台灣影視基地</p>
             </a>
-            <a href="" class="tab">
+            <a href="works.php?id=2&subId=4" class="tab active">
                 <p class="text">首映記者會＆媒體報導</p>
             </a>
         </div>
@@ -36,13 +36,13 @@
                 <h6 class="text bold blue">
                     水湳 - 造浪設備拆卸上棧板
                 </h6>
-                <img src="img/works/02/03/01.png" alt="">
+                <img class="col100" src="img/works/02/03/01.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
                     造浪設備包裝遷移
                 </h6>
-                <img src="img/works/02/03/02.png" alt="">
+                <img class="col100" src="img/works/02/03/02.png" alt="">
             </div>
         </div>
     </div>
@@ -52,13 +52,13 @@
                 <h6 class="text bold blue">
                     霧峰-進場安裝造浪機組
                 </h6>
-                <img src="img/works/02/03/03.png" alt="">
+                <img class="col100" src="img/works/02/03/03.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
                     霧峰中台灣影視基地-造浪池
                 </h6>
-                <img src="img/works/02/03/04.png" alt="">
+                <img class="col100" src="img/works/02/03/04.png" alt="">
             </div>
         </div>
     </div>
@@ -68,10 +68,10 @@
                 <h6 class="text bold blue">
                     霧峰中台灣影視基地-空拍全景
                 </h6>
-                <img src="img/works/02/03/05.png" alt="">
+                <img class="col100" src="img/works/02/03/05.png" alt="">
             </div>
             <div class="col50">
-                <img src="img/works/02/03/06.png" alt="">
+                <img class="col100" src="img/works/02/03/06.png" alt="">
             </div>
         </div>
     </div>

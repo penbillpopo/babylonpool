@@ -21,7 +21,7 @@
                 </p>
             </div>
             <div class="col60">
-                <img src="img/facility/05/01.png" alt="">
+                <img class="col100" src="img/facility/05/01.png" alt="">
             </div>
         </div>
     </div>
@@ -33,12 +33,8 @@
             MINIHARBOUR®為兒童造浪池 + 家庭娛樂項目結合在一起。創建家庭式造浪池景點，
             調整至幼兒遊玩尺寸，並添加創新設施，吸引孩子和成人前來一同遊玩。
         </p>
-        <div class="col100">
-            <img src="img/facility/05/02.png" alt="">
-        </div>
-        <div class="col100">
-            <img src="img/facility/05/03.png" alt="">
-        </div>
+        <img class="col100" src="img/facility/05/02.png" alt="">
+        <img class="col100" src="img/facility/05/03.png" alt="">
     </div>
     <div class="block">
         <h6 class="text bold blue">
@@ -46,10 +42,26 @@
         </h6>
         <div class="flexBox">
             <div class="col50">
-                <img src="img/facility/05/04.png" alt="">
+                <img class="col100" src="img/facility/05/04.png" alt="">
             </div>
             <div class="col50">
-                <img src="img/facility/05/05.png" alt="">
+                <img class="col100" src="img/facility/05/05.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="flexBox">
+            <div class="col50">
+                <h6 class="text bold blue">
+                    兒童迷你小喇叭滑道
+                </h6>
+                <img class="col100" src="img/facility/05/06.png" alt="">
+            </div>
+            <div class="col50">
+                <h6 class="text bold blue">
+                    兒童飛毯滑道
+                </h6>
+                <img class="col100" src="img/facility/05/07.png" alt="">
             </div>
         </div>
     </div>

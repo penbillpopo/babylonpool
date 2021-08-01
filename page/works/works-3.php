@@ -18,13 +18,13 @@
                 <h6 class="text bold blue">
                     滑板衝浪 (FLOWRIDER)
                 </h6>
-                <img src="img/works/03/02.png" alt="">
+                <img class="col100" src="img/works/03/02.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
                     造浪池 (WAVE POOL)
                 </h6>
-                <img src="img/works/03/03.png" alt="">
+                <img class="col100" src="img/works/03/03.png" alt="">
             </div>
         </div>
     </div>
@@ -34,13 +34,13 @@
                 <h6 class="text bold blue">
                     互動水屋( INTERACTIVE WATER PLAY)
                 </h6>
-                <img src="img/works/03/04.png" alt="">
+                <img class="col100" src="img/works/03/04.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
                     兒童池(KIDS POOL)
                 </h6>
-                <img src="img/works/03/05.png" alt="">
+                <img class="col100" src="img/works/03/05.png" alt="">
             </div>
         </div>
     </div>
@@ -50,13 +50,13 @@
                 <h6 class="text bold blue">
                     螺旋六並列滑道組合(6 LANE OCTOPUS RACER SLIDE)
                 </h6>
-                <img src="img/works/03/06.png" alt="">
+                <img class="col100" src="img/works/03/06.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
                     大喇叭滑道(TORNADO SLIDE)
                 </h6>
-                <img src="img/works/03/07.png" alt="">
+                <img class="col100" src="img/works/03/07.png" alt="">
             </div>
         </div>
     </div>
@@ -66,13 +66,13 @@
                 <h6 class="text bold blue">
                     螺旋組合滑道(TUBE SLIDE)
                 </h6>
-                <img src="img/works/03/08.png" alt="">
+                <img class="col100" src="img/works/03/08.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
                     漂流河 (ADVENTURE RIVER)
                 </h6>
-                <img src="img/works/03/09.png" alt="">
+                <img class="col100" src="img/works/03/09.png" alt="">
             </div>
         </div>
     </div>
@@ -91,14 +91,25 @@
                 <h6 class="text bold blue">
                     翻江倒海組合滑道 (MACH 4 TUBE SLIDE)
                 </h6>
-                <img src="img/works/03/12.png" alt="">
+                <img class="col100" src="img/works/03/12.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
                     雙飛大回環組合滑道( SUPER LOOP )
                 </h6>
-                <img src="img/works/03/13.png" alt="">
+                <img class="col100" src="img/works/03/13.png" alt="">
             </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="col100">
+            <div class="videoBox" style="background-image: url('./img/common/facility_01.png');">
+                <a id="videoBox" class="playBtn"
+                    href="https://www.youtube.com/watch?v=JzkV6Z9pOFo"
+                    data-fancybox 
+                    >
+                </a>
+			</div>
         </div>
     </div>
 

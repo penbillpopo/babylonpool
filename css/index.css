@@ -150,6 +150,7 @@ button {
   -moz-osx-font-smoothing: inherit;
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
+  cursor: pointer;
 }
 
 textarea {
@@ -164,13 +165,13 @@ textarea {
 參數:方向，邊長，顏色*/
 /* ----------Extend---------- */
 /*background*/
-.nodata::before, #footer .contentbox .left .logoBox img, #headBanner .bannerImg, #surfField .container .videoBox .surfImg, #caseField .container .caseBox .case .imgFrame .img {
+.pageContainer .contentField .block .videoBox, .nodata::before, #footer .contentbox .left .logoBox img, #headBanner .bannerImg, #surfField .container .videoBox .surfImg, #caseField .container .caseBox .case .imgFrame .img {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.pagebtnbox .preBtn, .pagebtnbox .nextBtn, #headBanner .swiperbox .navBox .swiper-button-prev,
+.pagebtnbox .preBtn, .pagebtnbox .nextBtn, .pageContainer .contentField .block .text.icon, .pageContainer .contentField .block .videoBox .playBtn, #headBanner .swiperbox .navBox .swiper-button-prev,
 #headBanner .swiperbox .navBox .swiper-button-next, #waveField .container .swiperbox .navBox .swiper-button-prev,
 #waveField .container .swiperbox .navBox .swiper-button-next, #surfField .container .videoBox .surfImg .playBtn {
   background-size: 100% 100%;
@@ -829,6 +830,10 @@ textarea {
   margin-bottom: 50px;
 }
 
+.pageContainer .contentField .block a {
+  color: #5099bf;
+}
+
 .pageContainer .contentField .block .titleBox {
   margin-bottom: 15px;
 }
@@ -861,9 +866,29 @@ textarea {
   color: #5099bf;
 }
 
+.pageContainer .contentField .block .text.black {
+  color: #151B28;
+}
+
+.pageContainer .contentField .block .text.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .textBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .pageContainer .contentField .block img {
   display: block;
   height: auto;
+  -o-object-fit: fill;
+     object-fit: fill;
   max-width: 100%;
   margin-bottom: 10px;
 }
@@ -915,6 +940,25 @@ textarea {
   border-bottom: 2px solid #5099bf;
 }
 
+.pageContainer .contentField .block .flex-col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pageContainer .contentField .block .flex-col.between {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .pageContainer .contentField .block .flexBox {
   width: 100%;
   display: -webkit-box;
@@ -933,353 +977,626 @@ textarea {
 }
 
 @media screen and (max-width: 1023px) {
-  .pageContainer .contentField .block .flexBox.nowrap .col100 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col100 {
     max-width: 100%;
     width: calc(100% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col90 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col90 {
     max-width: 90%;
     width: calc(90% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col85 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col85 {
     max-width: 85%;
     width: calc(85% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col80 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col80 {
     max-width: 80%;
     width: calc(80% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col75 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col75 {
     max-width: 75%;
     width: calc(75% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col70 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col70 {
     max-width: 70%;
     width: calc(70% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col66 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col66 {
     max-width: 66.6666%;
     width: calc(66.6666% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col65 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col65 {
     max-width: 65%;
     width: calc(65% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col60 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col60 {
     max-width: 60%;
     width: calc(60% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col55 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col55 {
     max-width: 55%;
     width: calc(55% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col50 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col50 {
     max-width: 50%;
     width: calc(50% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col45 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col45 {
     max-width: 45%;
     width: calc(45% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col40 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col40 {
     max-width: 40%;
     width: calc(40% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col35 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col35 {
     max-width: 35%;
     width: calc(35% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col30 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col30 {
     max-width: 30%;
     width: calc(30% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col33 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col33 {
     max-width: 33.3333%;
     width: calc(33.3333% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col25 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col25 {
     max-width: 25%;
     width: calc(25% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col20 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col20 {
     max-width: 20%;
     width: calc(20% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col16 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col16 {
     max-width: 16.6666667%;
     width: calc(16.6666667% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap .col15 {
+  .pageContainer .contentField .block .flexBox.nowrap > .col15 {
     max-width: 15%;
     width: calc(15% - 10px);
     margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col100 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col100 {
     max-width: 100%;
-    width: calc(100% - 20px);
-    margin-right: 20px;
+    width: calc(100% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col90 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col90 {
     max-width: 90%;
-    width: calc(90% - 20px);
-    margin-right: 20px;
+    width: calc(90% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col85 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col85 {
     max-width: 85%;
-    width: calc(85% - 20px);
-    margin-right: 20px;
+    width: calc(85% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col80 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col80 {
     max-width: 80%;
-    width: calc(80% - 20px);
-    margin-right: 20px;
+    width: calc(80% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col75 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col75 {
     max-width: 75%;
-    width: calc(75% - 20px);
-    margin-right: 20px;
+    width: calc(75% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col70 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col70 {
     max-width: 70%;
-    width: calc(70% - 20px);
-    margin-right: 20px;
+    width: calc(70% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col66 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col66 {
     max-width: 66.6666%;
-    width: calc(66.6666% - 20px);
-    margin-right: 20px;
+    width: calc(66.6666% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col65 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col65 {
     max-width: 65%;
-    width: calc(65% - 20px);
-    margin-right: 20px;
+    width: calc(65% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col60 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col60 {
     max-width: 60%;
-    width: calc(60% - 20px);
-    margin-right: 20px;
+    width: calc(60% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col55 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col55 {
     max-width: 55%;
-    width: calc(55% - 20px);
-    margin-right: 20px;
+    width: calc(55% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col50 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col50 {
     max-width: 50%;
-    width: calc(50% - 20px);
-    margin-right: 20px;
+    width: calc(50% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col45 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col45 {
     max-width: 45%;
-    width: calc(45% - 20px);
-    margin-right: 20px;
+    width: calc(45% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col40 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col40 {
     max-width: 40%;
-    width: calc(40% - 20px);
-    margin-right: 20px;
+    width: calc(40% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col35 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col35 {
     max-width: 35%;
-    width: calc(35% - 20px);
-    margin-right: 20px;
+    width: calc(35% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col30 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col30 {
     max-width: 30%;
-    width: calc(30% - 20px);
-    margin-right: 20px;
+    width: calc(30% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col33 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col33 {
     max-width: 33.3333%;
-    width: calc(33.3333% - 20px);
-    margin-right: 20px;
+    width: calc(33.3333% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col25 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col25 {
     max-width: 25%;
-    width: calc(25% - 20px);
-    margin-right: 20px;
+    width: calc(25% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col20 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col20 {
     max-width: 20%;
-    width: calc(20% - 20px);
-    margin-right: 20px;
+    width: calc(20% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col16 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col16 {
     max-width: 16.6666667%;
-    width: calc(16.6666667% - 20px);
-    margin-right: 20px;
+    width: calc(16.6666667% - 10px);
+    margin-right: 10px;
   }
-  .pageContainer .contentField .block .flexBox.nowrap.gap-20 .col15 {
+  .pageContainer .contentField .block .flexBox.nowrap.gap-10 > .col15 {
     max-width: 15%;
-    width: calc(15% - 20px);
-    margin-right: 20px;
+    width: calc(15% - 10px);
+    margin-right: 10px;
   }
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col100 {
+.pageContainer .contentField .block .flexBox > .col100 {
   max-width: 100%;
   width: calc(100% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col90 {
+.pageContainer .contentField .block .flexBox > .col90 {
   max-width: 90%;
   width: calc(90% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col85 {
+.pageContainer .contentField .block .flexBox > .col85 {
   max-width: 85%;
   width: calc(85% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col80 {
+.pageContainer .contentField .block .flexBox > .col80 {
   max-width: 80%;
   width: calc(80% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col75 {
+.pageContainer .contentField .block .flexBox > .col75 {
   max-width: 75%;
   width: calc(75% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col70 {
+.pageContainer .contentField .block .flexBox > .col70 {
   max-width: 70%;
   width: calc(70% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col66 {
+.pageContainer .contentField .block .flexBox > .col66 {
   max-width: 66.6666%;
   width: calc(66.6666% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col65 {
+.pageContainer .contentField .block .flexBox > .col65 {
   max-width: 65%;
   width: calc(65% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col60 {
+.pageContainer .contentField .block .flexBox > .col60 {
   max-width: 60%;
   width: calc(60% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col55 {
+.pageContainer .contentField .block .flexBox > .col55 {
   max-width: 55%;
   width: calc(55% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col50 {
+.pageContainer .contentField .block .flexBox > .col50 {
   max-width: 50%;
   width: calc(50% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col45 {
+.pageContainer .contentField .block .flexBox > .col45 {
   max-width: 45%;
   width: calc(45% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col40 {
+.pageContainer .contentField .block .flexBox > .col40 {
   max-width: 40%;
   width: calc(40% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col35 {
+.pageContainer .contentField .block .flexBox > .col35 {
   max-width: 35%;
   width: calc(35% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col30 {
+.pageContainer .contentField .block .flexBox > .col30 {
   max-width: 30%;
   width: calc(30% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col33 {
+.pageContainer .contentField .block .flexBox > .col33 {
   max-width: 33.3333%;
   width: calc(33.3333% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col25 {
+.pageContainer .contentField .block .flexBox > .col25 {
   max-width: 25%;
   width: calc(25% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col20 {
+.pageContainer .contentField .block .flexBox > .col20 {
   max-width: 20%;
   width: calc(20% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col16 {
+.pageContainer .contentField .block .flexBox > .col16 {
   max-width: 16.6666667%;
   width: calc(16.6666667% - 20px);
   margin-right: 20px;
 }
 
-.pageContainer .contentField .block .flexBox.gap-20 .col15 {
+.pageContainer .contentField .block .flexBox > .col15 {
   max-width: 15%;
   width: calc(15% - 20px);
   margin-right: 20px;
 }
 
+.pageContainer .contentField .block .flexBox.gap-10 > .col100 {
+  max-width: 100%;
+  width: calc(100% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col90 {
+  max-width: 90%;
+  width: calc(90% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col85 {
+  max-width: 85%;
+  width: calc(85% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col80 {
+  max-width: 80%;
+  width: calc(80% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col75 {
+  max-width: 75%;
+  width: calc(75% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col70 {
+  max-width: 70%;
+  width: calc(70% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col66 {
+  max-width: 66.6666%;
+  width: calc(66.6666% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col65 {
+  max-width: 65%;
+  width: calc(65% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col60 {
+  max-width: 60%;
+  width: calc(60% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col55 {
+  max-width: 55%;
+  width: calc(55% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col50 {
+  max-width: 50%;
+  width: calc(50% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col45 {
+  max-width: 45%;
+  width: calc(45% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col40 {
+  max-width: 40%;
+  width: calc(40% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col35 {
+  max-width: 35%;
+  width: calc(35% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col30 {
+  max-width: 30%;
+  width: calc(30% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col33 {
+  max-width: 33.3333%;
+  width: calc(33.3333% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col25 {
+  max-width: 25%;
+  width: calc(25% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col20 {
+  max-width: 20%;
+  width: calc(20% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col16 {
+  max-width: 16.6666667%;
+  width: calc(16.6666667% - 10px);
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-10 > .col15 {
+  max-width: 15%;
+  width: calc(15% - 10px);
+  margin-right: 10px;
+}
+
 @media screen and (max-width: 1023px) {
-  .pageContainer .contentField .block .flexBox.gap-20 .col90,
-  .pageContainer .contentField .block .flexBox.gap-20 .col85,
-  .pageContainer .contentField .block .flexBox.gap-20 .col80,
-  .pageContainer .contentField .block .flexBox.gap-20 .col75,
-  .pageContainer .contentField .block .flexBox.gap-20 .col70,
-  .pageContainer .contentField .block .flexBox.gap-20 .col66,
-  .pageContainer .contentField .block .flexBox.gap-20 .col65,
-  .pageContainer .contentField .block .flexBox.gap-20 .col60,
-  .pageContainer .contentField .block .flexBox.gap-20 .col55,
-  .pageContainer .contentField .block .flexBox.gap-20 .col50,
-  .pageContainer .contentField .block .flexBox.gap-20 .col45,
-  .pageContainer .contentField .block .flexBox.gap-20 .col40,
-  .pageContainer .contentField .block .flexBox.gap-20 .col35,
-  .pageContainer .contentField .block .flexBox.gap-20 .col30,
-  .pageContainer .contentField .block .flexBox.gap-20 .col33,
-  .pageContainer .contentField .block .flexBox.gap-20 .col25,
-  .pageContainer .contentField .block .flexBox.gap-20 .col20,
-  .pageContainer .contentField .block .flexBox.gap-20 .col16,
-  .pageContainer .contentField .block .flexBox.gap-20 .col15 {
+  .pageContainer .contentField .block .flexBox.gap-10 .col100,
+  .pageContainer .contentField .block .flexBox.gap-10 .col90,
+  .pageContainer .contentField .block .flexBox.gap-10 .col85,
+  .pageContainer .contentField .block .flexBox.gap-10 .col80,
+  .pageContainer .contentField .block .flexBox.gap-10 .col75,
+  .pageContainer .contentField .block .flexBox.gap-10 .col70,
+  .pageContainer .contentField .block .flexBox.gap-10 .col66,
+  .pageContainer .contentField .block .flexBox.gap-10 .col65,
+  .pageContainer .contentField .block .flexBox.gap-10 .col60,
+  .pageContainer .contentField .block .flexBox.gap-10 .col55,
+  .pageContainer .contentField .block .flexBox.gap-10 .col50,
+  .pageContainer .contentField .block .flexBox.gap-10 .col45,
+  .pageContainer .contentField .block .flexBox.gap-10 .col40,
+  .pageContainer .contentField .block .flexBox.gap-10 .col35,
+  .pageContainer .contentField .block .flexBox.gap-10 .col30,
+  .pageContainer .contentField .block .flexBox.gap-10 .col33,
+  .pageContainer .contentField .block .flexBox.gap-10 .col25,
+  .pageContainer .contentField .block .flexBox.gap-10 .col20,
+  .pageContainer .contentField .block .flexBox.gap-10 .col16,
+  .pageContainer .contentField .block .flexBox.gap-10 .col15 {
     width: 100%;
     max-width: 100%;
     margin-right: 0px;
   }
-  .pageContainer .contentField .block .flexBox.gap-20 .text, .pageContainer .contentField .block .flexBox.gap-20 img {
+  .pageContainer .contentField .block .flexBox.gap-10 .text, .pageContainer .contentField .block .flexBox.gap-10 img {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0px;
+  }
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col100 {
+  max-width: 100%;
+  width: calc(100% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col90 {
+  max-width: 90%;
+  width: calc(90% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col85 {
+  max-width: 85%;
+  width: calc(85% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col80 {
+  max-width: 80%;
+  width: calc(80% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col75 {
+  max-width: 75%;
+  width: calc(75% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col70 {
+  max-width: 70%;
+  width: calc(70% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col66 {
+  max-width: 66.6666%;
+  width: calc(66.6666% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col65 {
+  max-width: 65%;
+  width: calc(65% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col60 {
+  max-width: 60%;
+  width: calc(60% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col55 {
+  max-width: 55%;
+  width: calc(55% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col50 {
+  max-width: 50%;
+  width: calc(50% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col45 {
+  max-width: 45%;
+  width: calc(45% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col40 {
+  max-width: 40%;
+  width: calc(40% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col35 {
+  max-width: 35%;
+  width: calc(35% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col30 {
+  max-width: 30%;
+  width: calc(30% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col33 {
+  max-width: 33.3333%;
+  width: calc(33.3333% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col25 {
+  max-width: 25%;
+  width: calc(25% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col20 {
+  max-width: 20%;
+  width: calc(20% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col16 {
+  max-width: 16.6666667%;
+  width: calc(16.6666667% - 30px);
+  margin-right: 30px;
+}
+
+.pageContainer .contentField .block .flexBox.gap-30 > .col15 {
+  max-width: 15%;
+  width: calc(15% - 30px);
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 1023px) {
+  .pageContainer .contentField .block .flexBox.gap-30 .col100,
+  .pageContainer .contentField .block .flexBox.gap-30 .col90,
+  .pageContainer .contentField .block .flexBox.gap-30 .col85,
+  .pageContainer .contentField .block .flexBox.gap-30 .col80,
+  .pageContainer .contentField .block .flexBox.gap-30 .col75,
+  .pageContainer .contentField .block .flexBox.gap-30 .col70,
+  .pageContainer .contentField .block .flexBox.gap-30 .col66,
+  .pageContainer .contentField .block .flexBox.gap-30 .col65,
+  .pageContainer .contentField .block .flexBox.gap-30 .col60,
+  .pageContainer .contentField .block .flexBox.gap-30 .col55,
+  .pageContainer .contentField .block .flexBox.gap-30 .col50,
+  .pageContainer .contentField .block .flexBox.gap-30 .col45,
+  .pageContainer .contentField .block .flexBox.gap-30 .col40,
+  .pageContainer .contentField .block .flexBox.gap-30 .col35,
+  .pageContainer .contentField .block .flexBox.gap-30 .col30,
+  .pageContainer .contentField .block .flexBox.gap-30 .col33,
+  .pageContainer .contentField .block .flexBox.gap-30 .col25,
+  .pageContainer .contentField .block .flexBox.gap-30 .col20,
+  .pageContainer .contentField .block .flexBox.gap-30 .col16,
+  .pageContainer .contentField .block .flexBox.gap-30 .col15 {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0px;
+  }
+  .pageContainer .contentField .block .flexBox.gap-30 .text, .pageContainer .contentField .block .flexBox.gap-30 img {
     width: 100%;
     max-width: 100%;
     margin-right: 0px;
@@ -1320,155 +1637,111 @@ textarea {
           align-items: flex-end;
 }
 
-.pageContainer .contentField .block .col100 {
-  max-width: 100%;
-  width: calc(100% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col90 {
-  max-width: 90%;
-  width: calc(90% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col85 {
-  max-width: 85%;
-  width: calc(85% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col80 {
-  max-width: 80%;
-  width: calc(80% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col75 {
-  max-width: 75%;
-  width: calc(75% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col70 {
-  max-width: 70%;
-  width: calc(70% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col66 {
-  max-width: 66.6666%;
-  width: calc(66.6666% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col65 {
-  max-width: 65%;
-  width: calc(65% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col60 {
-  max-width: 60%;
-  width: calc(60% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col55 {
-  max-width: 55%;
-  width: calc(55% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col50 {
-  max-width: 50%;
-  width: calc(50% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col45 {
-  max-width: 45%;
-  width: calc(45% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col40 {
-  max-width: 40%;
-  width: calc(40% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col35 {
-  max-width: 35%;
-  width: calc(35% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col30 {
-  max-width: 30%;
-  width: calc(30% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col33 {
-  max-width: 33.3333%;
-  width: calc(33.3333% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col25 {
-  max-width: 25%;
-  width: calc(25% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col20 {
-  max-width: 20%;
-  width: calc(20% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col16 {
-  max-width: 16.6666667%;
-  width: calc(16.6666667% - 10px);
-  margin-right: 10px;
-}
-
-.pageContainer .contentField .block .col15 {
-  max-width: 15%;
-  width: calc(15% - 10px);
-  margin-right: 10px;
-}
-
 @media screen and (max-width: 1023px) {
-  .pageContainer .contentField .block .col90,
-  .pageContainer .contentField .block .col85,
-  .pageContainer .contentField .block .col80,
-  .pageContainer .contentField .block .col75,
-  .pageContainer .contentField .block .col70,
-  .pageContainer .contentField .block .col66,
-  .pageContainer .contentField .block .col65,
-  .pageContainer .contentField .block .col60,
-  .pageContainer .contentField .block .col55,
-  .pageContainer .contentField .block .col50,
-  .pageContainer .contentField .block .col45,
-  .pageContainer .contentField .block .col40,
-  .pageContainer .contentField .block .col35,
-  .pageContainer .contentField .block .col30,
-  .pageContainer .contentField .block .col33,
-  .pageContainer .contentField .block .col25,
-  .pageContainer .contentField .block .col20,
-  .pageContainer .contentField .block .col16,
-  .pageContainer .contentField .block .col15 {
+  .pageContainer .contentField .block .flexBox .col100,
+  .pageContainer .contentField .block .flexBox .col90,
+  .pageContainer .contentField .block .flexBox .col85,
+  .pageContainer .contentField .block .flexBox .col80,
+  .pageContainer .contentField .block .flexBox .col75,
+  .pageContainer .contentField .block .flexBox .col70,
+  .pageContainer .contentField .block .flexBox .col66,
+  .pageContainer .contentField .block .flexBox .col65,
+  .pageContainer .contentField .block .flexBox .col60,
+  .pageContainer .contentField .block .flexBox .col55,
+  .pageContainer .contentField .block .flexBox .col50,
+  .pageContainer .contentField .block .flexBox .col45,
+  .pageContainer .contentField .block .flexBox .col40,
+  .pageContainer .contentField .block .flexBox .col35,
+  .pageContainer .contentField .block .flexBox .col30,
+  .pageContainer .contentField .block .flexBox .col33,
+  .pageContainer .contentField .block .flexBox .col25,
+  .pageContainer .contentField .block .flexBox .col20,
+  .pageContainer .contentField .block .flexBox .col16,
+  .pageContainer .contentField .block .flexBox .col15 {
     width: 100%;
     max-width: 100%;
     margin-right: 0px;
   }
-  .pageContainer .contentField .block .text, .pageContainer .contentField .block img {
+  .pageContainer .contentField .block .flexBox .text, .pageContainer .contentField .block .flexBox img {
     width: 100%;
     max-width: 100%;
     margin-right: 0px;
   }
+}
+
+.pageContainer .contentField .block .blueTileBox {
+  border-top: 1px solid #5099bf;
+  border-bottom: 1px solid #5099bf;
+  padding: 5px 0;
+}
+
+.pageContainer .contentField .block .blueTileBox .text {
+  color: #5099bf;
+  text-align: center;
+}
+
+.pageContainer .contentField .block .videoBox {
+  width: 100%;
+  padding-bottom: 50%;
+  position: relative;
+}
+
+.pageContainer .contentField .block .videoBox .playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-image: url("../img/index/playBtn.png");
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+@media screen and (min-width: 1023px) {
+  .pageContainer .contentField .block .videoBox .playBtn:hover {
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+        -ms-transform: translate(-50%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.pageContainer .contentField .block .mt10 {
+  margin-top: 10px;
+}
+
+.pageContainer .contentField .block .mb10 {
+  margin-bottom: 10px;
+}
+
+.pageContainer .contentField .block .mr10 {
+  margin-right: 10px;
+}
+
+.pageContainer .contentField .block .ml10 {
+  margin-left: 10px;
+}
+
+.pageContainer .contentField .block .mt20 {
+  margin-top: 20px;
+}
+
+.pageContainer .contentField .block .mb20 {
+  margin-bottom: 20px;
+}
+
+.pageContainer .contentField .block .mr20 {
+  margin-right: 20px;
+}
+
+.pageContainer .contentField .block .ml20 {
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1765,6 +2038,28 @@ textarea {
   position: relative;
 }
 
+#navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub::before {
+  content: '';
+  width: 10px;
+  height: 15px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/icon/arrowPage-left.png");
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0.6;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
 @media screen and (min-width: 1023px) {
   #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav:hover {
     background-color: #5099bf20;
@@ -2040,6 +2335,7 @@ textarea {
     background-image: url("../img/icon/arrowPage-left.png");
     position: absolute;
     top: 45px;
+    left: initial;
     right: 40px;
     opacity: 0.6;
     -webkit-transition: -webkit-transform 0.3s ease;

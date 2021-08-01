@@ -7,7 +7,7 @@
     <div class="block">
         <div class="flexBox">
             <div class="col50">
-                <img src="img/works/04/01.png" alt="">
+                <img class="col100" src="img/works/04/01.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
@@ -26,7 +26,7 @@
     <div class="block">
         <div class="flexBox">
             <div class="col50">
-                <img src="img/works/04/02.png" alt="">
+                <img class="col100" src="img/works/04/02.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
@@ -43,7 +43,7 @@
     <div class="block">
         <div class="flexBox">
             <div class="col50">
-                <img src="img/works/04/03.png" alt="">
+                <img class="col100" src="img/works/04/03.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
@@ -92,10 +92,10 @@
         </h6>
         <div class="flexBox">
             <div class="col50">
-                <img src="img/works/04/06.png" alt="">
+                <img class="col100" src="img/works/04/06.png" alt="">
             </div>
             <div class="col50">
-                <img src="img/works/04/07.png" alt="">
+                <img class="col100" src="img/works/04/07.png" alt="">
             </div>
         </div>
     </div>

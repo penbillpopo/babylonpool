@@ -11,24 +11,31 @@
         </p>
     </div>
     <div class="block">
-        <div class="flexBox">
+        <div class="flexBox ">
             <img class="col50" src="img/facility/08/01.png" alt="">
             <img class="col50" src="img/facility/08/02.png" alt="">
+            <img class="col100 mt20" src="img/facility/08/03.png" alt="">    
         </div>
     </div>
     <div class="block">
-        <img class="col100" src="img/facility/08/03.png" alt="">    
+        <div class="blueTileBox">
+            <h6 class="text bold blue">
+                安裝實績
+            </h6>
+        </div>
     </div>
     <div class="block">
-        <div class="flexBox">
-            <div class="col50">
-                <h6 class="text bold blue">
-                    銅山過山車  Copper Mountain
-                </h6>
-                <p class="text">
-                    這款高山過山車是北美最長的高山過山車之一，其風景優美的上升和蜿蜒曲折的陡峭彎道貫穿整個高山森林。
-                </p>
-                <img src="img/facility/08/04.png" alt="">
+        <div class="flexBox ">
+            <div class="col50 flex-col between">
+                <div class="col100">
+                    <h6 class="text bold blue">
+                        銅山過山車  Copper Mountain
+                    </h6>
+                    <p class="text">
+                        這款高山過山車是北美最長的高山過山車之一，其風景優美的上升和蜿蜒曲折的陡峭彎道貫穿整個高山森林。
+                    </p>
+                </div>
+                <img class="col100" src="img/facility/08/04.png" alt="">
             </div>
             <div class="col50">
                 <h6 class="text bold blue">
@@ -38,7 +45,7 @@
                     想要創新的遊樂設施作為他們新冒險公園的介紹性景點。
                     於是選擇了ADG的Mountain Coaster，此設施可最大程度運用其地形的優勢來達到更高的效益。
                 </p>
-                <img src="img/facility/08/05.png" alt="">
+                <img class="col100" src="img/facility/08/05.png" alt="">
             </div>
         </div>
     </div>

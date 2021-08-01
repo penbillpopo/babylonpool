@@ -3,7 +3,7 @@
         <div class="titleBox">
             <h4 class="text bold">造浪設備</h4>
         </div>
-        <p class="text">
+        <p class="text mb20">
             造浪池(WAVE POOL®)是水上樂園中最大，遊客量最多的景點。<br>
             其主要吸引力為每分鐘最大波動的海浪和更多的水流來創造令人難忘的體驗。<br>
             造浪系統為您提供比市場更多款不同浪高及多種造浪模式的選擇。隨著WAVETEK®每一道完美的海浪。<br>
@@ -42,7 +42,7 @@
                 遊客可以輕鬆地從任一端進入造浪池，為他們提供一種獨一無二的體驗。
                 在1.2公尺淺的造浪池讓所有人都可以輕鬆的享受戲水樂趣。
             </p>
-            <img src="img/facility/01/05.png" alt="">
+            <img class="col40" src="img/facility/01/05.png" alt="">
         </div>
     </div>
     <div class="block">

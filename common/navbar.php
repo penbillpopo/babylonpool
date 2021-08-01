@@ -12,9 +12,17 @@
 			<img src="./img/header_logo.png" alt="">
 		</a>
 		<div class="navitem">
-			<a href="about.php" class="nav <?php echo $about_active;?>">
+			<div class="nav hasSub <?php echo $about_active;?>">
 				<p class='name'>關於巴比倫</p>
-			</a>
+				<div class="secondNavItem">
+					<a href="about.php?id=1" class="secondNav">
+						<p class='name'>關於我們</p>
+					</a>
+					<a href="about.php?id=2" class="secondNav">
+						<p class='name'>服務項目</p>
+					</a>
+				</div>
+			</div>
 			<a href="newsList.php" class="nav <?php echo $newsList_active;?>">
 				<p class='name'>最新消息</p>
 			</a>

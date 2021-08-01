@@ -15,7 +15,7 @@
         <img class="col100" src="img/facility/03/02.png" alt="">
     </div>
     <div class="block">
-        <div class="flexBox">
+        <div class="flexBox ">
             <div class="col30">
                 <h6 class="text bold blue">BREAKER BEACH®</h6>
                 <p class="text">
@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="block">
-        <div class="flexBox wrap-reverse">
+        <div class="flexBox gap-30 wrap-reverse">
             <img class="col60 fit-content" src="img/facility/03/04.png" alt="">
             <div class="text col40">
                 <h6 class="text bold blue">180°WAVEOZ™</h6>

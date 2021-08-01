@@ -468,108 +468,109 @@ textarea{
 }
 
 @mixin colSetting($gap) {
-	.col100 {
+	>.col100 {
 		max-width: 100%;
 		width: calc(100% - #{$gap});
 		margin-right: $gap;
 	}
-	.col90 {
+	>.col90 {
 		max-width: 90%;
 		width: calc(90% - #{$gap});
 		margin-right: $gap;
 	}
-	.col85 {
+	>.col85 {
 		max-width: 85%;
 		width: calc(85% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col80 {
+	>.col80 {
 		max-width: 80%;
 		width: calc(80% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col75 {
+	>.col75 {
 		max-width: 75%;
 		width: calc(75% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col70 {
+	>.col70 {
 		max-width: 70%;
 		width: calc(70% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col66 {
+	>.col66 {
 		max-width: 66.6666%;
 		width: calc(66.6666% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col65 {
+	>.col65 {
 		max-width: 65%;
 		width: calc(65% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col60 {
+	>.col60 {
 		max-width: 60%;
 		width: calc(60% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col55 {
+	>.col55 {
 		max-width: 55%;
 		width: calc(55% - #{$gap});	
 		margin-right: $gap;
 	}				
-	.col50 {
+	>.col50 {
 		max-width: 50%;
 		width: calc(50% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col45 {
+	>.col45 {
 		max-width: 45%;
 		width: calc(45% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col40 {
+	>.col40 {
 		max-width: 40%;
 		width: calc(40% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col35 {
+	>.col35 {
 		max-width: 35%;
 		width: calc(35% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col30 {
+	>.col30 {
 		max-width: 30%;
 		width: calc(30% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col33 {
+	>.col33 {
 		max-width: 33.3333%;
 		width: calc(33.3333% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col25 {
+	>.col25 {
 		max-width: 25%;
 		width: calc(25% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col20 {
+	>.col20 {
 		max-width: 20%;
 		width: calc(20% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col16 {
+	>.col16 {
 		max-width: 16.6666667%;
 		width: calc(16.6666667% - #{$gap});
 		margin-right: $gap;
 	}				
-	.col15 {
+	>.col15 {
 		max-width: 15%;
 		width: calc(15% - #{$gap});
 		margin-right: $gap;
 	}
 }
 @mixin colMobileFull(){
+	.col100,
 	.col90,
 	.col85,
 	.col80,
@@ -681,6 +682,9 @@ textarea{
 	.contentField{
 		.block{
 			margin-bottom: 50px;
+			a{
+				color: $color_blue_02;
+			}
 			.titleBox{
 				margin-bottom: 15px;
 				.text{
@@ -704,10 +708,24 @@ textarea{
 				&.blue{
 					color: $color_blue_02;
 				}
+				&.black{
+					color: $color_black_01;
+				}
+				&.icon{
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					@extend %background_100_100;
+					margin-right: 10px;
+				}
+			}
+			.textBox{
+				display: flex;
 			}
 			img{
 				display: block;
 				height: auto;
+				object-fit:fill;
 				max-width: 100%;
 				margin-bottom: 10px;
 				&.fit-content{
@@ -744,6 +762,13 @@ textarea{
 					border-bottom: 2px solid $color_blue_02;
 				}
 			}
+			.flex-col{
+				display: flex;
+				flex-direction: column;
+				&.between{
+					justify-content: space-between;
+				}
+			}
 			.flexBox{
 				width: 100%;
 				display: flex;
@@ -752,13 +777,20 @@ textarea{
 					flex-wrap: nowrap;
 					@media screen and (max-width: 1023px) {
 						@include colSetting(10px);
-						&.gap-20{
-							@include colSetting(20px);
+						&.gap-10{
+							@include colSetting(10px);
 						}
 					}
 				}
-				&.gap-20{
-					@include colSetting(20px);
+				@include colSetting(20px);
+				&.gap-10{
+					@include colSetting(10px);
+					@media screen and (max-width: 1023px) {
+						@include colMobileFull()
+					}
+				}
+				&.gap-30{
+					@include colSetting(30px);
 					@media screen and (max-width: 1023px) {
 						@include colMobileFull()
 					}
@@ -778,13 +810,66 @@ textarea{
 				&.bottom{
 					align-items:flex-end;
 				}
+				@media screen and (max-width: 1023px) {
+					@include colMobileFull()
+				}
 			}
-			@include colSetting(10px);
-			
-			@media screen and (max-width: 1023px) {
-				@include colMobileFull()
+			.blueTileBox{
+				border-top: 1px solid $color_blue_02;
+				border-bottom: 1px solid $color_blue_02;
+				padding: 5px 0;
+				.text{
+					color:$color_blue_02;
+					text-align: center
+				}
 			}
-
+			.videoBox{
+				width: 100%;
+				padding-bottom: 50%;
+				@extend %background_100;
+				position: relative;
+				.playBtn{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					width: 100px;
+					height: 100px;
+					cursor: pointer;
+					@extend %background_100_100;
+					background-image: url('../img/index/playBtn.png');
+					transition: transform 0.3s ease;
+					@media screen and (min-width: 1023px) {
+						&:hover{
+							transform:translate(-50%,-50%) scale(1.1);	
+						}
+					}
+				}
+		   	}
+			.mt10{
+				margin-top: 10px;
+			}
+			.mb10{
+				margin-bottom: 10px;
+			}
+			.mr10{
+				margin-right: 10px;
+			}
+			.ml10{
+				margin-left: 10px;
+			}
+			.mt20{
+				margin-top: 20px;
+			}
+			.mb20{
+				margin-bottom: 20px;
+			}
+			.mr20{
+				margin-right: 20px;
+			}
+			.ml20{
+				margin-left: 20px;
+			}
 		}
 	}
 	@media screen and (max-width: 768px) {

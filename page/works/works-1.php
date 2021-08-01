@@ -41,7 +41,7 @@
             全台唯一立體滑道，從15公尺的高空急速俯衝而下，瞬間衝向天際，
             隨即再度迅速滑落，刺激快感高潮迭起的刺激快感。
         </h6>
-        <div class="flexBox">
+        <div class="flexBox ">
             <img class="col50" src="img/works/01/02.png" alt="">
             <img class="col50" src="img/works/01/03.png" alt="">
         </div>
@@ -52,7 +52,7 @@
             從雲端垂直急馳而下，驚魂未定之時，巨大的水流再度席捲而來，一波又一波的上天下海，
             隨著每個人的軀體感應，享受著獨一無二的無限快感。
         </h6>
-        <div class="flexBox">
+        <div class="flexBox ">
             <img class="col50" src="img/works/01/04.png" alt="">
             <img class="col50" src="img/works/01/05.png" alt="">
         </div>
@@ -63,7 +63,7 @@
             全台唯一雙拼式急速戲水滑道，交錯盤旋於半空中，暗黑滑道充滿著無限想像，
             全程封閉極速下衝，體驗未知中的驚奇快感。
         </h6>
-        <div class="flexBox">
+        <div class="flexBox ">
             <img class="col50" src="img/works/01/06.png" alt="">
             <img class="col50" src="img/works/01/07.png" alt="">
         </div>
@@ -74,13 +74,13 @@
             由11公尺高的暗黑滑道快速墜落UFO造型的大漩渦內，高速旋轉、
             重力加速以及強力衝擊的震撼考驗，是挑戰膽量的完美體現。
         </h6>
-        <div class="flexBox">
+        <div class="flexBox ">
             <img class="col50" src="img/works/01/08.png" alt="">
             <img class="col50" src="img/works/01/09.png" alt="">
         </div>
     </div>
     <div class="block">
-        <div class="flexBox">
+        <div class="flexBox ">
             <div class="col50">
                 <h6 class="text bold blue">碧海藍天（Waves ）- 造浪池-具備8種浪型</h6>
                 <p class="text">
@@ -92,7 +92,7 @@
         </div>
     </div>
     <div class="block">
-        <div class="flexBox bottom wrap-reverse">
+        <div class="flexBox bottom wrap-reverse ">
             <img class="col50 fit-content" src="img/works/01/11.png" alt="">
             <div class="col40">
                 <h6 class="text bold blue col100">水芭蕾（Dancing Fountains）-海神廣場</h6>

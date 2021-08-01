@@ -2,14 +2,14 @@
 $("#hambuger .menu-btn").click(function () {
 	if (!$('.navitem').hasClass('active')) {
 		$('.navitem').addClass('active');
-		$("body").css("overflow", "hidden");
+		$("body").css("overflow-y", "hidden");
 		$('#nav_blackfield').css("display", "block");
 		setTimeout(function () {
 			$('#nav_blackfield').css("opacity", "1");
 		}, 100);
 	} else {
 		$('.navitem').removeClass('active');
-		$("body").css("overflow", "scroll");
+		$("body").css("overflow-y", "scroll");
 		$('#nav_blackfield').css("opacity", "0");
 		$('#nav_blackfield').css("display", "none");
 	}

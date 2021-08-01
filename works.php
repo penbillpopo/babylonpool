@@ -21,6 +21,7 @@
 <html lang="en">
 <head>	
 	<link rel="stylesheet" href="./css/sample.css?version=<?php echo time();?>">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
 	<?php include('./common/load.php') ?>
 </head>
 	<?php include('./common/navbar.php') ?>
@@ -50,5 +51,6 @@
 	</div>
 </body>
 <?php include('./common/footer.php') ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 </html>
 
