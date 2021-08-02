@@ -85,7 +85,7 @@ $().ready(function() {
                 Host : "smtp.gmail.com",
                 Username : "penbill2016@gmail.com",
                 Password : "075717169",
-                To : 'penbillpopo@gmail.com',
+                To : 'fourfun1023@gmail.com',
                 From : "penbill2016@gmail.com",
                 Subject : "巴比倫-聯絡我們",
                 Body : sendTxt
@@ -101,4 +101,13 @@ $().ready(function() {
         }   
     })
 
+})
+$('#clearBtn').on('click',function(){
+    $('#company').val('')
+    $('#name').val('')
+    $('#phone').val('')
+    $('#email').val('')
+    $('#address').val('')
+    $('#interest').val('')
+    $('#message').val('')
 })

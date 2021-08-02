@@ -10,10 +10,10 @@
             <a href="works.php?id=2&subId=2" class="tab">
                 <p class="text">造浪池施工</p>
             </a>
-            <a href="works.php?id=2&subId=3" class="tab">
+            <a href="works.php?id=2&subId=3" class="tab active">
                 <p class="text">中台灣影視基地</p>
             </a>
-            <a href="works.php?id=2&subId=4" class="tab active">
+            <a href="works.php?id=2&subId=4" class="tab">
                 <p class="text">首映記者會＆媒體報導</p>
             </a>
         </div>
@@ -26,7 +26,7 @@
         </h6>
         <p class="text">
             2015年規劃設計將李安導演少年Pi的奇幻漂流造浪機組遷移至台中市霧峰區，
-            打造「中台灣影視基地」，於2016年10月開工，2018年7月完工移交，
+            打造「中台灣影視基地」，於2016年10月開工，2018年7月完工移交，
             並於2019年7月順利啟用，成為全台灣唯一擁有造浪池及深水池場景的專業片場。
         </p>
     </div>

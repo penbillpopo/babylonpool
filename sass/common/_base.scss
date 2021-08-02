@@ -699,16 +699,16 @@ textarea{
 				&,*{
 					line-height: 40px;
 				}
-				&.bold{
-					font-weight: 400;
-				}
-				&.bolder{
+				&.bold,span.bold{
 					font-weight: 500;
 				}
-				&.blue{
+				&.bolder,span.bolder{
+					font-weight: 600;
+				}
+				&.blue,span.blue{
 					color: $color_blue_02;
 				}
-				&.black{
+				&.black,span.black{
 					color: $color_black_01;
 				}
 				&.icon{
@@ -843,6 +843,18 @@ textarea{
 						&:hover{
 							transform:translate(-50%,-50%) scale(1.1);	
 						}
+					}
+				}
+				@media screen and (max-width: 1023px) {
+					.playBtn{
+						width: 80px;
+						height: 80px;
+					}
+				}
+				@media screen and (max-width: 480px) {
+					.playBtn{
+						width: 60px;
+						height: 60px;
 					}
 				}
 		   	}

@@ -97,11 +97,11 @@ $color-darkgray:$color_grey_01;
 						box-shadow: 2px 2px 3px #00000090;
 						.secondNav{
 							display: block;
-							padding: 12px 40px;
+							padding: 12px 35px;
 							transition: background-color 0.3s ease;
 							position: relative;
 							&.hasSub{
-								&::before{
+								&::after{
 									content: '';
 									width: 10px;
 									height: 15px;
@@ -148,6 +148,9 @@ $color-darkgray:$color_grey_01;
 					font-weight: 400;
 					text-align: center;
 					white-space: nowrap;
+					@media screen and (max-width: 1023px) {
+						white-space:initial;
+					}
 				}
 			}
 			a{
@@ -283,8 +286,11 @@ $color-darkgray:$color_grey_01;
 					small{
 						font-size: 16px;
 					}
+					&::before{
+						display: none;
+					}
 					&.hasSub{
-						&::before{
+						&::after{
 							content: '';
 							width: 10px;
 							height: 15px;
@@ -295,12 +301,12 @@ $color-darkgray:$color_grey_01;
 							position: absolute;
 							top: 35px;
 							left: initial;
-							right: 40px;
+							right: 25px;
 							opacity: 0.6;
 							transition: transform 0.3s ease;
 						}
 						&.active{
-							&::before{
+							&::after{
 								transform: rotate(-90deg);
 							}
 							>.name{
@@ -334,7 +340,7 @@ $color-darkgray:$color_grey_01;
 									}
 								}
 								&.hasSub{
-									&::before{
+									&::after{
 										content: '';
 										width: 10px;
 										height: 15px;
@@ -343,15 +349,15 @@ $color-darkgray:$color_grey_01;
 										background-position: center;
 										background-image: url('../img/icon/arrowPage-left.png');
 										position: absolute;
-										top: 45px;
+										top: 42.5px;
 										left: initial;
-										right: 40px;
+										right: 25px;
 										opacity: 0.6;
 										transition: transform 0.3s ease;
 									}
 									&.active{
-										&::before{
-											transform: rotate(-90deg);
+										&::after{
+											transform: rotate(-90deg) translateX(5px);
 										}
 										>.name{
 											color: $color-blue-02;

@@ -24,10 +24,8 @@
             <div class="col50">
                 <div class="textBox">
                     <h6 class="text bold">
-                        ✔&nbsp
-                    </h6>
-                    <h6 class="text bold blue">
-                        增強設施的使用性
+                        <span>✔&nbsp</span>
+                        <span class="blue">增強設施的使用性</span>
                     </h6>
                 </div>
                 <p class="text">
@@ -42,10 +40,8 @@
                 <div>
                     <div class="textBox">
                         <h6 class="text bold">
-                            ✔&nbsp
-                        </h6>
-                        <h6 class="text bold blue">
-                            提高運營效率
+                            <span>✔&nbsp</span>
+                            <span class="blue">提高運營效率</span>
                         </h6>
                     </div>
                     <p class="text">
@@ -63,10 +59,8 @@
             <div class="col50">
                 <div class="textBox">
                     <h6 class="text bold">
-                        ✔&nbsp
-                    </h6>
-                    <h6 class="text bold blue">
-                        競爭優勢
+                        <span>✔&nbsp</span>
+                        <span class="blue">競爭優勢</span>
                     </h6>
                 </div>
                 <p class="text">
@@ -78,10 +72,8 @@
             <div class="col50">
                 <div class="textBox">
                     <h6 class="text bold">
-                        ✔&nbsp
-                    </h6>
-                    <h6 class="text bold blue">
-                        外觀裝飾
+                        <span>✔&nbsp</span>
+                        <span class="blue">外觀裝飾</span>
                     </h6>
                 </div>
                 <p class="text">
@@ -91,9 +83,7 @@
                 </p>
             </div>
         </div>
-    </div>
-    <div class="block">
-        <div class="flexBox">
+        <div class="flexBox nowrap">
             <img class="col33" src="img/facility/09/03.png" alt="">
             <img class="col33" src="img/facility/09/04.png" alt="">
             <img class="col33" src="img/facility/09/05.png" alt="">

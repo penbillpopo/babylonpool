@@ -9,9 +9,17 @@
 			align-items: center;
 			width: 100%;
 			background-color: $color-white-01;
-			padding-top: 50px;
+			padding-top: 35px;
 			padding-bottom: 40px;
 			position: relative;
+			&.gap{
+				padding-top: 50px;
+				.navBtn {
+					&::before{
+						top: -5px;
+					}
+				}
+			}
 			.navBtn {
 				margin: 0 15px;
 				position: relative;
@@ -23,7 +31,7 @@
 					content: '';
 					position: absolute;
 					left:0;
-					top: -5px;
+					top: -35px;
 					width: 0%;
 					height: 3px;
 					background-color: $color_green_01;

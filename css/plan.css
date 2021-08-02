@@ -852,19 +852,19 @@ textarea {
   line-height: 40px;
 }
 
-.pageContainer .contentField .block .text.bold {
-  font-weight: 400;
-}
-
-.pageContainer .contentField .block .text.bolder {
+.pageContainer .contentField .block .text.bold, .pageContainer .contentField .block .text span.bold {
   font-weight: 500;
 }
 
-.pageContainer .contentField .block .text.blue {
+.pageContainer .contentField .block .text.bolder, .pageContainer .contentField .block .text span.bolder {
+  font-weight: 600;
+}
+
+.pageContainer .contentField .block .text.blue, .pageContainer .contentField .block .text span.blue {
   color: #5099bf;
 }
 
-.pageContainer .contentField .block .text.black {
+.pageContainer .contentField .block .text.black, .pageContainer .contentField .block .text span.black {
   color: #151B28;
 }
 
@@ -1710,6 +1710,20 @@ textarea {
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .pageContainer .contentField .block .videoBox .playBtn {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pageContainer .contentField .block .videoBox .playBtn {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 .pageContainer .contentField .block .mt10 {
   margin-top: 10px;
 }
@@ -2029,14 +2043,14 @@ textarea {
 
 #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav {
   display: block;
-  padding: 12px 40px;
+  padding: 12px 35px;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   position: relative;
 }
 
-#navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub::before {
+#navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub::after {
   content: '';
   width: 10px;
   height: 15px;
@@ -2095,6 +2109,12 @@ textarea {
   font-weight: 400;
   text-align: center;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 1023px) {
+  #navbar .container .navitem .nav .name {
+    white-space: initial;
+  }
 }
 
 #navbar .container .navitem a .name {
@@ -2257,7 +2277,10 @@ textarea {
   #navbar .container .navitem .nav small {
     font-size: 16px;
   }
-  #navbar .container .navitem .nav.hasSub::before {
+  #navbar .container .navitem .nav::before {
+    display: none;
+  }
+  #navbar .container .navitem .nav.hasSub::after {
     content: '';
     width: 10px;
     height: 15px;
@@ -2268,7 +2291,7 @@ textarea {
     position: absolute;
     top: 35px;
     left: initial;
-    right: 40px;
+    right: 25px;
     opacity: 0.6;
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
@@ -2276,7 +2299,7 @@ textarea {
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   }
-  #navbar .container .navitem .nav.hasSub.active::before {
+  #navbar .container .navitem .nav.hasSub.active::after {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
@@ -2323,7 +2346,7 @@ textarea {
 }
 
 @media screen and (max-width: 1023px) {
-  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub::before {
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub::after {
     content: '';
     width: 10px;
     height: 15px;
@@ -2332,9 +2355,9 @@ textarea {
     background-position: center;
     background-image: url("../img/icon/arrowPage-left.png");
     position: absolute;
-    top: 45px;
+    top: 42.5px;
     left: initial;
-    right: 40px;
+    right: 25px;
     opacity: 0.6;
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
@@ -2342,10 +2365,10 @@ textarea {
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   }
-  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub.active::before {
-    -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+  #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub.active::after {
+    -webkit-transform: rotate(-90deg) translateX(5px);
+        -ms-transform: rotate(-90deg) translateX(5px);
+            transform: rotate(-90deg) translateX(5px);
   }
   #navbar .container .navitem .nav.hasSub .secondNavItem .secondNav.hasSub.active > .name {
     color: #5099bf;
@@ -2443,9 +2466,17 @@ textarea {
           align-items: center;
   width: 100%;
   background-color: #FFFFFF;
-  padding-top: 50px;
+  padding-top: 35px;
   padding-bottom: 40px;
   position: relative;
+}
+
+#footer .navField .navBox.gap {
+  padding-top: 50px;
+}
+
+#footer .navField .navBox.gap .navBtn::before {
+  top: -5px;
 }
 
 #footer .navField .navBox .navBtn {
@@ -2462,7 +2493,7 @@ textarea {
   content: '';
   position: absolute;
   left: 0;
-  top: -5px;
+  top: -35px;
   width: 0%;
   height: 3px;
   background-color: #b5e494;
@@ -2804,13 +2835,20 @@ textarea {
 
 #headBanner .bannerImg {
   width: 100%;
-  padding-bottom: 40%;
+  height: 75vh;
+}
+
+@media screen and (max-width: 1023px) {
+  #headBanner .bannerImg {
+    height: auto;
+    padding-bottom: 40%;
+  }
 }
 
 #headBanner .bannerTitleBox {
   position: absolute;
   left: 50%;
-  top: 30%;
+  top: 35%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);

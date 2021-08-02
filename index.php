@@ -96,25 +96,25 @@
 				<h1 class="text">完工案例</h1>
 			</div>
 			<div class="caseBox">
-				<a class="case reveal_right" href="#">
+				<a class="case reveal_right" href="works.php?id=1">
 					<div class="imgFrame">
 						<div class="img" style="background-image:url('./img/index/1.png');"></div>
 					</div>
 					<h5 class="text">六福村六福水上樂園</h5>
 				</a>
-				<a class="case reveal_right_d200" href="#">
+				<a class="case reveal_right_d200" href="works.php?id=2&subId=1">
 					<div class="imgFrame">
 						<div class="img" style="background-image:url('./img/index/2.png');"></div>
 					</div>
 					<h5 class="text">Life of PI 少年PI的奇幻漂流</h5>
 				</a>
-				<a class="case reveal_right_d400" href="#">
+				<a class="case reveal_right_d400" href="works.php?id=4">
 					<div class="imgFrame">
 						<div class="img" style="background-image:url('./img/index/3.png');"></div>
 					</div>
 					<h5 class="text">ADG美國水上樂園實績</h5>
 				</a>
-				<a class="case reveal_right_d600" href="#">
+				<a class="case reveal_right_d600" href="works.php?id=3">
 					<div class="imgFrame">
 						<div class="img" style="background-image:url('./img/index/4.png');"></div>
 					</div>

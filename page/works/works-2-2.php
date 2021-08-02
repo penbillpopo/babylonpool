@@ -7,13 +7,13 @@
             <a href="works.php?id=2&subId=1" class="tab">
                 <p class="text">造浪池簡介</p>
             </a>
-            <a href="works.php?id=2&subId=2" class="tab">
+            <a href="works.php?id=2&subId=2" class="tab active">
                 <p class="text">造浪池施工</p>
             </a>
             <a href="works.php?id=2&subId=3" class="tab">
                 <p class="text">中台灣影視基地</p>
             </a>
-            <a href="works.php?id=2&subId=4" class="tab active">
+            <a href="works.php?id=2&subId=4" class="tab">
                 <p class="text">首映記者會＆媒體報導</p>
             </a>
         </div>

@@ -14,7 +14,7 @@
 				<p class="text">TOP</p>
 			</div>
 		</div>
-		<div class="navBox">
+		<div class="navBox <?php if(isset($isIndex) && $isIndex) echo 'gap';?>">
 			<a href="about.php" class="navBtn <?php echo $about_active;?>">
 				<p>關於巴比倫</p>
 			</a>

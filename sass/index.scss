@@ -40,7 +40,6 @@
 				transition: transform 0.5s ease,
 				opacity 0.5s ease;
 			}
-			
 			.swiper-button-prev {
 				background-image: url('../img/icon/arrow-left.png');
 				margin-left: 30px;
@@ -60,9 +59,6 @@
 						opacity: 0.9;
 					}
 				}
-			}
-			@media screen and (max-width: 768px) {
-				display: none;
 			}
 		}
 		.paginationBox{
@@ -84,11 +80,19 @@
 				height: auto;
 				padding-bottom: 50%;
 			}
-			.navBox{
-				display: none;
-			}
 			.paginationBox{
 				display: block;
+			}
+		}	
+	}
+	@media screen and (max-width: 768px) {
+		.swiperbox{
+			.navBox{
+				.swiper-button-prev,
+				.swiper-button-next {
+					width: 20px !important;
+					height: 35px !important;
+				}
 			}
 		}	
 	}

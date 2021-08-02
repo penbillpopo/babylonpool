@@ -20,7 +20,9 @@
 				</div>
 			</div>
 			<div class="contentField">
-				<form id="contactForm" class="formBox" method="post" action="contact_b.php">
+				<!--改為前端發信-->
+				<!-- <form id="contactForm" class="formBox" method="post" action="contact_b.php"> -->
+				<form id="contactForm" class="formBox">
 					<div class="infoTxt">
 						<p class="top">
 							歡迎您的蒞臨及瀏覽本公司的網站，如果您對於本公司的產品需要更詳盡的說明時，

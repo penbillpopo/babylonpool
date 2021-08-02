@@ -16,7 +16,7 @@
             <img class="col50 fit-content" src="img/facility/02/01.png" alt="">
             <p class="text col50">
                 <strong>HVS 真空過濾設備</strong><br>
-                <strong>材質：</strong><span>不銹鋼SUS-304L過濾機件及PVC管排配置方型RC混凝土機體。</span><br>
+                <strong>材質：</strong><span>不銹鋼SUS-304L過濾機件及PVC管排配置方型RC混凝土機體。</span><br>
                 <strong>特點：</strong><span>高效能過濾主機，過濾水量超大，相較于傳統壓力式過濾系統，RC機體佔用面積相對較小，對於有高用水量需求的規劃案，選擇具備過濾週期長，逆洗次數少，總耗水量少等優點的HVS真空過濾設備，絕對是最明智的選擇。</span><br>
                 <strong>過濾能力：</strong><span>單機最高可達每小時790噸。</span><br>
                 <strong>適用：</strong><span>水上樂園、50M以上游泳池。</span>

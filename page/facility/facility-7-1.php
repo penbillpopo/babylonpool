@@ -23,7 +23,7 @@
         </p>
     </div>
     <div class="block">
-        <div class="flexBox bottom">
+        <div class="flexBox">
             <div class="col60">
                 <h6 class="text bold blue">
                     六並列競速滑道

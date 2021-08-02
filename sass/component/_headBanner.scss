@@ -3,13 +3,17 @@
     position: relative;
     .bannerImg{
         width: 100%;
-        padding-bottom: 40%;
+        height: 75vh;
         @extend %background_100;
+        @media screen and (max-width: 1023px) {
+            height: auto;
+            padding-bottom: 40%;
+        }
     }
     .bannerTitleBox{
         position: absolute;
         left: 50%;
-        top: 30%;
+        top: 35%;
         transform: translate(-50%,-50%);
         padding: 0 20px;
         .bannerTitle,.bannerSubTitle{

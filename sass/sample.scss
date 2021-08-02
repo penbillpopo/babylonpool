@@ -84,14 +84,15 @@
     .contentField{
         .aboutTextIcon{
             display: inline-block;
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
+            width: 28px;
+            height: 27px;
+            min-width: 28px;
             background-size: 100% 100%;
             background-repeat: no-repeat;
             background-position: center;
             background-image: url('../img/about/02/01.png');
-            transform: translateY(25%);
+            transform: translateY(50%);
+            margin-right: 10px;
         }
     }
 }
