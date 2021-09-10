@@ -25,8 +25,8 @@ $(function () {
 			delay: 5000,
 		},
 		navigation: {
-			nextEl: '#productField .waveArea .swiper-button-next',
-			prevEl: '#productField .waveArea .swiper-button-prev',
+			nextEl: '#waveField .swiper-button-next',
+			prevEl: '#waveField .swiper-button-prev',
 		},
 		breakpoints: {
 			// when window width is >= 480px
